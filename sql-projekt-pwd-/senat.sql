@@ -120,3 +120,15 @@ where won = true
 
 select distinct(party)
 from governors_county_candidate gcc 
+
+
+select *
+	, case when (round((current_votes::numeric / total_votes::numeric)*100,0))>100 
+	then round((total_votes::numeric / current_votes::numeric)*100,2)
+	else round((current_votes::numeric / total_votes::numeric)*100,2)
+	end aa
+	,  current_votes - total_votes  not_valid
+from governors_county gc 
+where current_votes > total_votes 
+
+
