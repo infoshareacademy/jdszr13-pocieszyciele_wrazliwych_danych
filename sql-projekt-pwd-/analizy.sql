@@ -137,8 +137,32 @@ from a
 join b on a.state = b.state
 
 
+--Presidents  - jaki % głosów nieważnych per lokalizacja
+select * 
+from president_county pc  
+
+-- presidents total votes 
+select candidate, sum(total_votes)
+from president_county_candidate pcc 
+group by candidate
 
 
+--Presidents - wygrani w stanach per partia per candidate wg electoral votes 
+with a as(
+SELECT state, party, candidate, winners, total_votes
+FROM (
+    SELECT state, candidate,party, COUNT(won) AS winners, SUM(total_votes) AS total_votes,
+           ROW_NUMBER() OVER (PARTITION BY state ORDER BY SUM(total_votes) DESC) AS row_num
+    FROM president_county_candidate pcc
+    WHERE won = true
+    GROUP BY state, candidate, party
+    order by winners desc
+) subquery
+WHERE row_num = 1
+ORDER BY state)
+select a.*, ec.electoral_votes
+from a
+join electoral_votes ec on a.state = ec.state
 
 
 
