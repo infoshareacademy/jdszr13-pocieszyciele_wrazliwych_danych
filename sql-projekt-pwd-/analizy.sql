@@ -1,97 +1,9 @@
-
-
 --Governors  - jaki % głosów nieważnych per lokalizacja
 select * 
 from governors_county gc 
 
 
 --Governors - wygrani w stanach per partia
-
-select county, sum(votes) county_total_votes
-from governors_county_candidate gcc 
-group by county
-
-
-select *
-	,SUM(votes) over (partition by county) county_votes
-	,round((votes::numeric  / SUM(votes) over (partition by county))*100,2) county_votes_percent
-	,SUM(votes) over (partition by state) state_votes
-	,SUM(votes) over (partition by party, state) party_votes
-	,round((SUM(votes) over (partition by party, state)::numeric / SUM(votes) over (partition by state))*100,2) percent_party_votes_by_state
-	,case when won = true then 1 else 0 end winners
-	,sum(case when won = true then 1 else 0 end) over (partition by state,party) party_winners_by_state
-from governors_county_candidate gcc
-where state = 'Indiana'
-
-
-
-with a as(
-select candidate, state 
-	,sum(case when won = true then 1 else 0 end) winners
-	,sum(votes) votes
-from governors_county_candidate gcc
-group by state,candidate
-order by sum(case when won = true then 1 else 0 end) desc)
-select state, max(winners), concat(state,(max(winners))) vlookup
-from a
-group by state
-
-select candidate, state
-	,sum(case when won = true then 1 else 0 end) winners
-	,sum(votes) votes
-	,concat(state,sum(case when won = true then 1 else 0 end)) vlookup
-from governors_county_candidate gcc
-group by candidate, state
-order by sum(case when won = true then 1 else 0 end) desc
--- połączenie zapytań
-with a as(
-select candidate, state 
-	,sum(case when won = true then 1 else 0 end) winners
-	,sum(votes) votes
-from governors_county_candidate gcc
-group by state,candidate
-order by sum(case when won = true then 1 else 0 end) desc),
-b as(select candidate, state
-	,sum(case when won = true then 1 else 0 end) winners
-	,sum(votes) votes
-	,concat(state,sum(case when won = true then 1 else 0 end)) vlookup
-from governors_county_candidate gcc
-group by candidate, state
-order by sum(case when won = true then 1 else 0 end) desc),
-select a.state, max(a.winners), concat(state,(max(a.winners))) vlookup
-from a
-group by state
-
---test
-with b(
-with a as(
-select candidate, state 
-	,sum(case when won = true then 1 else 0 end) winners
-	,sum(votes) votes
-from governors_county_candidate gcc
-group by state,candidate
-order by sum(case when won = true then 1 else 0 end) desc)
-select state, max(winners), concat(state,(max(winners))) vlookup
-from a
-group by state),
-c as(select candidate, state
-	,sum(case when won = true then 1 else 0 end) winners
-	,sum(votes) votes
-	,concat(state,sum(case when won = true then 1 else 0 end)) vlookup
-from governors_county_candidate gcc
-group by candidate, state
-order by sum(case when won = true then 1 else 0 end) desc),
-select * 
-from b 
-join c on c.vlookup = b.vlookup
-
-
-
-select distinct(state)
-from governors_county_candidate gcc 
-
-
--- połączone zapytania
 
 WITH a AS (
     SELECT candidate, state,
@@ -142,10 +54,10 @@ select *
 from president_county pc  
 
 -- presidents total votes 
-select candidate, sum(total_votes)
+select candidate, sum(total_votes)s
 from president_county_candidate pcc 
 group by candidate
-
+order by sum(total_votes) desc
 
 --Presidents - wygrani w stanach per partia per candidate wg electoral votes 
 with a as(
@@ -154,15 +66,11 @@ FROM (
     SELECT state, candidate,party, COUNT(won) AS winners, SUM(total_votes) AS total_votes,
            ROW_NUMBER() OVER (PARTITION BY state ORDER BY SUM(total_votes) DESC) AS row_num
     FROM president_county_candidate pcc
-    WHERE won = true
     GROUP BY state, candidate, party
-    order by winners desc
+    order by SUM(total_votes) desc
 ) subquery
 WHERE row_num = 1
 ORDER BY state)
 select a.*, ec.electoral_votes
 from a
 join electoral_votes ec on a.state = ec.state
-
-
-
