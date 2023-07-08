@@ -1,0 +1,2863 @@
+2023-07-08 10:11:08 [INFO] Question: Find all correlations
+2023-07-08 10:11:08 [INFO] Running PandasAI with openai LLM...
+2023-07-08 10:11:08 [INFO] Prompt ID: d01b4a4d-ca49-4179-b1d5-85330dfb174f
+2023-07-08 10:11:08 [INFO] error_code=insufficient_quota error_message='You exceeded your current quota, please check your plan and billing details.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
+2023-07-08 10:19:01 [INFO] Question: Find all correlations
+2023-07-08 10:19:01 [INFO] Running PandasAI with openai LLM...
+2023-07-08 10:19:01 [INFO] Prompt ID: b4a61c99-3a9b-49ef-80ae-c54e24691f85
+2023-07-08 10:19:02 [INFO] error_code=insufficient_quota error_message='You exceeded your current quota, please check your plan and billing details.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
+2023-07-08 10:19:16 [INFO] Question: Find all correlations
+2023-07-08 10:19:16 [INFO] Running PandasAI with openai LLM...
+2023-07-08 10:19:16 [INFO] Prompt ID: f064b8cd-59c4-4a8c-9a41-de29a88da17d
+2023-07-08 10:19:16 [INFO] error_code=insufficient_quota error_message='You exceeded your current quota, please check your plan and billing details.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
+2023-07-08 10:20:07 [INFO] Question: Find all correlations
+2023-07-08 10:20:07 [INFO] Running PandasAI with openai LLM...
+2023-07-08 10:20:07 [INFO] Prompt ID: 01a3692a-c5ea-49db-90b5-684b7b632951
+2023-07-08 10:20:07 [INFO] error_code=insufficient_quota error_message='You exceeded your current quota, please check your plan and billing details.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
+2023-07-08 10:23:49 [INFO] Question: Find all correlations
+2023-07-08 10:23:49 [INFO] Running PandasAI with openai LLM...
+2023-07-08 10:23:49 [INFO] Prompt ID: ceae4bc4-716a-4011-8cb5-06f69b3b2480
+2023-07-08 10:23:51 [INFO] 
+                        Code generated:
+                        ```
+                        correlations = df.corr()
+                        ```
+                    
+2023-07-08 10:23:51 [INFO] 
+Code running:
+```
+correlations = df.corr()
+```
+2023-07-08 10:23:53 [INFO] Answer: 
+2023-07-08 10:23:53 [INFO] Executed in: 4.197254657745361s
+2023-07-08 10:25:15 [INFO] Question: Find all correlations for numeric_only columns
+2023-07-08 10:25:15 [INFO] Running PandasAI with openai LLM...
+2023-07-08 10:25:15 [INFO] Prompt ID: a4416f5f-0291-4043-a31b-ba9d011aaf4f
+2023-07-08 10:25:16 [INFO] 
+                        Code generated:
+                        ```
+                        correlations = df.corr()
+correlations
+                        ```
+                    
+2023-07-08 10:25:16 [INFO] 
+Code running:
+```
+correlations = df.corr()
+correlations
+```
+2023-07-08 10:25:18 [INFO] Answer:                          USMER  MEDICAL_UNIT       SEX  PATIENT_TYPE  \
+USMER                 1.000000      0.127927 -0.001126     -0.190570   
+MEDICAL_UNIT          0.127927      1.000000  0.001475     -0.205413   
+SEX                  -0.001126      0.001475  1.000000      0.089505   
+PATIENT_TYPE         -0.190570     -0.205413  0.089505      1.000000   
+INTUBED               0.175457      0.205243 -0.089943     -0.976335   
+PNEUMONIA            -0.154950     -0.046433 -0.012131      0.022966   
+AGE                  -0.045088     -0.082223  0.028367      0.315193   
+PREGNANT             -0.001469      0.005300  0.992713      0.088340   
+DIABETES              0.014704      0.019523  0.008888      0.008743   
+COPD                  0.011030      0.014209  0.009372      0.019548   
+ASTHMA                0.010814      0.013312  0.010415      0.023042   
+INMSUPR               0.003234      0.011785  0.007999      0.024924   
+HIPERTENSION          0.014830      0.020964  0.009257      0.006852   
+OTHER_DISEASE        -0.015763      0.027453  0.009039      0.036724   
+CARDIOVASCULAR        0.010097      0.014406  0.008174      0.022175   
+OBESITY               0.014567      0.019577  0.009858      0.019650   
+RENAL_CHRONIC         0.011527      0.014751  0.008249      0.018873   
+TOBACCO               0.010638      0.012282  0.004919      0.022123   
+CLASIFFICATION_FINAL  0.028840      0.079981 -0.057782     -0.183370   
+ICU                   0.174901      0.205141 -0.089844     -0.975810   
+
+                       INTUBED  PNEUMONIA       AGE  PREGNANT  DIABETES  \
+USMER                 0.175457  -0.154950 -0.045088 -0.001469  0.014704   
+MEDICAL_UNIT          0.205243  -0.046433 -0.082223  0.005300  0.019523   
+SEX                  -0.089943  -0.012131  0.028367  0.992713  0.008888   
+PATIENT_TYPE         -0.976335   0.022966  0.315193  0.088340  0.008743   
+INTUBED               1.000000   0.079743 -0.317945 -0.088097 -0.009215   
+PNEUMONIA             0.079743   1.000000 -0.073127 -0.007284 -0.004484   
+AGE                  -0.317945  -0.073127  1.000000  0.027257  0.004422   
+PREGNANT             -0.088097  -0.007284  0.027257  1.000000  0.014707   
+DIABETES             -0.009215  -0.004484  0.004422  0.014707  1.000000   
+COPD                 -0.020124  -0.005618  0.019048  0.015736  0.828823   
+ASTHMA               -0.023446  -0.005392  0.022715  0.016765  0.829349   
+INMSUPR              -0.024140  -0.000802  0.022820  0.014265  0.781108   
+HIPERTENSION         -0.007628  -0.004799 -0.004964  0.015335  0.835018   
+OTHER_DISEASE        -0.035404   0.001612  0.022837  0.014175  0.634611   
+CARDIOVASCULAR       -0.022442  -0.004758  0.019489  0.014378  0.809417   
+OBESITY              -0.020217  -0.004276  0.015500  0.015895  0.752739   
+RENAL_CHRONIC        -0.019309  -0.005287  0.020124  0.014392  0.812657   
+TOBACCO              -0.022428  -0.004325  0.021263  0.010794  0.771763   
+CLASIFFICATION_FINAL  0.193075   0.075351 -0.152637 -0.057809 -0.004739   
+ICU                   0.999434   0.079691 -0.317813 -0.087991 -0.009223   
+
+                          COPD    ASTHMA   INMSUPR  HIPERTENSION  \
+USMER                 0.011030  0.010814  0.003234      0.014830   
+MEDICAL_UNIT          0.014209  0.013312  0.011785      0.020964   
+SEX                   0.009372  0.010415  0.007999      0.009257   
+PATIENT_TYPE          0.019548  0.023042  0.024924      0.006852   
+INTUBED              -0.020124 -0.023446 -0.024140     -0.007628   
+PNEUMONIA            -0.005618 -0.005392 -0.000802     -0.004799   
+AGE                   0.019048  0.022715  0.022820     -0.004964   
+PREGNANT              0.015736  0.016765  0.014265      0.015335   
+DIABETES              0.828823  0.829349  0.781108      0.835018   
+COPD                  1.000000  0.908929  0.852273      0.855249   
+ASTHMA                0.908929  1.000000  0.868917      0.864264   
+INMSUPR               0.852273  0.868917  1.000000      0.825158   
+HIPERTENSION          0.855249  0.864264  0.825158      1.000000   
+OTHER_DISEASE         0.687323  0.696709  0.734826      0.671532   
+CARDIOVASCULAR        0.880097  0.891026  0.853365      0.861063   
+OBESITY               0.814868  0.824631  0.783953      0.805127   
+RENAL_CHRONIC         0.884032  0.895050  0.852755      0.860477   
+TOBACCO               0.836097  0.845067  0.806749      0.816539   
+CLASIFFICATION_FINAL -0.010336 -0.011178 -0.009412     -0.006020   
+ICU                  -0.020146 -0.023415 -0.024077     -0.007573   
+
+                      OTHER_DISEASE  CARDIOVASCULAR   OBESITY  RENAL_CHRONIC  \
+USMER                     -0.015763        0.010097  0.014567       0.011527   
+MEDICAL_UNIT               0.027453        0.014406  0.019577       0.014751   
+SEX                        0.009039        0.008174  0.009858       0.008249   
+PATIENT_TYPE               0.036724        0.022175  0.019650       0.018873   
+INTUBED                   -0.035404       -0.022442 -0.020217      -0.019309   
+PNEUMONIA                  0.001612       -0.004758 -0.004276      -0.005287   
+AGE                        0.022837        0.019489  0.015500       0.020124   
+PREGNANT                   0.014175        0.014378  0.015895       0.014392   
+DIABETES                   0.634611        0.809417  0.752739       0.812657   
+COPD                       0.687323        0.880097  0.814868       0.884032   
+ASTHMA                     0.696709        0.891026  0.824631       0.895050   
+INMSUPR                    0.734826        0.853365  0.783953       0.852755   
+HIPERTENSION               0.671532        0.861063  0.805127       0.860477   
+OTHER_DISEASE              1.000000        0.717129  0.649809       0.704725   
+CARDIOVASCULAR             0.717129        1.000000  0.834389       0.913248   
+OBESITY                    0.649809        0.834389  1.000000       0.842466   
+RENAL_CHRONIC              0.704725        0.913248  0.842466       1.000000   
+TOBACCO                    0.668621        0.858102  0.801834       0.868761   
+CLASIFFICATION_FINAL      -0.011143       -0.012143 -0.006924      -0.011342   
+ICU                       -0.035330       -0.022413 -0.020254      -0.019285   
+
+                       TOBACCO  CLASIFFICATION_FINAL       ICU  
+USMER                 0.010638              0.028840  0.174901  
+MEDICAL_UNIT          0.012282              0.079981  0.205141  
+SEX                   0.004919             -0.057782 -0.089844  
+PATIENT_TYPE          0.022123             -0.183370 -0.975810  
+INTUBED              -0.022428              0.193075  0.999434  
+PNEUMONIA            -0.004325              0.075351  0.079691  
+AGE                   0.021263             -0.152637 -0.317813  
+PREGNANT              0.010794             -0.057809 -0.087991  
+DIABETES              0.771763             -0.004739 -0.009223  
+COPD                  0.836097             -0.010336 -0.020146  
+ASTHMA                0.845067             -0.011178 -0.023415  
+INMSUPR               0.806749             -0.009412 -0.024077  
+HIPERTENSION          0.816539             -0.006020 -0.007573  
+OTHER_DISEASE         0.668621             -0.011143 -0.035330  
+CARDIOVASCULAR        0.858102             -0.012143 -0.022413  
+OBESITY               0.801834             -0.006924 -0.020254  
+RENAL_CHRONIC         0.868761             -0.011342 -0.019285  
+TOBACCO               1.000000             -0.012567 -0.022445  
+CLASIFFICATION_FINAL -0.012567              1.000000  0.193163  
+ICU                  -0.022445              0.193163  1.000000  
+2023-07-08 10:25:18 [INFO] Executed in: 2.6755805015563965s
+2023-07-08 10:26:10 [INFO] Question: Find all correlations for numeric_only columns, make chart with only strong correlations
+2023-07-08 10:26:10 [INFO] Running PandasAI with openai LLM...
+2023-07-08 10:26:10 [INFO] Prompt ID: 54f957e0-7f89-4a5a-a182-adf9d99c7af7
+2023-07-08 10:26:13 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import seaborn as sns
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Convert DATE_DIED column to datetime
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+
+# Calculate correlations for numeric columns
+correlations = df.corr()
+
+# Filter out weak correlations
+strong_correlations = correlations[correlations.abs() > 0.5]
+
+# Plot the strong correlations
+sns.heatmap(strong_correlations, annot=True, cmap='coolwarm')
+                        ```
+                    
+2023-07-08 10:26:13 [INFO] 
+Code running:
+```
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+correlations = df.corr()
+strong_correlations = correlations[correlations.abs() > 0.5]
+sns.heatmap(strong_correlations, annot=True, cmap='coolwarm')
+```
+2023-07-08 10:26:36 [INFO] Answer: 
+2023-07-08 10:26:36 [INFO] Executed in: 26.16829538345337s
+2023-07-08 10:27:06 [INFO] Question: Find all correlations for numeric_only columns, make chart with only strong correlations
+2023-07-08 10:27:06 [INFO] Running PandasAI with openai LLM...
+2023-07-08 10:27:06 [INFO] Prompt ID: e9997981-9325-4e39-9f32-2dd148f97c3c
+2023-07-08 10:27:06 [INFO] Using cached response
+2023-07-08 10:27:06 [INFO] 
+Code running:
+```
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+correlations = df.corr()
+strong_correlations = correlations[correlations.abs() > 0.5]
+sns.heatmap(strong_correlations, annot=True, cmap='coolwarm')
+```
+2023-07-08 10:27:15 [INFO] Answer: 
+2023-07-08 10:27:15 [INFO] Executed in: 9.001370429992676s
+2023-07-08 10:27:39 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts
+2023-07-08 10:27:39 [INFO] Running PandasAI with openai LLM...
+2023-07-08 10:27:39 [INFO] Prompt ID: dd49d934-8021-4995-a143-fe91e0ee15cc
+2023-07-08 10:27:45 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Read the dataframe
+df = pd.read_csv('data.csv')
+
+# Select only numeric columns
+numeric_columns = df.select_dtypes(include=['int64', 'float64'])
+
+# Calculate the correlation matrix
+correlation_matrix = numeric_columns.corr()
+
+# Plot the correlation matrix as a heatmap
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(correlation_matrix.columns)), correlation_matrix.columns, rotation=90)
+plt.yticks(range(len(correlation_matrix.columns)), correlation_matrix.columns)
+plt.title('Correlation Matrix')
+plt.show()
+                        ```
+                    
+2023-07-08 10:27:45 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['int64', 'float64'])
+correlation_matrix = numeric_columns.corr()
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(correlation_matrix.columns)), correlation_matrix.
+    columns, rotation=90)
+plt.yticks(range(len(correlation_matrix.columns)), correlation_matrix.columns)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 10:27:47 [INFO] Answer: None
+2023-07-08 10:27:47 [INFO] Executed in: 8.347494125366211s
+2023-07-08 10:38:44 [INFO] Question: Add column "death" when column "DATE_DIET" is not "9999-99-99" is 1 else 0 and find correlations columnt "death" with numeric_only columns and make chart correlation matrix
+2023-07-08 10:38:44 [INFO] Running PandasAI with openai LLM...
+2023-07-08 10:38:44 [INFO] Prompt ID: f9f317d8-5f1d-429d-9b75-8e3755e04523
+2023-07-08 10:38:49 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Read the dataframe
+df = pd.read_csv("data.csv")
+
+# Convert DATE_DIED column to datetime format
+df["DATE_DIED"] = pd.to_datetime(df["DATE_DIED"], format="%d/%m/%Y")
+
+# Add death column
+df["death"] = np.where(df["DATE_DIED"] != "9999-99-99", 1, 0)
+
+# Select numeric columns for correlation matrix
+numeric_columns = df.select_dtypes(include=np.number).columns
+
+# Calculate correlation matrix
+correlation_matrix = df[numeric_columns].corr()
+
+# Plot correlation matrix
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap="coolwarm", interpolation="nearest")
+plt.colorbar()
+plt.xticks(range(len(numeric_columns)), numeric_columns, rotation=90)
+plt.yticks(range(len(numeric_columns)), numeric_columns)
+plt.title("Correlation Matrix")
+plt.show()
+                        ```
+                    
+2023-07-08 10:38:49 [INFO] 
+Code running:
+```
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+df['death'] = np.where(df['DATE_DIED'] != '9999-99-99', 1, 0)
+numeric_columns = df.select_dtypes(include=np.number).columns
+correlation_matrix = df[numeric_columns].corr()
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(numeric_columns)), numeric_columns, rotation=90)
+plt.yticks(range(len(numeric_columns)), numeric_columns)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 10:39:03 [INFO] Answer: None
+2023-07-08 10:39:03 [INFO] Executed in: 18.62997841835022s
+2023-07-08 10:39:24 [INFO] Question: Add column "death" when column "DATE_DIET" is not "9999-99-99" is 1 else 0. Find correlations column "death" with numeric_only columns and make chart correlation matrix
+2023-07-08 10:39:24 [INFO] Running PandasAI with openai LLM...
+2023-07-08 10:39:24 [INFO] Prompt ID: 30747105-3f41-4864-8a40-b7913d57f08b
+2023-07-08 10:39:29 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Convert the 'DATE_DIED' column to datetime format
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y', errors='coerce')
+
+# Add the 'death' column
+df['death'] = np.where(df['DATE_DIED'] != '9999-99-99', 1, 0)
+
+# Select numeric columns for correlation matrix
+numeric_columns = df.select_dtypes(include=np.number).columns
+
+# Calculate correlation matrix
+correlation_matrix = df[numeric_columns].corr()
+
+# Plot correlation matrix
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(numeric_columns)), numeric_columns, rotation=90)
+plt.yticks(range(len(numeric_columns)), numeric_columns)
+plt.title('Correlation Matrix')
+plt.show()
+                        ```
+                    
+2023-07-08 10:39:29 [INFO] 
+Code running:
+```
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y', errors
+    ='coerce')
+df['death'] = np.where(df['DATE_DIED'] != '9999-99-99', 1, 0)
+numeric_columns = df.select_dtypes(include=np.number).columns
+correlation_matrix = df[numeric_columns].corr()
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(numeric_columns)), numeric_columns, rotation=90)
+plt.yticks(range(len(numeric_columns)), numeric_columns)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 10:39:31 [INFO] Answer: None
+2023-07-08 10:39:31 [INFO] Executed in: 7.44223690032959s
+2023-07-08 10:39:47 [INFO] Question: Add column "death" when column "DATE_DIET" is not "9999-99-99" is 1 else 0. Find correlations witn new column "death" with numeric_only columns and make chart correlation matrix
+2023-07-08 10:39:47 [INFO] Running PandasAI with openai LLM...
+2023-07-08 10:39:47 [INFO] Prompt ID: 5a27512f-bdbd-4269-b3f1-446b2fa7e7b0
+2023-07-08 10:39:51 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv("data.csv")
+
+# Convert DATE_DIED column to datetime
+df["DATE_DIED"] = pd.to_datetime(df["DATE_DIED"], format="%Y-%m-%d")
+
+# Add column "death" based on DATE_DIED column
+df["death"] = np.where(df["DATE_DIED"] != "9999-99-99", 1, 0)
+
+# Select numeric_only columns
+numeric_columns = df.select_dtypes(include=np.number).columns
+
+# Calculate correlation matrix
+correlation_matrix = df[numeric_columns].corr()
+
+# Plot correlation matrix
+plt.figure(figsize=(10, 8))
+sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm")
+plt.title("Correlation Matrix")
+plt.show()
+                        ```
+                    
+2023-07-08 10:39:51 [INFO] 
+Code running:
+```
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%Y-%m-%d')
+df['death'] = np.where(df['DATE_DIED'] != '9999-99-99', 1, 0)
+numeric_columns = df.select_dtypes(include=np.number).columns
+correlation_matrix = df[numeric_columns].corr()
+plt.figure(figsize=(10, 8))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 10:39:54 [INFO] Answer: None
+2023-07-08 10:39:54 [INFO] Executed in: 7.2297680377960205s
+2023-07-08 10:43:31 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts
+2023-07-08 10:43:31 [INFO] Running PandasAI with openai LLM...
+2023-07-08 10:43:31 [INFO] Prompt ID: 1a981e05-2c74-40e7-b236-4aa209ce7fe9
+2023-07-08 10:43:31 [INFO] Using cached response
+2023-07-08 10:43:31 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['int64', 'float64'])
+correlation_matrix = numeric_columns.corr()
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(correlation_matrix.columns)), correlation_matrix.
+    columns, rotation=90)
+plt.yticks(range(len(correlation_matrix.columns)), correlation_matrix.columns)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 10:43:34 [INFO] Answer: None
+2023-07-08 10:43:34 [INFO] Executed in: 2.7900073528289795s
+2023-07-08 10:43:53 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts
+2023-07-08 10:43:53 [INFO] Running PandasAI with openai LLM...
+2023-07-08 10:43:53 [INFO] Prompt ID: e3edb12a-bdb5-456a-89fc-f4c31179d70b
+2023-07-08 10:43:53 [INFO] Using cached response
+2023-07-08 10:43:53 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['int64', 'float64'])
+correlation_matrix = numeric_columns.corr()
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(correlation_matrix.columns)), correlation_matrix.
+    columns, rotation=90)
+plt.yticks(range(len(correlation_matrix.columns)), correlation_matrix.columns)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 10:43:56 [INFO] Answer: None
+2023-07-08 10:43:56 [INFO] Executed in: 2.9268546104431152s
+2023-07-08 10:52:05 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts
+2023-07-08 10:52:05 [INFO] Running PandasAI with openai LLM...
+2023-07-08 10:52:05 [INFO] Prompt ID: 66297336-18e3-486f-860b-b15373148109
+2023-07-08 10:52:05 [INFO] Using cached response
+2023-07-08 10:52:05 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['int64', 'float64'])
+correlation_matrix = numeric_columns.corr()
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(correlation_matrix.columns)), correlation_matrix.
+    columns, rotation=90)
+plt.yticks(range(len(correlation_matrix.columns)), correlation_matrix.columns)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 10:52:08 [INFO] Answer: None
+2023-07-08 10:52:08 [INFO] Executed in: 2.8335366249084473s
+2023-07-08 10:55:10 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts
+2023-07-08 10:55:10 [INFO] Running PandasAI with openai LLM...
+2023-07-08 10:55:10 [INFO] Prompt ID: 3dc23760-1e9b-4dfc-9ec9-adc71a590565
+2023-07-08 10:55:10 [INFO] Using cached response
+2023-07-08 10:55:10 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['int64', 'float64'])
+correlation_matrix = numeric_columns.corr()
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(correlation_matrix.columns)), correlation_matrix.
+    columns, rotation=90)
+plt.yticks(range(len(correlation_matrix.columns)), correlation_matrix.columns)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 10:55:13 [INFO] Answer: None
+2023-07-08 10:55:13 [INFO] Executed in: 2.9288318157196045s
+2023-07-08 10:56:23 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts, ignore NaN value
+2023-07-08 10:56:23 [INFO] Running PandasAI with openai LLM...
+2023-07-08 10:56:23 [INFO] Prompt ID: 5b49472f-6d3d-4fa7-9690-1042ab087015
+2023-07-08 10:56:27 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Read the dataframe from the given metadata
+df = pd.read_csv("data.csv")
+
+# Convert the DATE_DIED column to datetime format
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], dayfirst=True)
+
+# Drop rows with NaN values
+df = df.dropna()
+
+# Select only numeric columns
+numeric_columns = df.select_dtypes(include=['float64', 'int64'])
+
+# Calculate the correlation matrix
+correlation_matrix = numeric_columns.corr()
+
+# Plot the correlation matrix as a heatmap
+plt.figure(figsize=(10, 8))
+plt.title('Correlation Matrix')
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
+plt.show()
+                        ```
+                    
+2023-07-08 10:56:27 [INFO] 
+Code running:
+```
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], dayfirst=True)
+numeric_columns = df.select_dtypes(include=['float64', 'int64'])
+correlation_matrix = numeric_columns.corr()
+plt.figure(figsize=(10, 8))
+plt.title('Correlation Matrix')
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 10:56:38 [INFO] Answer: None
+2023-07-08 10:56:38 [INFO] Executed in: 15.099124670028687s
+2023-07-08 10:57:02 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts, ignore empty value
+2023-07-08 10:57:02 [INFO] Running PandasAI with openai LLM...
+2023-07-08 10:57:02 [INFO] Prompt ID: 3e5fbc87-1b61-4482-a811-f2d5b4ad8b17
+2023-07-08 10:57:08 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Convert DATE_DIED column to datetime
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+
+# Drop rows with empty values
+df = df.dropna()
+
+# Select numeric columns only
+numeric_columns = df.select_dtypes(include=['float64', 'int64']).columns
+
+# Calculate correlations
+correlations = df[numeric_columns].corr()
+
+# Plot correlation matrix
+plt.figure(figsize=(10, 8))
+plt.imshow(correlations, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(numeric_columns)), numeric_columns, rotation=90)
+plt.yticks(range(len(numeric_columns)), numeric_columns)
+plt.title('Correlation Matrix')
+plt.show()
+                        ```
+                    
+2023-07-08 10:57:08 [INFO] 
+Code running:
+```
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+numeric_columns = df.select_dtypes(include=['float64', 'int64']).columns
+correlations = df[numeric_columns].corr()
+plt.figure(figsize=(10, 8))
+plt.imshow(correlations, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(numeric_columns)), numeric_columns, rotation=90)
+plt.yticks(range(len(numeric_columns)), numeric_columns)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 10:57:22 [INFO] Answer: None
+2023-07-08 10:57:22 [INFO] Executed in: 19.438504219055176s
+2023-07-08 10:57:41 [INFO] Question: Find all correlations for numeric_only columns, ignore empty value and make chart or charts
+2023-07-08 10:57:41 [INFO] Running PandasAI with openai LLM...
+2023-07-08 10:57:41 [INFO] Prompt ID: 0bcbc677-61cc-4322-b1e4-f6c4e8ef68ff
+2023-07-08 10:57:46 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Read the dataframe from a csv file
+df = pd.read_csv('data.csv')
+
+# Convert the DATE_DIED column to datetime format
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+
+# Drop rows with empty values
+df = df.dropna()
+
+# Select only numeric columns
+numeric_columns = df.select_dtypes(include=['float64', 'int64'])
+
+# Calculate the correlation matrix
+correlation_matrix = numeric_columns.corr()
+
+# Plot the correlation matrix as a heatmap
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(correlation_matrix.columns)), correlation_matrix.columns, rotation=90)
+plt.yticks(range(len(correlation_matrix.columns)), correlation_matrix.columns)
+plt.title('Correlation Matrix')
+plt.show()
+                        ```
+                    
+2023-07-08 10:57:46 [INFO] 
+Code running:
+```
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+numeric_columns = df.select_dtypes(include=['float64', 'int64'])
+correlation_matrix = numeric_columns.corr()
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(correlation_matrix.columns)), correlation_matrix.
+    columns, rotation=90)
+plt.yticks(range(len(correlation_matrix.columns)), correlation_matrix.columns)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 10:58:00 [INFO] Answer: None
+2023-07-08 10:58:00 [INFO] Executed in: 18.899591207504272s
+2023-07-08 10:58:12 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts
+2023-07-08 10:58:12 [INFO] Running PandasAI with openai LLM...
+2023-07-08 10:58:12 [INFO] Prompt ID: 2db3ffed-d0cd-472a-9d51-e07f72361924
+2023-07-08 10:58:12 [INFO] Using cached response
+2023-07-08 10:58:12 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['int64', 'float64'])
+correlation_matrix = numeric_columns.corr()
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(correlation_matrix.columns)), correlation_matrix.
+    columns, rotation=90)
+plt.yticks(range(len(correlation_matrix.columns)), correlation_matrix.columns)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 10:58:14 [INFO] Answer: None
+2023-07-08 10:58:14 [INFO] Executed in: 2.651280403137207s
+2023-07-08 10:58:44 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts
+2023-07-08 10:58:44 [INFO] Running PandasAI with openai LLM...
+2023-07-08 10:58:44 [INFO] Prompt ID: 7450d7ac-0c18-45ec-b9ae-4561b893fa0a
+2023-07-08 10:58:44 [INFO] Using cached response
+2023-07-08 10:58:44 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['int64', 'float64'])
+correlation_matrix = numeric_columns.corr()
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(correlation_matrix.columns)), correlation_matrix.
+    columns, rotation=90)
+plt.yticks(range(len(correlation_matrix.columns)), correlation_matrix.columns)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 10:58:47 [INFO] Answer: None
+2023-07-08 10:58:47 [INFO] Executed in: 3.008517265319824s
+2023-07-08 11:02:06 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts
+2023-07-08 11:02:06 [INFO] Running PandasAI with openai LLM...
+2023-07-08 11:02:06 [INFO] Prompt ID: cde7a4fb-43ac-4581-9964-dceabe9825c7
+2023-07-08 11:02:06 [INFO] Using cached response
+2023-07-08 11:02:06 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['int64', 'float64'])
+correlation_matrix = numeric_columns.corr()
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(correlation_matrix.columns)), correlation_matrix.
+    columns, rotation=90)
+plt.yticks(range(len(correlation_matrix.columns)), correlation_matrix.columns)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 11:02:09 [INFO] Answer: None
+2023-07-08 11:02:09 [INFO] Executed in: 3.0102474689483643s
+2023-07-08 11:02:51 [INFO] Question: Find all correlations for numeric_only columns and make chart. Make grey color for 0 correlation
+2023-07-08 11:02:51 [INFO] Running PandasAI with openai LLM...
+2023-07-08 11:02:51 [INFO] Prompt ID: 222e0be6-d1ed-4132-915c-75ba414edb76
+2023-07-08 11:02:54 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Read the dataframe
+df = pd.read_csv('data.csv')
+
+# Select only numeric columns
+numeric_columns = df.select_dtypes(include=['int64', 'float64']).columns
+
+# Calculate the correlation matrix
+correlation_matrix = df[numeric_columns].corr()
+
+# Plot the correlation matrix
+plt.figure(figsize=(10, 8))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', linewidths=0.5)
+plt.title('Correlation Matrix')
+plt.show()
+                        ```
+                    
+2023-07-08 11:02:54 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['int64', 'float64']).columns
+correlation_matrix = df[numeric_columns].corr()
+plt.figure(figsize=(10, 8))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', linewidths=0.5)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 11:02:59 [INFO] Answer: None
+2023-07-08 11:02:59 [INFO] Executed in: 7.272666931152344s
+2023-07-08 11:03:21 [INFO] Question: Find all correlations for numeric_only columns and make chart. Make grey color for -0,2 to 0,2 correlation
+2023-07-08 11:03:21 [INFO] Running PandasAI with openai LLM...
+2023-07-08 11:03:21 [INFO] Prompt ID: 8f366187-c244-42ed-a490-98837824babe
+2023-07-08 11:03:24 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Read the dataframe
+df = pd.read_csv('data.csv')
+
+# Select only numeric columns
+numeric_columns = df.select_dtypes(include=['int64', 'float64'])
+
+# Calculate the correlation matrix
+correlation_matrix = numeric_columns.corr()
+
+# Plot the correlation matrix
+plt.figure(figsize=(10, 8))
+sns.heatmap(correlation_matrix, cmap='coolwarm', annot=True, vmin=-0.2, vmax=0.2)
+plt.title('Correlation Matrix')
+plt.show()
+                        ```
+                    
+2023-07-08 11:03:24 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['int64', 'float64'])
+correlation_matrix = numeric_columns.corr()
+plt.figure(figsize=(10, 8))
+sns.heatmap(correlation_matrix, cmap='coolwarm', annot=True, vmin=-0.2,
+    vmax=0.2)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 11:03:27 [INFO] Answer: None
+2023-07-08 11:03:27 [INFO] Executed in: 5.836666584014893s
+2023-07-08 11:03:40 [INFO] Question: Find all correlations for numeric_only columns and make chart. Make grey color for -0,02 to 0,02 correlation
+2023-07-08 11:03:40 [INFO] Running PandasAI with openai LLM...
+2023-07-08 11:03:40 [INFO] Prompt ID: fc2e40a7-b85c-4e8c-ba1f-4f300900656c
+2023-07-08 11:03:44 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Read the dataframe
+df = pd.read_csv('data.csv')
+
+# Select only numeric columns
+numeric_columns = df.select_dtypes(include=['int64', 'float64']).columns
+
+# Calculate correlations
+correlations = df[numeric_columns].corr()
+
+# Plot the correlation matrix
+plt.figure(figsize=(10, 8))
+sns.heatmap(correlations, cmap='coolwarm', annot=True, vmin=-0.02, vmax=0.02)
+plt.title('Correlation Matrix')
+plt.show()
+                        ```
+                    
+2023-07-08 11:03:44 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['int64', 'float64']).columns
+correlations = df[numeric_columns].corr()
+plt.figure(figsize=(10, 8))
+sns.heatmap(correlations, cmap='coolwarm', annot=True, vmin=-0.02, vmax=0.02)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 11:03:48 [INFO] Answer: None
+2023-07-08 11:03:48 [INFO] Executed in: 7.256556272506714s
+2023-07-08 11:04:02 [INFO] Question: Find all correlations for numeric_only columns and make chart.
+2023-07-08 11:04:02 [INFO] Running PandasAI with openai LLM...
+2023-07-08 11:04:02 [INFO] Prompt ID: dbddcdc5-2fda-4f59-81f7-3be330ad66e1
+2023-07-08 11:04:07 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Convert the 'DATE_DIED' column to datetime format
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+
+# Calculate the correlations for numeric columns
+correlations = df.corr()
+
+# Plot the correlation matrix as a heatmap
+plt.figure(figsize=(10, 8))
+plt.imshow(correlations, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(correlations.columns)), correlations.columns, rotation=90)
+plt.yticks(range(len(correlations.columns)), correlations.columns)
+plt.title('Correlation Matrix')
+plt.show()
+                        ```
+                    
+2023-07-08 11:04:07 [INFO] 
+Code running:
+```
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+correlations = df.corr()
+plt.figure(figsize=(10, 8))
+plt.imshow(correlations, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(correlations.columns)), correlations.columns, rotation=90)
+plt.yticks(range(len(correlations.columns)), correlations.columns)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 11:04:19 [INFO] Answer: None
+2023-07-08 11:04:19 [INFO] Executed in: 17.595810413360596s
+2023-07-08 11:04:37 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts.
+2023-07-08 11:04:37 [INFO] Running PandasAI with openai LLM...
+2023-07-08 11:04:37 [INFO] Prompt ID: 791e5177-52ca-446c-8a31-1beeee4300db
+2023-07-08 11:04:42 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Select only numeric columns
+numeric_columns = df.select_dtypes(include=['int64', 'float64'])
+
+# Calculate the correlation matrix
+correlation_matrix = numeric_columns.corr()
+
+# Plot the correlation matrix as a heatmap
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(correlation_matrix.columns)), correlation_matrix.columns, rotation=90)
+plt.yticks(range(len(correlation_matrix.columns)), correlation_matrix.columns)
+plt.title('Correlation Matrix')
+plt.show()
+                        ```
+                    
+2023-07-08 11:04:42 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['int64', 'float64'])
+correlation_matrix = numeric_columns.corr()
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(correlation_matrix.columns)), correlation_matrix.
+    columns, rotation=90)
+plt.yticks(range(len(correlation_matrix.columns)), correlation_matrix.columns)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 11:04:44 [INFO] Answer: None
+2023-07-08 11:04:44 [INFO] Executed in: 6.914539098739624s
+2023-07-08 11:05:07 [INFO] Question: Find all correlations for numeric_only columns and make correlation matrix chart.
+2023-07-08 11:05:07 [INFO] Running PandasAI with openai LLM...
+2023-07-08 11:05:07 [INFO] Prompt ID: 47770ee6-b33c-49ca-bcd7-3363d7ca0462
+2023-07-08 11:05:11 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Convert DATE_DIED column to datetime
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+
+# Calculate correlations for numeric_only columns
+correlations = df.corr()
+
+# Plot correlation matrix chart
+plt.figure(figsize=(10, 8))
+plt.imshow(correlations, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(np.arange(len(correlations.columns)), correlations.columns, rotation=90)
+plt.yticks(np.arange(len(correlations.columns)), correlations.columns)
+plt.title('Correlation Matrix')
+plt.show()
+                        ```
+                    
+2023-07-08 11:05:11 [INFO] 
+Code running:
+```
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+correlations = df.corr()
+plt.figure(figsize=(10, 8))
+plt.imshow(correlations, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(np.arange(len(correlations.columns)), correlations.columns,
+    rotation=90)
+plt.yticks(np.arange(len(correlations.columns)), correlations.columns)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 11:05:23 [INFO] Answer: None
+2023-07-08 11:05:23 [INFO] Executed in: 16.606775522232056s
+2023-07-08 11:05:30 [INFO] Question: Find all correlations for numeric_only columns and make charts.
+2023-07-08 11:05:30 [INFO] Running PandasAI with openai LLM...
+2023-07-08 11:05:30 [INFO] Prompt ID: 48a10c97-7d3f-42d1-b168-de24710b0523
+2023-07-08 11:05:33 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Convert DATE_DIED column to datetime
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+
+# Calculate correlations for numeric columns
+correlations = df.corr()
+
+# Plot correlation matrix
+plt.figure(figsize=(10, 8))
+plt.imshow(correlations, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(correlations.columns)), correlations.columns, rotation=90)
+plt.yticks(range(len(correlations.columns)), correlations.columns)
+plt.title('Correlation Matrix')
+plt.show()
+                        ```
+                    
+2023-07-08 11:05:33 [INFO] 
+Code running:
+```
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+correlations = df.corr()
+plt.figure(figsize=(10, 8))
+plt.imshow(correlations, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(correlations.columns)), correlations.columns, rotation=90)
+plt.yticks(range(len(correlations.columns)), correlations.columns)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 11:05:44 [INFO] Answer: None
+2023-07-08 11:05:44 [INFO] Executed in: 14.371516227722168s
+2023-07-08 11:05:52 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts.
+2023-07-08 11:05:52 [INFO] Running PandasAI with openai LLM...
+2023-07-08 11:05:52 [INFO] Prompt ID: c0a1a1ad-8dd3-485d-8620-1387ebb00cf4
+2023-07-08 11:05:52 [INFO] Using cached response
+2023-07-08 11:05:52 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['int64', 'float64'])
+correlation_matrix = numeric_columns.corr()
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(correlation_matrix.columns)), correlation_matrix.
+    columns, rotation=90)
+plt.yticks(range(len(correlation_matrix.columns)), correlation_matrix.columns)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 11:05:54 [INFO] Answer: None
+2023-07-08 11:05:54 [INFO] Executed in: 2.608546495437622s
+2023-07-08 11:06:29 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts. Make color for 1 red, for -1 blue, for 0 grey.
+2023-07-08 11:06:29 [INFO] Running PandasAI with openai LLM...
+2023-07-08 11:06:29 [INFO] Prompt ID: 8b40404d-c459-4460-b729-9faf40ae4c2a
+2023-07-08 11:06:32 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Select only numeric columns
+numeric_columns = df.select_dtypes(include=['int64', 'float64'])
+
+# Calculate the correlation matrix
+correlation_matrix = numeric_columns.corr()
+
+# Plot the correlation matrix
+plt.figure(figsize=(10, 8))
+sns.heatmap(correlation_matrix, annot=True, cmap=sns.diverging_palette(220, 10, as_cmap=True), center=0)
+plt.title('Correlation Matrix')
+plt.show()
+                        ```
+                    
+2023-07-08 11:06:32 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['int64', 'float64'])
+correlation_matrix = numeric_columns.corr()
+plt.figure(figsize=(10, 8))
+sns.heatmap(correlation_matrix, annot=True, cmap=sns.diverging_palette(220,
+    10, as_cmap=True), center=0)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 11:06:35 [INFO] Answer: None
+2023-07-08 11:06:35 [INFO] Executed in: 6.353478908538818s
+2023-07-08 11:06:46 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts. Make colors for 1 red, for -1 blue, for 0 grey.
+2023-07-08 11:06:46 [INFO] Running PandasAI with openai LLM...
+2023-07-08 11:06:46 [INFO] Prompt ID: bf785ce1-ec9b-4170-9bd7-b4858c190f15
+2023-07-08 11:06:50 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Convert DATE_DIED column to datetime
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+
+# Calculate correlations for numeric columns
+correlations = df.corr()
+
+# Create a mask for upper triangle of the correlation matrix
+mask = np.triu(np.ones_like(correlations, dtype=bool))
+
+# Set color palette
+cmap = sns.diverging_palette(250, 10, as_cmap=True)
+
+# Plot the correlation matrix
+plt.figure(figsize=(12, 8))
+sns.heatmap(correlations, mask=mask, cmap=cmap, center=0, annot=True, fmt=".2f", linewidths=0.5)
+plt.title('Correlation Matrix')
+plt.show()
+                        ```
+                    
+2023-07-08 11:06:50 [INFO] 
+Code running:
+```
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+correlations = df.corr()
+mask = np.triu(np.ones_like(correlations, dtype=bool))
+cmap = sns.diverging_palette(250, 10, as_cmap=True)
+plt.figure(figsize=(12, 8))
+sns.heatmap(correlations, mask=mask, cmap=cmap, center=0, annot=True, fmt=
+    '.2f', linewidths=0.5)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 11:07:03 [INFO] Answer: None
+2023-07-08 11:07:03 [INFO] Executed in: 17.098222255706787s
+2023-07-08 11:07:15 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts. Make colors in legend for 1 red, for -1 blue, for 0 grey.
+2023-07-08 11:07:15 [INFO] Running PandasAI with openai LLM...
+2023-07-08 11:07:15 [INFO] Prompt ID: d94ec4c2-fd32-4c6c-a5e8-a70ceeb4fec8
+2023-07-08 11:07:19 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Select only numeric columns
+numeric_columns = df.select_dtypes(include=['int64', 'float64'])
+
+# Calculate the correlation matrix
+correlation_matrix = numeric_columns.corr()
+
+# Plot the correlation matrix
+sns.heatmap(correlation_matrix, cmap='coolwarm', annot=True)
+
+# Set the legend colors
+colors = {'red': '#FF0000', 'blue': '#0000FF', 'grey': '#808080'}
+legend_colors = [colors['red'], colors['blue'], colors['grey']]
+labels = ['1', '-1', '0']
+legend_elements = [plt.Line2D([0], [0], marker='o', color='w', markerfacecolor=color, markersize=10) for color in legend_colors]
+
+# Add the legend
+plt.legend(legend_elements, labels, title='Correlation', loc='upper right')
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-07-08 11:07:19 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['int64', 'float64'])
+correlation_matrix = numeric_columns.corr()
+sns.heatmap(correlation_matrix, cmap='coolwarm', annot=True)
+colors = {'red': '#FF0000', 'blue': '#0000FF', 'grey': '#808080'}
+legend_colors = [colors['red'], colors['blue'], colors['grey']]
+labels = ['1', '-1', '0']
+legend_elements = [plt.Line2D([0], [0], marker='o', color='w',
+    markerfacecolor=color, markersize=10) for color in legend_colors]
+plt.legend(legend_elements, labels, title='Correlation', loc='upper right')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 11:07:23 [INFO] Answer: None
+2023-07-08 11:07:23 [INFO] Executed in: 8.103679418563843s
+2023-07-08 11:07:37 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts. Make colors for 1= red, for -1 =blue, for 0 =grey.
+2023-07-08 11:07:37 [INFO] Running PandasAI with openai LLM...
+2023-07-08 11:07:37 [INFO] Prompt ID: d9fddb1a-4ebf-4119-b44b-2beca4f121c0
+2023-07-08 11:07:40 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Convert DATE_DIED column to datetime
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+
+# Calculate correlations for numeric columns
+correlations = df.corr()
+
+# Plot the correlation matrix
+plt.figure(figsize=(12, 8))
+sns.heatmap(correlations, cmap='RdBu', annot=True)
+plt.title('Correlation Matrix')
+plt.show()
+                        ```
+                    
+2023-07-08 11:07:40 [INFO] 
+Code running:
+```
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+correlations = df.corr()
+plt.figure(figsize=(12, 8))
+sns.heatmap(correlations, cmap='RdBu', annot=True)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 11:07:50 [INFO] Answer: None
+2023-07-08 11:07:50 [INFO] Executed in: 12.690526723861694s
+2023-07-08 11:08:03 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts.
+2023-07-08 11:08:03 [INFO] Running PandasAI with openai LLM...
+2023-07-08 11:08:03 [INFO] Prompt ID: 5df2b838-b02c-42df-9e4a-48a6c1e777e6
+2023-07-08 11:08:03 [INFO] Using cached response
+2023-07-08 11:08:03 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['int64', 'float64'])
+correlation_matrix = numeric_columns.corr()
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(correlation_matrix.columns)), correlation_matrix.
+    columns, rotation=90)
+plt.yticks(range(len(correlation_matrix.columns)), correlation_matrix.columns)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 11:08:06 [INFO] Answer: None
+2023-07-08 11:08:06 [INFO] Executed in: 2.709362268447876s
+2023-07-08 11:09:35 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts.
+2023-07-08 11:09:35 [INFO] Running PandasAI with openai LLM...
+2023-07-08 11:09:35 [INFO] Prompt ID: 0f67c8be-1366-411c-b769-be6df48d82ca
+2023-07-08 11:09:35 [INFO] Using cached response
+2023-07-08 11:09:35 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['int64', 'float64'])
+correlation_matrix = numeric_columns.corr()
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(correlation_matrix.columns)), correlation_matrix.
+    columns, rotation=90)
+plt.yticks(range(len(correlation_matrix.columns)), correlation_matrix.columns)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 11:09:38 [INFO] Answer: None
+2023-07-08 11:09:38 [INFO] Executed in: 2.7720916271209717s
+2023-07-08 11:14:00 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts.
+2023-07-08 11:14:00 [INFO] Running PandasAI with openai LLM...
+2023-07-08 11:14:00 [INFO] Prompt ID: a0c10104-3e8d-4547-8b72-ca5db1632f6a
+2023-07-08 11:14:00 [INFO] Using cached response
+2023-07-08 11:14:00 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['int64', 'float64'])
+correlation_matrix = numeric_columns.corr()
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(correlation_matrix.columns)), correlation_matrix.
+    columns, rotation=90)
+plt.yticks(range(len(correlation_matrix.columns)), correlation_matrix.columns)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 11:14:04 [INFO] Answer: None
+2023-07-08 11:14:04 [INFO] Executed in: 3.177410364151001s
+2023-07-08 11:15:28 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts.
+2023-07-08 11:15:28 [INFO] Running PandasAI with openai LLM...
+2023-07-08 11:15:28 [INFO] Prompt ID: 0b8087c0-81c0-4333-87d7-a3ea546cf7e9
+2023-07-08 11:15:28 [INFO] Using cached response
+2023-07-08 11:15:28 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['int64', 'float64'])
+correlation_matrix = numeric_columns.corr()
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(correlation_matrix.columns)), correlation_matrix.
+    columns, rotation=90)
+plt.yticks(range(len(correlation_matrix.columns)), correlation_matrix.columns)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 11:15:31 [INFO] Answer: None
+2023-07-08 11:15:31 [INFO] Executed in: 2.7537646293640137s
+2023-07-08 11:17:06 [INFO] Question: Find correlation beetween DEATH and TOTAL_DISEASES
+2023-07-08 11:17:06 [INFO] Running PandasAI with openai LLM...
+2023-07-08 11:17:06 [INFO] Prompt ID: 44f0dfb4-f967-4a4a-aa22-e53ab662c95f
+2023-07-08 11:17:07 [INFO] 
+                        Code generated:
+                        ```
+                        df['DEATH'].corr(df['TOTAL_DISEASES'])
+                        ```
+                    
+2023-07-08 11:17:07 [INFO] 
+Code running:
+```
+df['DEATH'].corr(df['TOTAL_DISEASES'])
+```
+2023-07-08 11:17:07 [INFO] Answer: 0.045173226574557065
+2023-07-08 11:17:07 [INFO] Executed in: 0.8002715110778809s
+2023-07-08 11:17:21 [INFO] Question: Find correlation beetween DEATH and TOTAL_DISEASES and make chart
+2023-07-08 11:17:21 [INFO] Running PandasAI with openai LLM...
+2023-07-08 11:17:21 [INFO] Prompt ID: 8778be53-9da3-4e0f-aca4-55b2c44c374b
+2023-07-08 11:17:24 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Convert DATE_DIED column to datetime
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+
+# Calculate correlation between DEATH and TOTAL_DISEASES
+correlation = df['DEATH'].corr(df['TOTAL_DISEASES'])
+
+# Plot the correlation
+plt.scatter(df['DEATH'], df['TOTAL_DISEASES'])
+plt.xlabel('DEATH')
+plt.ylabel('TOTAL_DISEASES')
+plt.title(f'Correlation: {correlation}')
+plt.show()
+                        ```
+                    
+2023-07-08 11:17:24 [INFO] 
+Code running:
+```
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+correlation = df['DEATH'].corr(df['TOTAL_DISEASES'])
+plt.scatter(df['DEATH'], df['TOTAL_DISEASES'])
+plt.xlabel('DEATH')
+plt.ylabel('TOTAL_DISEASES')
+plt.title(f'Correlation: {correlation}')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 11:17:35 [INFO] Answer: None
+2023-07-08 11:17:35 [INFO] Executed in: 13.94593358039856s
+2023-07-08 11:17:45 [INFO] Question: Find correlation beetween DEATH and TOTAL_DISEASES and make chart for this correlation
+2023-07-08 11:17:45 [INFO] Running PandasAI with openai LLM...
+2023-07-08 11:17:45 [INFO] Prompt ID: 62ee6387-de5d-4293-86f4-a26a250ccb4c
+2023-07-08 11:17:48 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Convert DATE_DIED column to datetime
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+
+# Calculate correlation between DEATH and TOTAL_DISEASES
+correlation = df['DEATH'].corr(df['TOTAL_DISEASES'])
+
+# Plot the correlation
+plt.scatter(df['DEATH'], df['TOTAL_DISEASES'])
+plt.xlabel('DEATH')
+plt.ylabel('TOTAL_DISEASES')
+plt.title(f'Correlation: {correlation}')
+plt.show()
+                        ```
+                    
+2023-07-08 11:17:48 [INFO] 
+Code running:
+```
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+correlation = df['DEATH'].corr(df['TOTAL_DISEASES'])
+plt.scatter(df['DEATH'], df['TOTAL_DISEASES'])
+plt.xlabel('DEATH')
+plt.ylabel('TOTAL_DISEASES')
+plt.title(f'Correlation: {correlation}')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 11:18:00 [INFO] Answer: None
+2023-07-08 11:18:00 [INFO] Executed in: 15.085878610610962s
+2023-07-08 11:19:16 [INFO] Question: The 1 in the DEATH column means death, check if there is a correlation in the number of deaths vs. the number of diseases in the TOTAL_DISEASE column. Show it on the graph. 
+2023-07-08 11:19:16 [INFO] Running PandasAI with openai LLM...
+2023-07-08 11:19:16 [INFO] Prompt ID: 3701d0fd-7d32-4875-9770-22746850e3b3
+2023-07-08 11:19:20 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Filter the dataframe to include only rows where DEATH is 1
+deaths_df = df[df['DEATH'] == 1]
+
+# Group the filtered dataframe by the number of diseases in TOTAL_DISEASE column and count the number of deaths
+deaths_by_diseases = deaths_df.groupby('TOTAL_DISEASES')['DEATH'].count()
+
+# Plot the correlation between the number of diseases and the number of deaths
+plt.plot(deaths_by_diseases.index, deaths_by_diseases.values)
+plt.xlabel('Number of Diseases')
+plt.ylabel('Number of Deaths')
+plt.title('Correlation between Number of Diseases and Number of Deaths')
+plt.show()
+                        ```
+                    
+2023-07-08 11:19:20 [INFO] 
+Code running:
+```
+deaths_df = df[df['DEATH'] == 1]
+deaths_by_diseases = deaths_df.groupby('TOTAL_DISEASES')['DEATH'].count()
+plt.plot(deaths_by_diseases.index, deaths_by_diseases.values)
+plt.xlabel('Number of Diseases')
+plt.ylabel('Number of Deaths')
+plt.title('Correlation between Number of Diseases and Number of Deaths')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 11:19:21 [INFO] Answer: None
+2023-07-08 11:19:21 [INFO] Executed in: 4.787599563598633s
+2023-07-08 11:20:20 [INFO] Question: Make graphs from data
+2023-07-08 11:20:20 [INFO] Running PandasAI with openai LLM...
+2023-07-08 11:20:20 [INFO] Prompt ID: 66f78108-cabf-4551-8816-4894d88bcfa5
+2023-07-08 11:20:25 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Convert the DATE_DIED column to datetime format
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+
+# Group the data by DATE_DIED and count the number of occurrences
+date_counts = df['DATE_DIED'].value_counts().sort_index()
+
+# Plot the graph
+plt.plot(date_counts.index, date_counts.values)
+plt.xlabel('Date')
+plt.ylabel('Number of Deaths')
+plt.title('Number of Deaths by Date')
+plt.show()
+                        ```
+                    
+2023-07-08 11:20:25 [INFO] 
+Code running:
+```
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+date_counts = df['DATE_DIED'].value_counts().sort_index()
+plt.plot(date_counts.index, date_counts.values)
+plt.xlabel('Date')
+plt.ylabel('Number of Deaths')
+plt.title('Number of Deaths by Date')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 11:20:34 [INFO] Answer: None
+2023-07-08 11:20:34 [INFO] Executed in: 13.75584864616394s
+2023-07-08 11:20:43 [INFO] Question: Make graphs from all data
+2023-07-08 11:20:43 [INFO] Running PandasAI with openai LLM...
+2023-07-08 11:20:43 [INFO] Prompt ID: 82da3c73-2b61-4ca4-a659-0acd1a4e2442
+2023-07-08 11:20:45 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Read the dataframe from a file or create it in memory
+df = pd.read_csv('data.csv')
+
+# Plot all columns as line graphs
+df.plot(kind='line', subplots=True, layout=(5, 5), figsize=(15, 15))
+
+# Show the plots
+plt.show()
+                        ```
+                    
+2023-07-08 11:20:45 [INFO] 
+Code running:
+```
+df.plot(kind='line', subplots=True, layout=(5, 5), figsize=(15, 15))
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 11:22:09 [INFO] Answer: None
+2023-07-08 11:22:09 [INFO] Executed in: 86.26464772224426s
+2023-07-08 11:42:00 [INFO] Question: Make graphs for DEATH by AGE
+2023-07-08 11:42:00 [INFO] Running PandasAI with openai LLM...
+2023-07-08 11:42:00 [INFO] Prompt ID: 72228cef-91e2-4138-bff0-f4faa9de732a
+2023-07-08 11:42:03 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Convert DATE_DIED column to datetime
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+
+# Group by AGE and count the number of deaths
+death_by_age = df.groupby('AGE')['DEATH'].sum()
+
+# Plot the graph
+plt.plot(death_by_age.index, death_by_age.values)
+plt.xlabel('Age')
+plt.ylabel('Number of Deaths')
+plt.title('Deaths by Age')
+plt.show()
+                        ```
+                    
+2023-07-08 11:42:03 [INFO] 
+Code running:
+```
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+death_by_age = df.groupby('AGE')['DEATH'].sum()
+plt.plot(death_by_age.index, death_by_age.values)
+plt.xlabel('Age')
+plt.ylabel('Number of Deaths')
+plt.title('Deaths by Age')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 11:42:13 [INFO] Answer: None
+2023-07-08 11:42:13 [INFO] Executed in: 12.965663194656372s
+2023-07-08 11:42:19 [INFO] Question: Make graph for DEATH by AGE
+2023-07-08 11:42:19 [INFO] Running PandasAI with openai LLM...
+2023-07-08 11:42:19 [INFO] Prompt ID: 01b07b73-f422-4da8-9690-90d8de805ff1
+2023-07-08 11:42:23 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Read the dataframe from a file or create it in memory
+df = pd.read_csv('data.csv')
+
+# Convert the DATE_DIED column to datetime format
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+
+# Group the data by AGE and count the number of deaths in each age group
+death_by_age = df.groupby('AGE')['DEATH'].sum()
+
+# Plot the graph
+plt.plot(death_by_age.index, death_by_age.values)
+plt.xlabel('Age')
+plt.ylabel('Number of Deaths')
+plt.title('Deaths by Age')
+plt.show()
+                        ```
+                    
+2023-07-08 11:42:23 [INFO] 
+Code running:
+```
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+death_by_age = df.groupby('AGE')['DEATH'].sum()
+plt.plot(death_by_age.index, death_by_age.values)
+plt.xlabel('Age')
+plt.ylabel('Number of Deaths')
+plt.title('Deaths by Age')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 11:42:34 [INFO] Answer: None
+2023-07-08 11:42:34 [INFO] Executed in: 14.734975814819336s
+2023-07-08 11:42:39 [INFO] Question: Make plot for DEATH by AGE
+2023-07-08 11:42:39 [INFO] Running PandasAI with openai LLM...
+2023-07-08 11:42:39 [INFO] Prompt ID: c7ba14e0-c631-46f5-b7e7-36a21f125ec9
+2023-07-08 11:42:41 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Convert DATE_DIED column to datetime
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+
+# Group by AGE and count the number of deaths
+death_by_age = df.groupby('AGE')['DEATH'].sum()
+
+# Plot the data
+plt.plot(death_by_age.index, death_by_age.values)
+plt.xlabel('Age')
+plt.ylabel('Number of Deaths')
+plt.title('Deaths by Age')
+plt.show()
+                        ```
+                    
+2023-07-08 11:42:41 [INFO] 
+Code running:
+```
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+death_by_age = df.groupby('AGE')['DEATH'].sum()
+plt.plot(death_by_age.index, death_by_age.values)
+plt.xlabel('Age')
+plt.ylabel('Number of Deaths')
+plt.title('Deaths by Age')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 11:42:51 [INFO] Answer: None
+2023-07-08 11:42:51 [INFO] Executed in: 11.609738826751709s
+2023-07-08 12:27:05 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts.
+2023-07-08 12:27:05 [INFO] Running PandasAI with openai LLM...
+2023-07-08 12:27:05 [INFO] Prompt ID: b9f52a93-38ed-45e5-ba09-39e41813340b
+2023-07-08 12:27:05 [INFO] Using cached response
+2023-07-08 12:27:05 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['int64', 'float64'])
+correlation_matrix = numeric_columns.corr()
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(correlation_matrix.columns)), correlation_matrix.
+    columns, rotation=90)
+plt.yticks(range(len(correlation_matrix.columns)), correlation_matrix.columns)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 12:27:08 [INFO] Answer: None
+2023-07-08 12:27:08 [INFO] Executed in: 2.9460561275482178s
+2023-07-08 12:47:49 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts.
+2023-07-08 12:47:49 [INFO] Running PandasAI with openai LLM...
+2023-07-08 12:47:49 [INFO] Prompt ID: 9ae5caf2-2f3a-4229-9898-a1d85745a9e8
+2023-07-08 12:47:49 [INFO] Using cached response
+2023-07-08 12:47:49 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['int64', 'float64'])
+correlation_matrix = numeric_columns.corr()
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(correlation_matrix.columns)), correlation_matrix.
+    columns, rotation=90)
+plt.yticks(range(len(correlation_matrix.columns)), correlation_matrix.columns)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 12:47:52 [INFO] Answer: None
+2023-07-08 12:47:52 [INFO] Executed in: 2.224470376968384s
+2023-07-08 12:50:47 [INFO] Question: Show on the chart the number of deaths from the "ZGON" column by category, i.e. all columns.
+2023-07-08 12:50:47 [INFO] Running PandasAI with openai LLM...
+2023-07-08 12:50:47 [INFO] Prompt ID: 8352b435-c9b9-43f1-9222-eb60e1a26dd5
+2023-07-08 12:50:50 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Convert the 'DATE_DIED' column to datetime format
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+
+# Group the data by each column and count the number of deaths
+deaths_by_category = df.groupby(df.columns)['ZGON'].sum()
+
+# Plot the number of deaths by category
+deaths_by_category.plot(kind='bar')
+plt.xlabel('Category')
+plt.ylabel('Number of Deaths')
+plt.title('Number of Deaths by Category')
+plt.show()
+                        ```
+                    
+2023-07-08 12:50:50 [INFO] 
+Code running:
+```
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+deaths_by_category = df.groupby(df.columns)['ZGON'].sum()
+deaths_by_category.plot(kind='bar')
+plt.xlabel('Category')
+plt.ylabel('Number of Deaths')
+plt.title('Number of Deaths by Category')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 12:50:59 [INFO] Answer: None
+2023-07-08 12:50:59 [INFO] Executed in: 12.077165365219116s
+2023-07-08 12:51:24 [INFO] Question: Show on the chart the number of deaths from the "ZGON" column "PLEC" 
+2023-07-08 12:51:24 [INFO] Running PandasAI with openai LLM...
+2023-07-08 12:51:24 [INFO] Prompt ID: 99839c75-7d75-4411-b319-16383533e8d2
+2023-07-08 12:51:28 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Convert the 'DATE_DIED' column to datetime format
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+
+# Filter the dataframe for rows where 'ZGON' is 1 (indicating death)
+deaths = df[df['ZGON'] == 1]
+
+# Group the deaths by 'PLEC' and count the number of occurrences
+death_counts = deaths.groupby('PLEC').size()
+
+# Plot the bar chart
+plt.bar(death_counts.index, death_counts.values)
+plt.xlabel('Gender')
+plt.ylabel('Number of Deaths')
+plt.title('Number of Deaths by Gender')
+plt.show()
+                        ```
+                    
+2023-07-08 12:51:28 [INFO] 
+Code running:
+```
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+deaths = df[df['ZGON'] == 1]
+death_counts = deaths.groupby('PLEC').size()
+plt.bar(death_counts.index, death_counts.values)
+plt.xlabel('Gender')
+plt.ylabel('Number of Deaths')
+plt.title('Number of Deaths by Gender')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 12:51:40 [INFO] Answer: None
+2023-07-08 12:51:40 [INFO] Executed in: 15.760093688964844s
+2023-07-08 12:51:48 [INFO] Question: Show on the chart the number of deaths from the "ZGON" group by column "PLEC" 
+2023-07-08 12:51:48 [INFO] Running PandasAI with openai LLM...
+2023-07-08 12:51:48 [INFO] Prompt ID: 02eca926-5f15-4b40-bdb7-dac2eb36678b
+2023-07-08 12:51:51 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv("data.csv")
+
+# Convert the "DATE_DIED" column to datetime format
+df["DATE_DIED"] = pd.to_datetime(df["DATE_DIED"], format="%d/%m/%Y")
+
+# Filter the dataframe for rows where "ZGON" is 1 (indicating death)
+deaths = df[df["ZGON"] == 1]
+
+# Group the deaths by "PLEC" and count the number of occurrences
+death_counts = deaths.groupby("PLEC").size()
+
+# Plot the bar chart
+death_counts.plot(kind="bar")
+plt.xlabel("Gender")
+plt.ylabel("Number of Deaths")
+plt.title("Number of Deaths by Gender")
+plt.show()
+                        ```
+                    
+2023-07-08 12:51:51 [INFO] 
+Code running:
+```
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+deaths = df[df['ZGON'] == 1]
+death_counts = deaths.groupby('PLEC').size()
+death_counts.plot(kind='bar')
+plt.xlabel('Gender')
+plt.ylabel('Number of Deaths')
+plt.title('Number of Deaths by Gender')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 12:52:01 [INFO] Answer: None
+2023-07-08 12:52:01 [INFO] Executed in: 13.282044410705566s
+2023-07-08 12:52:12 [INFO] Question: Make chart the number of deaths from the "ZGON" group by column "PLEC" 
+2023-07-08 12:52:12 [INFO] Running PandasAI with openai LLM...
+2023-07-08 12:52:12 [INFO] Prompt ID: 3c52558e-7d94-4707-a8a0-100fc2b01346
+2023-07-08 12:52:15 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv("data.csv")
+
+# Convert the "DATE_DIED" column to datetime format
+df["DATE_DIED"] = pd.to_datetime(df["DATE_DIED"], format="%d/%m/%Y")
+
+# Filter the dataframe for rows where "ZGON" is 1 (indicating death)
+deaths = df[df["ZGON"] == 1]
+
+# Group the deaths by "PLEC" and count the number of occurrences
+death_counts = deaths.groupby("PLEC").size()
+
+# Plot the bar chart
+death_counts.plot(kind="bar")
+plt.xlabel("Gender")
+plt.ylabel("Number of Deaths")
+plt.title("Number of Deaths by Gender")
+plt.show()
+                        ```
+                    
+2023-07-08 12:52:15 [INFO] 
+Code running:
+```
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+deaths = df[df['ZGON'] == 1]
+death_counts = deaths.groupby('PLEC').size()
+death_counts.plot(kind='bar')
+plt.xlabel('Gender')
+plt.ylabel('Number of Deaths')
+plt.title('Number of Deaths by Gender')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 12:52:27 [INFO] Answer: None
+2023-07-08 12:52:27 [INFO] Executed in: 14.711116313934326s
+2023-07-08 12:52:36 [INFO] Question: Make graph the number of deaths from the "ZGON" group by column "PLEC" 
+2023-07-08 12:52:36 [INFO] Running PandasAI with openai LLM...
+2023-07-08 12:52:36 [INFO] Prompt ID: d0238a4f-c44d-48ab-a95d-721b6e65652e
+2023-07-08 12:52:39 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Read the dataframe from a file or create it in memory
+df = pd.read_csv('data.csv')
+
+# Convert the "DATE_DIED" column to datetime format
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+
+# Filter the dataframe to include only rows where "ZGON" is 1 (indicating death)
+deaths = df[df['ZGON'] == 1]
+
+# Group the deaths by "PLEC" and count the number of occurrences
+deaths_by_gender = deaths.groupby('PLEC').size()
+
+# Plot the number of deaths by gender
+deaths_by_gender.plot(kind='bar')
+plt.xlabel('Gender')
+plt.ylabel('Number of Deaths')
+plt.title('Number of Deaths by Gender')
+plt.show()
+                        ```
+                    
+2023-07-08 12:52:39 [INFO] 
+Code running:
+```
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+deaths = df[df['ZGON'] == 1]
+deaths_by_gender = deaths.groupby('PLEC').size()
+deaths_by_gender.plot(kind='bar')
+plt.xlabel('Gender')
+plt.ylabel('Number of Deaths')
+plt.title('Number of Deaths by Gender')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 12:52:52 [INFO] Answer: None
+2023-07-08 12:52:52 [INFO] Executed in: 16.480139017105103s
+2023-07-08 12:53:09 [INFO] Question: Make bar graph with sum of deaths from the column "ZGON" group by column "PLEC" 
+2023-07-08 12:53:09 [INFO] Running PandasAI with openai LLM...
+2023-07-08 12:53:09 [INFO] Prompt ID: da98def6-c0b1-40dc-8e03-9a31e4dab5ab
+2023-07-08 12:53:12 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Read the dataframe
+df = pd.read_csv("data.csv")
+
+# Group by "PLEC" and calculate the sum of deaths
+deaths_by_gender = df.groupby("PLEC")["ZGON"].sum()
+
+# Create a bar graph
+deaths_by_gender.plot(kind="bar")
+
+# Add labels and title
+plt.xlabel("Gender")
+plt.ylabel("Number of Deaths")
+plt.title("Number of Deaths by Gender")
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-07-08 12:53:12 [INFO] 
+Code running:
+```
+deaths_by_gender = df.groupby('PLEC')['ZGON'].sum()
+deaths_by_gender.plot(kind='bar')
+plt.xlabel('Gender')
+plt.ylabel('Number of Deaths')
+plt.title('Number of Deaths by Gender')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 12:53:12 [INFO] Answer: None
+2023-07-08 12:53:12 [INFO] Executed in: 2.905697822570801s
+2023-07-08 12:53:31 [INFO] Question: Make bar graph with sum of deaths from the column "ZGON" group by column "PLEC" where 1 is male and 2 is female
+2023-07-08 12:53:31 [INFO] Running PandasAI with openai LLM...
+2023-07-08 12:53:31 [INFO] Prompt ID: f23710d7-3116-4467-af93-5ce0fcf24853
+2023-07-08 12:53:34 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Read the dataframe from a file or create it in memory
+df = pd.read_csv("data.csv")
+
+# Group the data by "PLEC" and calculate the sum of deaths in each group
+deaths_by_gender = df.groupby("PLEC")["ZGON"].sum()
+
+# Create a bar graph
+deaths_by_gender.plot(kind="bar")
+
+# Add labels and title to the graph
+plt.xlabel("Gender")
+plt.ylabel("Number of Deaths")
+plt.title("Number of Deaths by Gender")
+
+# Show the graph
+plt.show()
+                        ```
+                    
+2023-07-08 12:53:34 [INFO] 
+Code running:
+```
+deaths_by_gender = df.groupby('PLEC')['ZGON'].sum()
+deaths_by_gender.plot(kind='bar')
+plt.xlabel('Gender')
+plt.ylabel('Number of Deaths')
+plt.title('Number of Deaths by Gender')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 12:53:34 [INFO] Answer: None
+2023-07-08 12:53:34 [INFO] Executed in: 3.0982799530029297s
+2023-07-08 12:53:59 [INFO] Question: Make bar graph with sum of deaths from the column "ZGON" group by column "PLEC" where 1 = female and 2 = male
+2023-07-08 12:53:59 [INFO] Running PandasAI with openai LLM...
+2023-07-08 12:53:59 [INFO] Prompt ID: 6fa19d24-2fa6-455b-b260-db4256e4585f
+2023-07-08 12:54:02 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Read the dataframe from a file or create it in memory
+df = pd.read_csv('data.csv')
+
+# Group the data by "PLEC" and calculate the sum of deaths in each group
+deaths_by_gender = df.groupby('PLEC')['ZGON'].sum()
+
+# Create a bar graph
+deaths_by_gender.plot(kind='bar')
+
+# Add labels and title to the graph
+plt.xlabel('Gender')
+plt.ylabel('Number of Deaths')
+plt.title('Number of Deaths by Gender')
+
+# Display the graph
+plt.show()
+                        ```
+                    
+2023-07-08 12:54:02 [INFO] 
+Code running:
+```
+deaths_by_gender = df.groupby('PLEC')['ZGON'].sum()
+deaths_by_gender.plot(kind='bar')
+plt.xlabel('Gender')
+plt.ylabel('Number of Deaths')
+plt.title('Number of Deaths by Gender')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 12:54:02 [INFO] Answer: None
+2023-07-08 12:54:02 [INFO] Executed in: 2.7873778343200684s
+2023-07-08 12:55:02 [INFO] Question: Make bar graph with sum of deaths from the column "ZGON" by columns: "ASTMA", "OTYLOSC"
+2023-07-08 12:55:02 [INFO] Running PandasAI with openai LLM...
+2023-07-08 12:55:02 [INFO] Prompt ID: c93479aa-08e1-4f18-9203-af9e42deb1da
+2023-07-08 12:55:05 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Read the dataframe
+df = pd.read_csv("data.csv")
+
+# Group the data by "ASTMA" and "OTYLOSC" columns and sum the "ZGON" column
+grouped_df = df.groupby(["ASTMA", "OTYLOSC"])["ZGON"].sum().reset_index()
+
+# Create a bar graph
+plt.bar(grouped_df["ASTMA"], grouped_df["ZGON"], tick_label=grouped_df["OTYLOSC"])
+plt.xlabel("ASTMA")
+plt.ylabel("Sum of Deaths")
+plt.title("Sum of Deaths by ASTMA and OTYLOSC")
+plt.show()
+                        ```
+                    
+2023-07-08 12:55:05 [INFO] 
+Code running:
+```
+grouped_df = df.groupby(['ASTMA', 'OTYLOSC'])['ZGON'].sum().reset_index()
+plt.bar(grouped_df['ASTMA'], grouped_df['ZGON'], tick_label=grouped_df[
+    'OTYLOSC'])
+plt.xlabel('ASTMA')
+plt.ylabel('Sum of Deaths')
+plt.title('Sum of Deaths by ASTMA and OTYLOSC')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 12:55:05 [INFO] Answer: None
+2023-07-08 12:55:05 [INFO] Executed in: 3.0403964519500732s
+2023-07-08 12:56:16 [INFO] Question: How many deaths (from "ZGON") was when "ASTMA" =1 
+2023-07-08 12:56:16 [INFO] Running PandasAI with openai LLM...
+2023-07-08 12:56:16 [INFO] Prompt ID: b5a54629-0f00-49d5-9bf6-50ab584cc9e7
+2023-07-08 12:56:18 [INFO] 
+                        Code generated:
+                        ```
+                        deaths_with_asthma = df[df['ASTMA'] == 1]['ZGON'].sum()
+deaths_with_asthma
+                        ```
+                    
+2023-07-08 12:56:18 [INFO] 
+Code running:
+```
+deaths_with_asthma = df[df['ASTMA'] == 1]['ZGON'].sum()
+deaths_with_asthma
+```
+2023-07-08 12:56:18 [INFO] Answer: 1480
+2023-07-08 12:56:18 [INFO] Executed in: 1.37019944190979s
+2023-07-08 12:56:26 [INFO] Question: How many deaths (from "ZGON") was when "CUKRZYCA" =1 
+2023-07-08 12:56:26 [INFO] Running PandasAI with openai LLM...
+2023-07-08 12:56:26 [INFO] Prompt ID: 76423d70-77fe-4392-bfd2-2a8fa112caff
+2023-07-08 12:56:27 [INFO] 
+                        Code generated:
+                        ```
+                        deaths_with_cukrzyca = df[df['CUKRZYCA'] == 1]['ZGON'].sum()
+deaths_with_cukrzyca
+                        ```
+                    
+2023-07-08 12:56:27 [INFO] 
+Code running:
+```
+deaths_with_cukrzyca = df[df['CUKRZYCA'] == 1]['ZGON'].sum()
+deaths_with_cukrzyca
+```
+2023-07-08 12:56:27 [INFO] Answer: 28265
+2023-07-08 12:56:27 [INFO] Executed in: 1.1581294536590576s
+2023-07-08 12:56:53 [INFO] Question: Show on graph how many deaths (from "ZGON") was when "CUKRZYCA" =1 and "OTYLOSC" = 1 
+2023-07-08 12:56:53 [INFO] Running PandasAI with openai LLM...
+2023-07-08 12:56:53 [INFO] Prompt ID: c41fdc2d-e2fa-4c6a-ac27-2b3943f36c41
+2023-07-08 12:56:56 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Filter the dataframe for deaths when "CUKRZYCA" = 1 and "OTYLOSC" = 1
+filtered_df = df[(df['CUKRZYCA'] == 1) & (df['OTYLOSC'] == 1)]
+
+# Count the number of deaths
+deaths_count = filtered_df['ZGON'].sum()
+
+# Plot the result
+plt.bar(['Deaths'], [deaths_count])
+plt.xlabel('Condition')
+plt.ylabel('Number of Deaths')
+plt.title('Number of Deaths with CUKRZYCA = 1 and OTYLOSC = 1')
+plt.show()
+                        ```
+                    
+2023-07-08 12:56:56 [INFO] 
+Code running:
+```
+filtered_df = df[(df['CUKRZYCA'] == 1) & (df['OTYLOSC'] == 1)]
+deaths_count = filtered_df['ZGON'].sum()
+plt.bar(['Deaths'], [deaths_count])
+plt.xlabel('Condition')
+plt.ylabel('Number of Deaths')
+plt.title('Number of Deaths with CUKRZYCA = 1 and OTYLOSC = 1')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 12:56:56 [INFO] Answer: None
+2023-07-08 12:56:56 [INFO] Executed in: 3.0108795166015625s
+2023-07-08 12:57:11 [INFO] Question: Show on graph how many deaths (from "ZGON") was when "CUKRZYCA" =1, "OTYLOSC" = 1 
+2023-07-08 12:57:11 [INFO] Running PandasAI with openai LLM...
+2023-07-08 12:57:11 [INFO] Prompt ID: d5e9f82d-7f0c-4902-8c74-72bdc0e7d1fb
+2023-07-08 12:57:15 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv("data.csv")
+
+# Filter the dataframe for deaths when "CUKRZYCA" = 1 and "OTYLOSC" = 1
+filtered_df = df[(df["CUKRZYCA"] == 1) & (df["OTYLOSC"] == 1)]
+
+# Count the number of deaths
+deaths_count = filtered_df["ZGON"].sum()
+
+# Plot the result
+plt.bar(["Deaths"], [deaths_count])
+plt.xlabel("Condition")
+plt.ylabel("Number of Deaths")
+plt.title("Number of Deaths with CUKRZYCA = 1 and OTYLOSC = 1")
+plt.show()
+                        ```
+                    
+2023-07-08 12:57:15 [INFO] 
+Code running:
+```
+filtered_df = df[(df['CUKRZYCA'] == 1) & (df['OTYLOSC'] == 1)]
+deaths_count = filtered_df['ZGON'].sum()
+plt.bar(['Deaths'], [deaths_count])
+plt.xlabel('Condition')
+plt.ylabel('Number of Deaths')
+plt.title('Number of Deaths with CUKRZYCA = 1 and OTYLOSC = 1')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 12:57:15 [INFO] Answer: None
+2023-07-08 12:57:15 [INFO] Executed in: 3.5917279720306396s
+2023-07-08 12:57:31 [INFO] Question: Show on graph how many deaths (from "ZGON") was in category where "CUKRZYCA" =1, "OTYLOSC" = 1 
+2023-07-08 12:57:31 [INFO] Running PandasAI with openai LLM...
+2023-07-08 12:57:31 [INFO] Prompt ID: 8fd65da1-e6e1-49e6-aabe-610e8f304920
+2023-07-08 12:57:35 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv("data.csv")
+
+# Filter the dataframe for rows where "CUKRZYCA" = 1 and "OTYLOSC" = 1
+filtered_df = df[(df["CUKRZYCA"] == 1) & (df["OTYLOSC"] == 1)]
+
+# Count the number of deaths in the filtered dataframe
+deaths = filtered_df["ZGON"].sum()
+
+# Plot the result on a bar graph
+plt.bar(["Deaths"], [deaths])
+plt.xlabel("Category")
+plt.ylabel("Number of Deaths")
+plt.title("Number of Deaths in Category with CUKRZYCA = 1 and OTYLOSC = 1")
+plt.show()
+                        ```
+                    
+2023-07-08 12:57:35 [INFO] 
+Code running:
+```
+filtered_df = df[(df['CUKRZYCA'] == 1) & (df['OTYLOSC'] == 1)]
+deaths = filtered_df['ZGON'].sum()
+plt.bar(['Deaths'], [deaths])
+plt.xlabel('Category')
+plt.ylabel('Number of Deaths')
+plt.title('Number of Deaths in Category with CUKRZYCA = 1 and OTYLOSC = 1')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 12:57:35 [INFO] Answer: None
+2023-07-08 12:57:35 [INFO] Executed in: 3.9321632385253906s
+2023-07-08 12:57:51 [INFO] Question: Show on graph how many deaths (from "ZGON") was in category CUKRZYCA: "CUKRZYCA" =1, OTYLOSC:  "OTYLOSC" = 1 
+2023-07-08 12:57:51 [INFO] Running PandasAI with openai LLM...
+2023-07-08 12:57:51 [INFO] Prompt ID: 1c0adcbd-15db-4a66-94f1-42e9f24756d6
+2023-07-08 12:57:55 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Read the dataframe
+df = pd.read_csv('data.csv')
+
+# Filter the dataframe for deaths with CUKRZYCA = 1 and OTYLOSC = 1
+filtered_df = df[(df['ZGON'] == 1) & (df['CUKRZYCA'] == 1) & (df['OTYLOSC'] == 1)]
+
+# Count the number of deaths in the filtered dataframe
+death_count = len(filtered_df)
+
+# Plot the result on a bar graph
+plt.bar(['Deaths'], [death_count])
+plt.xlabel('Category')
+plt.ylabel('Number of Deaths')
+plt.title('Number of Deaths in Category CUKRZYCA and OTYLOSC')
+plt.show()
+                        ```
+                    
+2023-07-08 12:57:55 [INFO] 
+Code running:
+```
+filtered_df = df[(df['ZGON'] == 1) & (df['CUKRZYCA'] == 1) & (df['OTYLOSC'] ==
+    1)]
+death_count = len(filtered_df)
+plt.bar(['Deaths'], [death_count])
+plt.xlabel('Category')
+plt.ylabel('Number of Deaths')
+plt.title('Number of Deaths in Category CUKRZYCA and OTYLOSC')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 12:57:55 [INFO] Answer: None
+2023-07-08 12:57:55 [INFO] Executed in: 4.143824815750122s
+2023-07-08 12:58:00 [INFO] Question: Show on graph how many deaths (from "ZGON") was in group CUKRZYCA: "CUKRZYCA" =1, OTYLOSC:  "OTYLOSC" = 1 
+2023-07-08 12:58:00 [INFO] Running PandasAI with openai LLM...
+2023-07-08 12:58:00 [INFO] Prompt ID: 914a9cb3-0e1c-465e-aac4-b0f77e06b75c
+2023-07-08 12:58:04 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Read the dataframe
+df = pd.read_csv("data.csv")
+
+# Filter the dataframe for deaths with CUKRZYCA = 1 and OTYLOSC = 1
+filtered_df = df[(df["ZGON"] == 1) & (df["CUKRZYCA"] == 1) & (df["OTYLOSC"] == 1)]
+
+# Count the number of deaths in the filtered dataframe
+death_count = len(filtered_df)
+
+# Plot the result on a bar graph
+plt.bar(["Deaths"], [death_count])
+plt.xlabel("Category")
+plt.ylabel("Number of Deaths")
+plt.title("Number of Deaths with CUKRZYCA = 1 and OTYLOSC = 1")
+plt.show()
+                        ```
+                    
+2023-07-08 12:58:04 [INFO] 
+Code running:
+```
+filtered_df = df[(df['ZGON'] == 1) & (df['CUKRZYCA'] == 1) & (df['OTYLOSC'] ==
+    1)]
+death_count = len(filtered_df)
+plt.bar(['Deaths'], [death_count])
+plt.xlabel('Category')
+plt.ylabel('Number of Deaths')
+plt.title('Number of Deaths with CUKRZYCA = 1 and OTYLOSC = 1')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 12:58:04 [INFO] Answer: None
+2023-07-08 12:58:04 [INFO] Executed in: 3.427807331085205s
+2023-07-08 12:58:12 [INFO] Question: Show on graph how many deaths (from "ZGON") was in two groups CUKRZYCA: "CUKRZYCA" =1, OTYLOSC:  "OTYLOSC" = 1 
+2023-07-08 12:58:12 [INFO] Running PandasAI with openai LLM...
+2023-07-08 12:58:12 [INFO] Prompt ID: 3313e8e3-6cff-4237-82e1-09ac6a9c63b4
+2023-07-08 12:58:15 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Read the dataframe
+df = pd.read_csv("data.csv")
+
+# Filter the dataframe for CUKRZYCA = 1 and OTYLOSC = 1
+filtered_df = df[(df["CUKRZYCA"] == 1) & (df["OTYLOSC"] == 1)]
+
+# Count the number of deaths in the filtered dataframe
+deaths = filtered_df["ZGON"].sum()
+
+# Plot the number of deaths
+plt.bar(["CUKRZYCA & OTYLOSC"], [deaths])
+plt.xlabel("Groups")
+plt.ylabel("Number of Deaths")
+plt.title("Number of Deaths in CUKRZYCA & OTYLOSC Group")
+plt.show()
+                        ```
+                    
+2023-07-08 12:58:15 [INFO] 
+Code running:
+```
+filtered_df = df[(df['CUKRZYCA'] == 1) & (df['OTYLOSC'] == 1)]
+deaths = filtered_df['ZGON'].sum()
+plt.bar(['CUKRZYCA & OTYLOSC'], [deaths])
+plt.xlabel('Groups')
+plt.ylabel('Number of Deaths')
+plt.title('Number of Deaths in CUKRZYCA & OTYLOSC Group')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 12:58:15 [INFO] Answer: None
+2023-07-08 12:58:15 [INFO] Executed in: 3.2716169357299805s
+2023-07-08 12:58:22 [INFO] Question: Show on graph how many deaths (from "ZGON") was in two groups CUKRZYCA: "CUKRZYCA" =1 and second group OTYLOSC:  "OTYLOSC" = 1 
+2023-07-08 12:58:22 [INFO] Running PandasAI with openai LLM...
+2023-07-08 12:58:22 [INFO] Prompt ID: a95665f9-790a-488e-ad62-a5b8c85220b7
+2023-07-08 12:58:26 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Read the dataframe
+df = pd.read_csv("data.csv")
+
+# Filter the dataframe for CUKRZYCA = 1 and OTYLOSC = 1
+filtered_df = df[(df["CUKRZYCA"] == 1) & (df["OTYLOSC"] == 1)]
+
+# Count the number of deaths in each group
+deaths = filtered_df["ZGON"].sum()
+
+# Create a bar plot to visualize the number of deaths in each group
+plt.bar(["CUKRZYCA", "OTYLOSC"], [deaths, deaths])
+plt.xlabel("Group")
+plt.ylabel("Number of Deaths")
+plt.title("Number of Deaths in CUKRZYCA and OTYLOSC Groups")
+plt.show()
+                        ```
+                    
+2023-07-08 12:58:26 [INFO] 
+Code running:
+```
+filtered_df = df[(df['CUKRZYCA'] == 1) & (df['OTYLOSC'] == 1)]
+deaths = filtered_df['ZGON'].sum()
+plt.bar(['CUKRZYCA', 'OTYLOSC'], [deaths, deaths])
+plt.xlabel('Group')
+plt.ylabel('Number of Deaths')
+plt.title('Number of Deaths in CUKRZYCA and OTYLOSC Groups')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 12:58:26 [INFO] Answer: None
+2023-07-08 12:58:26 [INFO] Executed in: 3.77545166015625s
+2023-07-08 12:59:26 [INFO] Question: FIlter only ZGON = 1, show on bar graph: SUM OTYLOSC, SUM CUKRZYCA
+2023-07-08 12:59:26 [INFO] Running PandasAI with openai LLM...
+2023-07-08 12:59:26 [INFO] Prompt ID: 55a9e8ca-5464-4b8d-b7b4-7d003f98cae7
+2023-07-08 12:59:28 [INFO] 
+                        Code generated:
+                        ```
+                        df_filtered = df[df['ZGON'] == 1]
+df_filtered[['OTYLOSC', 'CUKRZYCA']].sum().plot(kind='bar')
+                        ```
+                    
+2023-07-08 12:59:28 [INFO] 
+Code running:
+```
+df_filtered = df[df['ZGON'] == 1]
+df_filtered[['OTYLOSC', 'CUKRZYCA']].sum().plot(kind='bar')
+```
+2023-07-08 12:59:28 [INFO] Answer: Axes(0.125,0.11;0.775x0.77)
+2023-07-08 12:59:28 [INFO] Executed in: 1.7352344989776611s
+2023-07-08 13:01:47 [INFO] Question: FIlter only ZGON = 1, show on bar graph: CUM RESPIRATOR, SUM ZAPALENIE_PLUC, SUM_CIAZA, SUM CUKRZYCA, SUM PRZEWLEKLA_CHOROBA_PLUC, SUM ASTMA, SUM IMMSUPR, SUM HIPERTENSION, SUM INNE_CHOROBY, SUM CHOROBY_SERCA, SUM OTYLOSC, SUM CHOROBA_NEREK, SUM PAPIEROSY, SUM INTENSYWNA_TERAPIA
+2023-07-08 13:01:47 [INFO] Running PandasAI with openai LLM...
+2023-07-08 13:01:47 [INFO] Prompt ID: 3f7c1836-e09f-4179-8cbd-66741f1680a5
+2023-07-08 13:01:56 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Filter only ZGON = 1
+filtered_df = df[df['ZGON'] == 1]
+
+# Calculate the sum of each column
+sum_respirator = filtered_df['RESPIRATOR'].sum()
+sum_zapalenie_pluc = filtered_df['ZAPALENIE_PLUC'].sum()
+sum_ciaza = filtered_df['CIAZA'].sum()
+sum_cukrzyca = filtered_df['CUKRZYCA'].sum()
+sum_przewlekla_choroba_pluc = filtered_df['PRZEWLEKLA_CHOROBA_PLUC'].sum()
+sum_astma = filtered_df['ASTMA'].sum()
+sum_immsupr = filtered_df['INMSUPR'].sum()
+sum_hipertension = filtered_df['HIPERTENSION'].sum()
+sum_inne_choroby = filtered_df['INNE_CHOROBY'].sum()
+sum_choroby_serca = filtered_df['CHROBY_SERCA'].sum()
+sum_otylosc = filtered_df['OTYLOSC'].sum()
+sum_choroba_nerek = filtered_df['CHOROBA_NEREK'].sum()
+sum_papierosy = filtered_df['PAPIEROSY'].sum()
+sum_intensywna_terapia = filtered_df['INTENSYWNA_TERAPIA'].sum()
+
+# Create a bar graph
+categories = ['RESPIRATOR', 'ZAPALENIE_PLUC', 'CIAZA', 'CUKRZYCA', 'PRZEWLEKLA_CHOROBA_PLUC', 'ASTMA', 'INMSUPR', 'HIPERTENSION', 'INNE_CHOROBY', 'CHROBY_SERCA', 'OTYLOSC', 'CHOROBA_NEREK', 'PAPIEROSY', 'INTENSYWNA_TERAPIA']
+values = [sum_respirator, sum_zapalenie_pluc, sum_ciaza, sum_cukrzyca, sum_przewlekla_choroba_pluc, sum_astma, sum_immsupr, sum_hipertension, sum_inne_choroby, sum_choroby_serca, sum_otylosc, sum_choroba_nerek, sum_papierosy, sum_intensywna_terapia]
+
+plt.bar(categories, values)
+plt
+                        ```
+                    
+2023-07-08 13:01:56 [INFO] 
+Code running:
+```
+filtered_df = df[df['ZGON'] == 1]
+sum_respirator = filtered_df['RESPIRATOR'].sum()
+sum_zapalenie_pluc = filtered_df['ZAPALENIE_PLUC'].sum()
+sum_ciaza = filtered_df['CIAZA'].sum()
+sum_cukrzyca = filtered_df['CUKRZYCA'].sum()
+sum_przewlekla_choroba_pluc = filtered_df['PRZEWLEKLA_CHOROBA_PLUC'].sum()
+sum_astma = filtered_df['ASTMA'].sum()
+sum_immsupr = filtered_df['INMSUPR'].sum()
+sum_hipertension = filtered_df['HIPERTENSION'].sum()
+sum_inne_choroby = filtered_df['INNE_CHOROBY'].sum()
+sum_choroby_serca = filtered_df['CHROBY_SERCA'].sum()
+sum_otylosc = filtered_df['OTYLOSC'].sum()
+sum_choroba_nerek = filtered_df['CHOROBA_NEREK'].sum()
+sum_papierosy = filtered_df['PAPIEROSY'].sum()
+sum_intensywna_terapia = filtered_df['INTENSYWNA_TERAPIA'].sum()
+categories = ['RESPIRATOR', 'ZAPALENIE_PLUC', 'CIAZA', 'CUKRZYCA',
+    'PRZEWLEKLA_CHOROBA_PLUC', 'ASTMA', 'INMSUPR', 'HIPERTENSION',
+    'INNE_CHOROBY', 'CHROBY_SERCA', 'OTYLOSC', 'CHOROBA_NEREK', 'PAPIEROSY',
+    'INTENSYWNA_TERAPIA']
+values = [sum_respirator, sum_zapalenie_pluc, sum_ciaza, sum_cukrzyca,
+    sum_przewlekla_choroba_pluc, sum_astma, sum_immsupr, sum_hipertension,
+    sum_inne_choroby, sum_choroby_serca, sum_otylosc, sum_choroba_nerek,
+    sum_papierosy, sum_intensywna_terapia]
+plt.bar(categories, values)
+plt
+```
+2023-07-08 13:01:56 [INFO] Answer: <module 'matplotlib.pyplot' from 'C:\\Users\\adria\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\matplotlib\\pyplot.py'>
+2023-07-08 13:01:56 [INFO] Executed in: 8.830361604690552s
+2023-07-08 13:02:21 [INFO] Question: FIlter only ZGON = 1, show on horizontal bar graph: CUM RESPIRATOR, SUM ZAPALENIE_PLUC, SUM_CIAZA, SUM CUKRZYCA, SUM PRZEWLEKLA_CHOROBA_PLUC, SUM ASTMA, SUM IMMSUPR, SUM HIPERTENSION, SUM INNE_CHOROBY, SUM CHOROBY_SERCA, SUM OTYLOSC, SUM CHOROBA_NEREK, SUM PAPIEROSY, SUM INTENSYWNA_TERAPIA
+2023-07-08 13:02:21 [INFO] Running PandasAI with openai LLM...
+2023-07-08 13:02:21 [INFO] Prompt ID: ac003410-140c-409f-941f-89e55c2be72f
+2023-07-08 13:02:31 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Filter the dataframe for ZGON = 1
+filtered_df = df[df['ZGON'] == 1]
+
+# Calculate the sum of each column for the filtered dataframe
+sum_respirator = filtered_df['RESPIRATOR'].sum()
+sum_zapalenie_pluc = filtered_df['ZAPALENIE_PLUC'].sum()
+sum_ciaza = filtered_df['CIAZA'].sum()
+sum_cukrzyca = filtered_df['CUKRZYCA'].sum()
+sum_przewlekla_choroba_pluc = filtered_df['PRZEWLEKLA_CHOROBA_PLUC'].sum()
+sum_astma = filtered_df['ASTMA'].sum()
+sum_immsupr = filtered_df['INMSUPR'].sum()
+sum_hipertension = filtered_df['HIPERTENSION'].sum()
+sum_inne_choroby = filtered_df['INNE_CHOROBY'].sum()
+sum_choroby_serca = filtered_df['CHROBY_SERCA'].sum()
+sum_otylosc = filtered_df['OTYLOSC'].sum()
+sum_choroba_nerek = filtered_df['CHOROBA_NEREK'].sum()
+sum_papierosy = filtered_df['PAPIEROSY'].sum()
+sum_intensywna_terapia = filtered_df['INTENSYWNA_TERAPIA'].sum()
+
+# Create a horizontal bar graph
+categories = ['RESPIRATOR', 'ZAPALENIE_PLUC', 'CIAZA', 'CUKRZYCA', 'PRZEWLEKLA_CHOROBA_PLUC', 'ASTMA', 'INMSUPR', 'HIPERTENSION', 'INNE_CHOROBY', 'CHROBY_SERCA', 'OTYLOSC', 'CHOROBA_NEREK', 'PAPIEROSY', 'INTENSYWNA_TERAPIA']
+values = [sum_respirator, sum_zapalenie_pluc, sum_ciaza, sum_cukrzyca, sum_przewlekla_choroba_pluc, sum_astma, sum_immsupr, sum_hipertension, sum_inne_choroby, sum_choroby_serca, sum_otylosc, sum_choroba_nerek, sum_papierosy, sum_intensywna_terapia]
+                        ```
+                    
+2023-07-08 13:02:31 [INFO] 
+Code running:
+```
+filtered_df = df[df['ZGON'] == 1]
+sum_respirator = filtered_df['RESPIRATOR'].sum()
+sum_zapalenie_pluc = filtered_df['ZAPALENIE_PLUC'].sum()
+sum_ciaza = filtered_df['CIAZA'].sum()
+sum_cukrzyca = filtered_df['CUKRZYCA'].sum()
+sum_przewlekla_choroba_pluc = filtered_df['PRZEWLEKLA_CHOROBA_PLUC'].sum()
+sum_astma = filtered_df['ASTMA'].sum()
+sum_immsupr = filtered_df['INMSUPR'].sum()
+sum_hipertension = filtered_df['HIPERTENSION'].sum()
+sum_inne_choroby = filtered_df['INNE_CHOROBY'].sum()
+sum_choroby_serca = filtered_df['CHROBY_SERCA'].sum()
+sum_otylosc = filtered_df['OTYLOSC'].sum()
+sum_choroba_nerek = filtered_df['CHOROBA_NEREK'].sum()
+sum_papierosy = filtered_df['PAPIEROSY'].sum()
+sum_intensywna_terapia = filtered_df['INTENSYWNA_TERAPIA'].sum()
+categories = ['RESPIRATOR', 'ZAPALENIE_PLUC', 'CIAZA', 'CUKRZYCA',
+    'PRZEWLEKLA_CHOROBA_PLUC', 'ASTMA', 'INMSUPR', 'HIPERTENSION',
+    'INNE_CHOROBY', 'CHROBY_SERCA', 'OTYLOSC', 'CHOROBA_NEREK', 'PAPIEROSY',
+    'INTENSYWNA_TERAPIA']
+values = [sum_respirator, sum_zapalenie_pluc, sum_ciaza, sum_cukrzyca,
+    sum_przewlekla_choroba_pluc, sum_astma, sum_immsupr, sum_hipertension,
+    sum_inne_choroby, sum_choroby_serca, sum_otylosc, sum_choroba_nerek,
+    sum_papierosy, sum_intensywna_terapia]
+```
+2023-07-08 13:02:31 [INFO] Answer: 
+2023-07-08 13:02:31 [INFO] Executed in: 9.653855800628662s
+2023-07-08 13:02:41 [INFO] Question: FIlter only ZGON = 1, show on horizontal bar graph: CUM RESPIRATOR, SUM ZAPALENIE_PLUC, SUM_CIAZA, SUM CUKRZYCA, SUM PRZEWLEKLA_CHOROBA_PLUC, SUM ASTMA, SUM IMMSUPR, SUM HIPERTENSION, SUM INNE_CHOROBY, SUM CHOROBY_SERCA, SUM OTYLOSC, SUM CHOROBA_NEREK, SUM PAPIEROSY, SUM INTENSYWNA_TERAPIA
+2023-07-08 13:02:41 [INFO] Running PandasAI with openai LLM...
+2023-07-08 13:02:41 [INFO] Prompt ID: 903b42f6-4ba9-4bca-9334-6001d920e70f
+2023-07-08 13:02:41 [INFO] Using cached response
+2023-07-08 13:02:41 [INFO] 
+Code running:
+```
+filtered_df = df[df['ZGON'] == 1]
+sum_respirator = filtered_df['RESPIRATOR'].sum()
+sum_zapalenie_pluc = filtered_df['ZAPALENIE_PLUC'].sum()
+sum_ciaza = filtered_df['CIAZA'].sum()
+sum_cukrzyca = filtered_df['CUKRZYCA'].sum()
+sum_przewlekla_choroba_pluc = filtered_df['PRZEWLEKLA_CHOROBA_PLUC'].sum()
+sum_astma = filtered_df['ASTMA'].sum()
+sum_immsupr = filtered_df['INMSUPR'].sum()
+sum_hipertension = filtered_df['HIPERTENSION'].sum()
+sum_inne_choroby = filtered_df['INNE_CHOROBY'].sum()
+sum_choroby_serca = filtered_df['CHROBY_SERCA'].sum()
+sum_otylosc = filtered_df['OTYLOSC'].sum()
+sum_choroba_nerek = filtered_df['CHOROBA_NEREK'].sum()
+sum_papierosy = filtered_df['PAPIEROSY'].sum()
+sum_intensywna_terapia = filtered_df['INTENSYWNA_TERAPIA'].sum()
+categories = ['RESPIRATOR', 'ZAPALENIE_PLUC', 'CIAZA', 'CUKRZYCA',
+    'PRZEWLEKLA_CHOROBA_PLUC', 'ASTMA', 'INMSUPR', 'HIPERTENSION',
+    'INNE_CHOROBY', 'CHROBY_SERCA', 'OTYLOSC', 'CHOROBA_NEREK', 'PAPIEROSY',
+    'INTENSYWNA_TERAPIA']
+values = [sum_respirator, sum_zapalenie_pluc, sum_ciaza, sum_cukrzyca,
+    sum_przewlekla_choroba_pluc, sum_astma, sum_immsupr, sum_hipertension,
+    sum_inne_choroby, sum_choroby_serca, sum_otylosc, sum_choroba_nerek,
+    sum_papierosy, sum_intensywna_terapia]
+```
+2023-07-08 13:02:41 [INFO] Answer: 
+2023-07-08 13:02:41 [INFO] Executed in: 0.02365565299987793s
+2023-07-08 13:02:47 [INFO] Question: FIlter only ZGON = 1, show on  graph: CUM RESPIRATOR, SUM ZAPALENIE_PLUC, SUM_CIAZA, SUM CUKRZYCA, SUM PRZEWLEKLA_CHOROBA_PLUC, SUM ASTMA, SUM IMMSUPR, SUM HIPERTENSION, SUM INNE_CHOROBY, SUM CHOROBY_SERCA, SUM OTYLOSC, SUM CHOROBA_NEREK, SUM PAPIEROSY, SUM INTENSYWNA_TERAPIA
+2023-07-08 13:02:47 [INFO] Running PandasAI with openai LLM...
+2023-07-08 13:02:47 [INFO] Prompt ID: c8a68d1f-865a-40e4-a7d1-c5d3fa927524
+2023-07-08 13:02:56 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Filter only ZGON = 1
+filtered_df = df[df['ZGON'] == 1]
+
+# Calculate the sum of each column
+sum_respirator = filtered_df['RESPIRATOR'].sum()
+sum_zapalenie_pluc = filtered_df['ZAPALENIE_PLUC'].sum()
+sum_ciaza = filtered_df['CIAZA'].sum()
+sum_cukrzyca = filtered_df['CUKRZYCA'].sum()
+sum_przewlekla_choroba_pluc = filtered_df['PRZEWLEKLA_CHOROBA_PLUC'].sum()
+sum_astma = filtered_df['ASTMA'].sum()
+sum_immsupr = filtered_df['INMSUPR'].sum()
+sum_hipertension = filtered_df['HIPERTENSION'].sum()
+sum_inne_choroby = filtered_df['INNE_CHOROBY'].sum()
+sum_choroby_serca = filtered_df['CHROBY_SERCA'].sum()
+sum_otylosc = filtered_df['OTYLOSC'].sum()
+sum_choroba_nerek = filtered_df['CHOROBA_NEREK'].sum()
+sum_papierosy = filtered_df['PAPIEROSY'].sum()
+sum_intensywna_terapia = filtered_df['INTENSYWNA_TERAPIA'].sum()
+
+# Create a bar plot
+categories = ['RESPIRATOR', 'ZAPALENIE_PLUC', 'CIAZA', 'CUKRZYCA', 'PRZEWLEKLA_CHOROBA_PLUC', 'ASTMA', 'INMSUPR', 'HIPERTENSION', 'INNE_CHOROBY', 'CHROBY_SERCA', 'OTYLOSC', 'CHOROBA_NEREK', 'PAPIEROSY', 'INTENSYWNA_TERAPIA']
+values = [sum_respirator, sum_zapalenie_pluc, sum_ciaza, sum_cukrzyca, sum_przewlekla_choroba_pluc, sum_astma, sum_immsupr, sum_hipertension, sum_inne_choroby, sum_choroby_serca, sum_otylosc, sum_choroba_nerek, sum_papierosy, sum_intensywna_terapia]
+
+plt.bar(categories, values)
+plt
+                        ```
+                    
+2023-07-08 13:02:56 [INFO] 
+Code running:
+```
+filtered_df = df[df['ZGON'] == 1]
+sum_respirator = filtered_df['RESPIRATOR'].sum()
+sum_zapalenie_pluc = filtered_df['ZAPALENIE_PLUC'].sum()
+sum_ciaza = filtered_df['CIAZA'].sum()
+sum_cukrzyca = filtered_df['CUKRZYCA'].sum()
+sum_przewlekla_choroba_pluc = filtered_df['PRZEWLEKLA_CHOROBA_PLUC'].sum()
+sum_astma = filtered_df['ASTMA'].sum()
+sum_immsupr = filtered_df['INMSUPR'].sum()
+sum_hipertension = filtered_df['HIPERTENSION'].sum()
+sum_inne_choroby = filtered_df['INNE_CHOROBY'].sum()
+sum_choroby_serca = filtered_df['CHROBY_SERCA'].sum()
+sum_otylosc = filtered_df['OTYLOSC'].sum()
+sum_choroba_nerek = filtered_df['CHOROBA_NEREK'].sum()
+sum_papierosy = filtered_df['PAPIEROSY'].sum()
+sum_intensywna_terapia = filtered_df['INTENSYWNA_TERAPIA'].sum()
+categories = ['RESPIRATOR', 'ZAPALENIE_PLUC', 'CIAZA', 'CUKRZYCA',
+    'PRZEWLEKLA_CHOROBA_PLUC', 'ASTMA', 'INMSUPR', 'HIPERTENSION',
+    'INNE_CHOROBY', 'CHROBY_SERCA', 'OTYLOSC', 'CHOROBA_NEREK', 'PAPIEROSY',
+    'INTENSYWNA_TERAPIA']
+values = [sum_respirator, sum_zapalenie_pluc, sum_ciaza, sum_cukrzyca,
+    sum_przewlekla_choroba_pluc, sum_astma, sum_immsupr, sum_hipertension,
+    sum_inne_choroby, sum_choroby_serca, sum_otylosc, sum_choroba_nerek,
+    sum_papierosy, sum_intensywna_terapia]
+plt.bar(categories, values)
+plt
+```
+2023-07-08 13:02:56 [INFO] Answer: <module 'matplotlib.pyplot' from 'C:\\Users\\adria\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\matplotlib\\pyplot.py'>
+2023-07-08 13:02:56 [INFO] Executed in: 9.40239143371582s
+2023-07-08 13:03:17 [INFO] Question: FIlter only ZGON = 1, show on horizontal graph: CUM RESPIRATOR, SUM ZAPALENIE_PLUC, SUM_CIAZA, SUM CUKRZYCA, SUM PRZEWLEKLA_CHOROBA_PLUC, SUM ASTMA, SUM IMMSUPR, SUM HIPERTENSION, SUM INNE_CHOROBY, SUM CHOROBY_SERCA, SUM OTYLOSC, SUM CHOROBA_NEREK, SUM PAPIEROSY, SUM INTENSYWNA_TERAPIA
+2023-07-08 13:03:17 [INFO] Running PandasAI with openai LLM...
+2023-07-08 13:03:17 [INFO] Prompt ID: f42de8a0-0247-4ee8-a94c-0a6b1926e143
+2023-07-08 13:03:33 [INFO] Question: FIlter only ZGON = 1, show on horizontal chart: CUM RESPIRATOR, SUM ZAPALENIE_PLUC, SUM_CIAZA, SUM CUKRZYCA, SUM PRZEWLEKLA_CHOROBA_PLUC, SUM ASTMA, SUM IMMSUPR, SUM HIPERTENSION, SUM INNE_CHOROBY, SUM CHOROBY_SERCA, SUM OTYLOSC, SUM CHOROBA_NEREK, SUM PAPIEROSY, SUM INTENSYWNA_TERAPIA
+2023-07-08 13:03:33 [INFO] Running PandasAI with openai LLM...
+2023-07-08 13:03:33 [INFO] Prompt ID: 165d919d-ef00-400e-b042-cbdadd79bbca
+2023-07-08 13:03:54 [INFO] Question: FIlter only ZGON = 1, show on chart: CUM RESPIRATOR, SUM ZAPALENIE_PLUC, SUM_CIAZA, SUM CUKRZYCA, SUM PRZEWLEKLA_CHOROBA_PLUC, SUM ASTMA, SUM IMMSUPR, SUM HIPERTENSION, SUM INNE_CHOROBY, SUM CHOROBY_SERCA, SUM OTYLOSC, SUM CHOROBA_NEREK, SUM PAPIEROSY, SUM INTENSYWNA_TERAPIA
+2023-07-08 13:03:54 [INFO] Running PandasAI with openai LLM...
+2023-07-08 13:03:54 [INFO] Prompt ID: 1900fccf-d31b-49d1-884f-7276987a59d5
+2023-07-08 13:04:03 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Filter only ZGON = 1
+filtered_df = df[df['ZGON'] == 1]
+
+# Calculate the sum of each column
+sum_respirator = filtered_df['RESPIRATOR'].sum()
+sum_zapalenie_pluc = filtered_df['ZAPALENIE_PLUC'].sum()
+sum_ciaza = filtered_df['CIAZA'].sum()
+sum_cukrzyca = filtered_df['CUKRZYCA'].sum()
+sum_przewlekla_choroba_pluc = filtered_df['PRZEWLEKLA_CHOROBA_PLUC'].sum()
+sum_astma = filtered_df['ASTMA'].sum()
+sum_immsupr = filtered_df['INMSUPR'].sum()
+sum_hipertension = filtered_df['HIPERTENSION'].sum()
+sum_inne_choroby = filtered_df['INNE_CHOROBY'].sum()
+sum_choroby_serca = filtered_df['CHROBY_SERCA'].sum()
+sum_otylosc = filtered_df['OTYLOSC'].sum()
+sum_choroba_nerek = filtered_df['CHOROBA_NEREK'].sum()
+sum_papierosy = filtered_df['PAPIEROSY'].sum()
+sum_intensywna_terapia = filtered_df['INTENSYWNA_TERAPIA'].sum()
+
+# Create a bar chart
+categories = ['RESPIRATOR', 'ZAPALENIE_PLUC', 'CIAZA', 'CUKRZYCA', 'PRZEWLEKLA_CHOROBA_PLUC', 'ASTMA', 'INMSUPR', 'HIPERTENSION', 'INNE_CHOROBY', 'CHROBY_SERCA', 'OTYLOSC', 'CHOROBA_NEREK', 'PAPIEROSY', 'INTENSYWNA_TERAPIA']
+values = [sum_respirator, sum_zapalenie_pluc, sum_ciaza, sum_cukrzyca, sum_przewlekla_choroba_pluc, sum_astma, sum_immsupr, sum_hipertension, sum_inne_choroby, sum_choroby_serca, sum_otylosc, sum_choroba_nerek, sum_papierosy, sum_intensywna_terapia]
+
+plt.bar(categories, values)
+plt
+                        ```
+                    
+2023-07-08 13:04:03 [INFO] 
+Code running:
+```
+filtered_df = df[df['ZGON'] == 1]
+sum_respirator = filtered_df['RESPIRATOR'].sum()
+sum_zapalenie_pluc = filtered_df['ZAPALENIE_PLUC'].sum()
+sum_ciaza = filtered_df['CIAZA'].sum()
+sum_cukrzyca = filtered_df['CUKRZYCA'].sum()
+sum_przewlekla_choroba_pluc = filtered_df['PRZEWLEKLA_CHOROBA_PLUC'].sum()
+sum_astma = filtered_df['ASTMA'].sum()
+sum_immsupr = filtered_df['INMSUPR'].sum()
+sum_hipertension = filtered_df['HIPERTENSION'].sum()
+sum_inne_choroby = filtered_df['INNE_CHOROBY'].sum()
+sum_choroby_serca = filtered_df['CHROBY_SERCA'].sum()
+sum_otylosc = filtered_df['OTYLOSC'].sum()
+sum_choroba_nerek = filtered_df['CHOROBA_NEREK'].sum()
+sum_papierosy = filtered_df['PAPIEROSY'].sum()
+sum_intensywna_terapia = filtered_df['INTENSYWNA_TERAPIA'].sum()
+categories = ['RESPIRATOR', 'ZAPALENIE_PLUC', 'CIAZA', 'CUKRZYCA',
+    'PRZEWLEKLA_CHOROBA_PLUC', 'ASTMA', 'INMSUPR', 'HIPERTENSION',
+    'INNE_CHOROBY', 'CHROBY_SERCA', 'OTYLOSC', 'CHOROBA_NEREK', 'PAPIEROSY',
+    'INTENSYWNA_TERAPIA']
+values = [sum_respirator, sum_zapalenie_pluc, sum_ciaza, sum_cukrzyca,
+    sum_przewlekla_choroba_pluc, sum_astma, sum_immsupr, sum_hipertension,
+    sum_inne_choroby, sum_choroby_serca, sum_otylosc, sum_choroba_nerek,
+    sum_papierosy, sum_intensywna_terapia]
+plt.bar(categories, values)
+plt
+```
+2023-07-08 13:04:03 [INFO] Answer: <module 'matplotlib.pyplot' from 'C:\\Users\\adria\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\matplotlib\\pyplot.py'>
+2023-07-08 13:04:03 [INFO] Executed in: 8.815366744995117s
+2023-07-08 13:04:20 [INFO] Question: FIlter only ZGON = 1, show on chart: SUM RESPIRATOR, SUM ZAPALENIE_PLUC, SUM_CIAZA, SUM CUKRZYCA, SUM PRZEWLEKLA_CHOROBA_PLUC, SUM ASTMA, SUM IMMSUPR, SUM HIPERTENSION, SUM INNE_CHOROBY, SUM CHOROBY_SERCA, SUM OTYLOSC, SUM CHOROBA_NEREK, SUM PAPIEROSY, SUM INTENSYWNA_TERAPIA. Sort by ASC
+2023-07-08 13:04:20 [INFO] Running PandasAI with openai LLM...
+2023-07-08 13:04:20 [INFO] Prompt ID: 759fe68d-b689-48d2-beef-150571f8da9b
+2023-07-08 13:04:29 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Filter only ZGON = 1
+filtered_df = df[df['ZGON'] == 1]
+
+# Calculate the sum of each column
+sum_respirator = filtered_df['RESPIRATOR'].sum()
+sum_zapalenie_pluc = filtered_df['ZAPALENIE_PLUC'].sum()
+sum_ciaza = filtered_df['CIAZA'].sum()
+sum_cukrzyca = filtered_df['CUKRZYCA'].sum()
+sum_przewlekla_choroba_pluc = filtered_df['PRZEWLEKLA_CHOROBA_PLUC'].sum()
+sum_astma = filtered_df['ASTMA'].sum()
+sum_inmsupr = filtered_df['INMSUPR'].sum()
+sum_hipertension = filtered_df['HIPERTENSION'].sum()
+sum_inne_choroby = filtered_df['INNE_CHOROBY'].sum()
+sum_choroby_serca = filtered_df['CHROBY_SERCA'].sum()
+sum_otylosc = filtered_df['OTYLOSC'].sum()
+sum_choroba_nerek = filtered_df['CHOROBA_NEREK'].sum()
+sum_papierosy = filtered_df['PAPIEROSY'].sum()
+sum_intensywna_terapia = filtered_df['INTENSYWNA_TERAPIA'].sum()
+
+# Create a bar chart
+categories = ['RESPIRATOR', 'ZAPALENIE_PLUC', 'CIAZA', 'CUKRZYCA', 'PRZEWLEKLA_CHOROBA_PLUC', 'ASTMA', 'INMSUPR', 'HIPERTENSION', 'INNE_CHOROBY', 'CHROBY_SERCA', 'OTYLOSC', 'CHOROBA_NEREK', 'PAPIEROSY', 'INTENSYWNA_TERAPIA']
+values = [sum_respirator, sum_zapalenie_pluc, sum_ciaza, sum_cukrzyca, sum_przewlekla_choroba_pluc, sum_astma, sum_inmsupr, sum_hipertension, sum_inne_choroby, sum_choroby_serca, sum_otylosc, sum_choroba_nerek, sum_papierosy, sum_intensywna_terapia]
+
+plt.bar(categories, values)
+plt
+                        ```
+                    
+2023-07-08 13:04:29 [INFO] 
+Code running:
+```
+filtered_df = df[df['ZGON'] == 1]
+sum_respirator = filtered_df['RESPIRATOR'].sum()
+sum_zapalenie_pluc = filtered_df['ZAPALENIE_PLUC'].sum()
+sum_ciaza = filtered_df['CIAZA'].sum()
+sum_cukrzyca = filtered_df['CUKRZYCA'].sum()
+sum_przewlekla_choroba_pluc = filtered_df['PRZEWLEKLA_CHOROBA_PLUC'].sum()
+sum_astma = filtered_df['ASTMA'].sum()
+sum_inmsupr = filtered_df['INMSUPR'].sum()
+sum_hipertension = filtered_df['HIPERTENSION'].sum()
+sum_inne_choroby = filtered_df['INNE_CHOROBY'].sum()
+sum_choroby_serca = filtered_df['CHROBY_SERCA'].sum()
+sum_otylosc = filtered_df['OTYLOSC'].sum()
+sum_choroba_nerek = filtered_df['CHOROBA_NEREK'].sum()
+sum_papierosy = filtered_df['PAPIEROSY'].sum()
+sum_intensywna_terapia = filtered_df['INTENSYWNA_TERAPIA'].sum()
+categories = ['RESPIRATOR', 'ZAPALENIE_PLUC', 'CIAZA', 'CUKRZYCA',
+    'PRZEWLEKLA_CHOROBA_PLUC', 'ASTMA', 'INMSUPR', 'HIPERTENSION',
+    'INNE_CHOROBY', 'CHROBY_SERCA', 'OTYLOSC', 'CHOROBA_NEREK', 'PAPIEROSY',
+    'INTENSYWNA_TERAPIA']
+values = [sum_respirator, sum_zapalenie_pluc, sum_ciaza, sum_cukrzyca,
+    sum_przewlekla_choroba_pluc, sum_astma, sum_inmsupr, sum_hipertension,
+    sum_inne_choroby, sum_choroby_serca, sum_otylosc, sum_choroba_nerek,
+    sum_papierosy, sum_intensywna_terapia]
+plt.bar(categories, values)
+plt
+```
+2023-07-08 13:04:29 [INFO] Answer: <module 'matplotlib.pyplot' from 'C:\\Users\\adria\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\matplotlib\\pyplot.py'>
+2023-07-08 13:04:29 [INFO] Executed in: 8.692460298538208s
+2023-07-08 13:04:39 [INFO] Question: FIlter only ZGON = 1, show on chart: SUM RESPIRATOR, SUM ZAPALENIE_PLUC, SUM_CIAZA, SUM CUKRZYCA, SUM PRZEWLEKLA_CHOROBA_PLUC, SUM ASTMA, SUM IMMSUPR, SUM HIPERTENSION, SUM INNE_CHOROBY, SUM CHOROBY_SERCA, SUM OTYLOSC, SUM CHOROBA_NEREK, SUM PAPIEROSY, SUM INTENSYWNA_TERAPIA. Sort by the largest
+2023-07-08 13:04:39 [INFO] Running PandasAI with openai LLM...
+2023-07-08 13:04:39 [INFO] Prompt ID: f15efb21-60d4-4a54-bd01-c6ffdd4e19e4
+2023-07-08 13:26:55 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts.
+2023-07-08 13:26:55 [INFO] Running PandasAI with openai LLM...
+2023-07-08 13:26:55 [INFO] Prompt ID: ea3405e0-6647-4588-8d0e-060164d91254
+2023-07-08 13:26:55 [INFO] Using cached response
+2023-07-08 13:26:55 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['int64', 'float64'])
+correlation_matrix = numeric_columns.corr()
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(correlation_matrix.columns)), correlation_matrix.
+    columns, rotation=90)
+plt.yticks(range(len(correlation_matrix.columns)), correlation_matrix.columns)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 13:26:57 [INFO] Answer: None
+2023-07-08 13:26:57 [INFO] Executed in: 2.6147494316101074s
+2023-07-08 13:39:17 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts.
+2023-07-08 13:39:17 [INFO] Running PandasAI with openai LLM...
+2023-07-08 13:39:17 [INFO] Prompt ID: 2bdb7a06-12a6-4263-b36b-50e8391a9493
+2023-07-08 13:39:17 [INFO] Using cached response
+2023-07-08 13:39:17 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['int64', 'float64'])
+correlation_matrix = numeric_columns.corr()
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(correlation_matrix.columns)), correlation_matrix.
+    columns, rotation=90)
+plt.yticks(range(len(correlation_matrix.columns)), correlation_matrix.columns)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 13:39:20 [INFO] Answer: None
+2023-07-08 13:39:20 [INFO] Executed in: 2.5543789863586426s
+2023-07-08 13:47:47 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts.
+2023-07-08 13:47:47 [INFO] Running PandasAI with openai LLM...
+2023-07-08 13:47:47 [INFO] Prompt ID: a7aee6f5-4129-4ec0-a279-2768327522cb
+2023-07-08 13:47:47 [INFO] Using cached response
+2023-07-08 13:47:47 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['int64', 'float64'])
+correlation_matrix = numeric_columns.corr()
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(correlation_matrix.columns)), correlation_matrix.
+    columns, rotation=90)
+plt.yticks(range(len(correlation_matrix.columns)), correlation_matrix.columns)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 13:47:49 [INFO] Answer: None
+2023-07-08 13:47:49 [INFO] Executed in: 2.3963239192962646s
+2023-07-08 13:48:47 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts. Only in columns
+2023-07-08 13:48:47 [INFO] Running PandasAI with openai LLM...
+2023-07-08 13:48:47 [INFO] Prompt ID: dcb21619-e52f-404b-bcf7-316561bcb1c6
+2023-07-08 13:48:51 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Convert the DATE_DIED column to datetime
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+
+# Select only numeric columns
+numeric_columns = df.select_dtypes(include=['int64', 'float64']).columns
+
+# Calculate the correlation matrix
+correlation_matrix = df[numeric_columns].corr()
+
+# Plot the correlation matrix as a heatmap
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', vmin=-1, vmax=1)
+plt.colorbar()
+plt.xticks(range(len(numeric_columns)), numeric_columns, rotation=90)
+plt.yticks(range(len(numeric_columns)), numeric_columns)
+plt.title('Correlation Matrix')
+plt.show()
+                        ```
+                    
+2023-07-08 13:48:51 [INFO] 
+Code running:
+```
+df['DATE_DIED'] = pd.to_datetime(df['DATE_DIED'], format='%d/%m/%Y')
+numeric_columns = df.select_dtypes(include=['int64', 'float64']).columns
+correlation_matrix = df[numeric_columns].corr()
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', vmin=-1, vmax=1)
+plt.colorbar()
+plt.xticks(range(len(numeric_columns)), numeric_columns, rotation=90)
+plt.yticks(range(len(numeric_columns)), numeric_columns)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 13:49:03 [INFO] Answer: None
+2023-07-08 13:49:03 [INFO] Executed in: 15.409047365188599s
+2023-07-08 13:49:15 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts.
+2023-07-08 13:49:15 [INFO] Running PandasAI with openai LLM...
+2023-07-08 13:49:15 [INFO] Prompt ID: 032ef8af-3b98-4ab6-9ef3-5726ee5bfa37
+2023-07-08 13:49:15 [INFO] Using cached response
+2023-07-08 13:49:15 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['int64', 'float64'])
+correlation_matrix = numeric_columns.corr()
+plt.figure(figsize=(10, 8))
+plt.imshow(correlation_matrix, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.xticks(range(len(correlation_matrix.columns)), correlation_matrix.
+    columns, rotation=90)
+plt.yticks(range(len(correlation_matrix.columns)), correlation_matrix.columns)
+plt.title('Correlation Matrix')
+plt.show(block=False)
+plt.close('all')
+```
+2023-07-08 13:49:17 [INFO] Answer: None
+2023-07-08 13:49:17 [INFO] Executed in: 2.2101988792419434s
