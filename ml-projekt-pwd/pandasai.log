@@ -256,3 +256,1914 @@ plt.close('all')
 ```
 2023-09-17 13:28:33 [INFO] Answer: 
 2023-09-17 13:28:33 [INFO] Executed in: 12.96894121170044s
+2023-09-17 13:32:44 [INFO] Question: narysuj wykres przestawiaj¹cy liczbê elementów w podziale na Investigation.Type
+2023-09-17 13:32:44 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:32:44 [INFO] Prompt ID: 65658970-50fc-4e28-925e-39297e01e580
+2023-09-17 13:32:49 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Read the dataframe
+df = pd.read_csv("data.csv")
+
+# Count the number of elements in each Investigation.Type
+investigation_counts = df["Investigation.Type"].value_counts()
+
+# Plot the bar chart
+investigation_counts.plot(kind="bar")
+
+# Add labels and title
+plt.xlabel("Investigation Type")
+plt.ylabel("Number of Elements")
+plt.title("Number of Elements by Investigation Type")
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 13:32:49 [INFO] 
+Code running:
+```
+investigation_counts = df['Investigation.Type'].value_counts()
+investigation_counts.plot(kind='bar')
+plt.xlabel('Investigation Type')
+plt.ylabel('Number of Elements')
+plt.title('Number of Elements by Investigation Type')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 13:32:49 [INFO] Answer: None
+2023-09-17 13:32:49 [INFO] Executed in: 4.881515026092529s
+2023-09-17 13:33:05 [INFO] Question: narysuj wykres ko³owy przestawiaj¹cy liczbê elementów w podziale na Investigation.Type
+2023-09-17 13:33:05 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:33:05 [INFO] Prompt ID: 3357dc9c-12ec-4149-8830-46d344e118dd
+2023-09-17 13:33:08 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Count the number of elements in each Investigation.Type category
+investigation_counts = df['Investigation.Type'].value_counts()
+
+# Plot a pie chart
+plt.pie(investigation_counts, labels=investigation_counts.index, autopct='%1.1f%%')
+plt.title('Investigation Type Distribution')
+plt.show()
+                        ```
+                    
+2023-09-17 13:33:08 [INFO] 
+Code running:
+```
+investigation_counts = df['Investigation.Type'].value_counts()
+plt.pie(investigation_counts, labels=investigation_counts.index, autopct=
+    '%1.1f%%')
+plt.title('Investigation Type Distribution')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 13:33:08 [INFO] Answer: None
+2023-09-17 13:33:08 [INFO] Executed in: 3.330334186553955s
+2023-09-17 13:35:39 [INFO] Question: narysuj wykres s³upkowy przestawiaj¹cy liczbê elementów w podziale na Investigation.Type. Kolory na wykresie powinny byæ w odzieniach niebieskiego
+2023-09-17 13:35:39 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:35:39 [INFO] Prompt ID: 365adbb2-9eb5-41f7-a8c7-9b941e508c3d
+2023-09-17 13:35:43 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Count the number of elements in each Investigation.Type category
+investigation_counts = df['Investigation.Type'].value_counts()
+
+# Plot the bar chart
+plt.bar(investigation_counts.index, investigation_counts.values, color='blue')
+
+# Set the title and labels
+plt.title('Number of Elements by Investigation Type')
+plt.xlabel('Investigation Type')
+plt.ylabel('Count')
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 13:35:43 [INFO] 
+Code running:
+```
+investigation_counts = df['Investigation.Type'].value_counts()
+plt.bar(investigation_counts.index, investigation_counts.values, color='blue')
+plt.title('Number of Elements by Investigation Type')
+plt.xlabel('Investigation Type')
+plt.ylabel('Count')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 13:35:43 [INFO] Answer: None
+2023-09-17 13:35:43 [INFO] Executed in: 4.055391311645508s
+2023-09-17 13:35:58 [INFO] Question: narysuj wykres s³upkowy przestawiaj¹cy liczbê elementów w podziale na Investigation.Type. Kolory na wykresie powinny byæ w odzieniach niebieskiego
+2023-09-17 13:35:58 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:35:58 [INFO] Prompt ID: c289b5a5-6618-470f-a5b7-2022fef577a4
+2023-09-17 13:35:58 [INFO] Using cached response
+2023-09-17 13:35:58 [INFO] 
+Code running:
+```
+investigation_counts = df['Investigation.Type'].value_counts()
+plt.bar(investigation_counts.index, investigation_counts.values, color='blue')
+plt.title('Number of Elements by Investigation Type')
+plt.xlabel('Investigation Type')
+plt.ylabel('Count')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 13:35:58 [INFO] Answer: None
+2023-09-17 13:35:58 [INFO] Executed in: 0.14700555801391602s
+2023-09-17 13:38:49 [INFO] Question: narysuj wykres ko³owy przestawiaj¹cy liczbê elementów w podziale na Investigation.Type. Kolory na wykresie powinny byæ w odzieniach niebieskiego
+2023-09-17 13:38:49 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:38:49 [INFO] Prompt ID: 349fbd4a-5885-4f7a-8710-ab229e2ec808
+2023-09-17 13:38:53 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Count the number of elements in each Investigation.Type category
+investigation_counts = df['Investigation.Type'].value_counts()
+
+# Plot a pie chart with the counts
+plt.pie(investigation_counts, labels=investigation_counts.index, colors='blue')
+
+# Add a title to the chart
+plt.title('Investigation Type Distribution')
+
+# Display the chart
+plt.show()
+                        ```
+                    
+2023-09-17 13:38:53 [INFO] 
+Code running:
+```
+investigation_counts = df['Investigation.Type'].value_counts()
+plt.pie(investigation_counts, labels=investigation_counts.index, colors='blue')
+plt.title('Investigation Type Distribution')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 13:39:05 [INFO] Answer: None
+2023-09-17 13:39:05 [INFO] Executed in: 15.851834535598755s
+2023-09-17 13:39:56 [INFO] Question: narysuj wykres ko³owy przestawiaj¹cy liczbê elementów w podziale na Investigation.Type.
+2023-09-17 13:39:56 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:39:56 [INFO] Prompt ID: 27dcbb27-af39-49c4-aed8-52873237f3fb
+2023-09-17 13:39:59 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Count the number of elements in each Investigation.Type category
+investigation_counts = df['Investigation.Type'].value_counts()
+
+# Plot a pie chart
+plt.pie(investigation_counts, labels=investigation_counts.index, autopct='%1.1f%%')
+plt.title('Investigation Type Distribution')
+plt.show()
+                        ```
+                    
+2023-09-17 13:39:59 [INFO] 
+Code running:
+```
+investigation_counts = df['Investigation.Type'].value_counts()
+plt.pie(investigation_counts, labels=investigation_counts.index, autopct=
+    '%1.1f%%')
+plt.title('Investigation Type Distribution')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 13:39:59 [INFO] Answer: None
+2023-09-17 13:39:59 [INFO] Executed in: 3.524963617324829s
+2023-09-17 13:43:18 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Number.of.Engines
+2023-09-17 13:43:18 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:43:18 [INFO] Prompt ID: ba97b38e-32cd-45cf-9261-8d74ea31114b
+2023-09-17 13:43:23 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Read the dataframe
+df = pd.read_csv('data.csv')
+
+# Group the data by Number.of.Engines and count the occurrences
+engine_counts = df.groupby('Number.of.Engines').size()
+
+# Plot the data
+engine_counts.plot(kind='bar')
+
+# Add labels and title
+plt.xlabel('Number of Engines')
+plt.ylabel('Count')
+plt.title('Number of Engines Distribution')
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 13:43:23 [INFO] 
+Code running:
+```
+engine_counts = df.groupby('Number.of.Engines').size()
+engine_counts.plot(kind='bar')
+plt.xlabel('Number of Engines')
+plt.ylabel('Count')
+plt.title('Number of Engines Distribution')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 13:43:23 [INFO] Answer: None
+2023-09-17 13:43:23 [INFO] Executed in: 4.854686975479126s
+2023-09-17 13:43:58 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type
+2023-09-17 13:43:58 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:43:58 [INFO] Prompt ID: 645d7f5b-528f-4463-be5b-c90abeef517b
+2023-09-17 13:44:00 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack().plot(kind='bar')
+
+plt.xlabel('Engine Type')
+plt.ylabel('Count')
+plt.title('Number of Engines by Engine Type')
+
+plt.show()
+                        ```
+                    
+2023-09-17 13:44:00 [INFO] 
+Code running:
+```
+df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack().plot(kind
+    ='bar')
+plt.xlabel('Engine Type')
+plt.ylabel('Count')
+plt.title('Number of Engines by Engine Type')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 13:44:01 [INFO] Answer: None
+2023-09-17 13:44:01 [INFO] Executed in: 3.166895627975464s
+2023-09-17 13:44:14 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym
+2023-09-17 13:44:14 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:44:14 [INFO] Prompt ID: 5f2c479a-883c-4846-a819-0f632d982a3b
+2023-09-17 13:44:19 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by Engine.Type and Number.of.Engines and count the occurrences
+engine_counts = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+
+# Calculate the percentage of each engine type for each number of engines
+engine_percentages = engine_counts.div(engine_counts.sum(axis=1), axis=0) * 100
+
+# Plot the data
+engine_percentages.plot(kind='bar', stacked=True)
+
+# Add labels and title
+plt.xlabel('Number of Engines')
+plt.ylabel('Percentage')
+plt.title('Percentage of Engine Types by Number of Engines')
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 13:44:19 [INFO] 
+Code running:
+```
+engine_counts = df.groupby(['Engine.Type', 'Number.of.Engines']).size(
+    ).unstack()
+engine_percentages = engine_counts.div(engine_counts.sum(axis=1), axis=0) * 100
+engine_percentages.plot(kind='bar', stacked=True)
+plt.xlabel('Number of Engines')
+plt.ylabel('Percentage')
+plt.title('Percentage of Engine Types by Number of Engines')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 13:44:20 [INFO] Answer: None
+2023-09-17 13:44:20 [INFO] Executed in: 6.0443384647369385s
+2023-09-17 13:44:55 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym. Legendê umieœæ po prawo od wykresu.
+2023-09-17 13:44:55 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:44:55 [INFO] Prompt ID: 3a8f9101-2eec-46f9-88b4-26da675e6bae
+2023-09-17 13:45:02 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by Engine.Type and Number.of.Engines and count the occurrences
+engine_counts = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+
+# Calculate the percentage of each engine type for each number of engines
+engine_percentages = engine_counts.div(engine_counts.sum(axis=1), axis=0) * 100
+
+# Plot the bar chart
+ax = engine_percentages.plot(kind='bar', stacked=True, figsize=(10, 6))
+
+# Add legend to the right of the chart
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+
+# Set labels and title
+ax.set_xlabel('Number of Engines')
+ax.set_ylabel('Percentage')
+ax.set_title('Percentage of Engine Types by Number of Engines')
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 13:45:02 [INFO] 
+Code running:
+```
+engine_counts = df.groupby(['Engine.Type', 'Number.of.Engines']).size(
+    ).unstack()
+engine_percentages = engine_counts.div(engine_counts.sum(axis=1), axis=0) * 100
+ax = engine_percentages.plot(kind='bar', stacked=True, figsize=(10, 6))
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+ax.set_xlabel('Number of Engines')
+ax.set_ylabel('Percentage')
+ax.set_title('Percentage of Engine Types by Number of Engines')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 13:45:03 [INFO] Answer: None
+2023-09-17 13:45:03 [INFO] Executed in: 7.963642120361328s
+2023-09-17 13:46:31 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym. Legendê umieœæ po prawo od wykresu.
+2023-09-17 13:46:31 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:46:31 [INFO] Prompt ID: 3eebd419-3cbc-4452-912a-b17148500b02
+2023-09-17 13:46:31 [INFO] Using cached response
+2023-09-17 13:46:31 [INFO] 
+Code running:
+```
+engine_counts = df.groupby(['Engine.Type', 'Number.of.Engines']).size(
+    ).unstack()
+engine_percentages = engine_counts.div(engine_counts.sum(axis=1), axis=0) * 100
+ax = engine_percentages.plot(kind='bar', stacked=True, figsize=(10, 6))
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+ax.set_xlabel('Number of Engines')
+ax.set_ylabel('Percentage')
+ax.set_title('Percentage of Engine Types by Number of Engines')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 13:46:31 [INFO] Answer: None
+2023-09-17 13:46:31 [INFO] Executed in: 0.36603260040283203s
+2023-09-17 13:46:56 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym. Legendê umieœæ po prawo od wykresu. Legenda ma 6 kolorów, ustaw je w odcieniach niebieskiego.
+2023-09-17 13:46:56 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:46:56 [INFO] Prompt ID: 50c90484-d32b-43c3-924a-b88a0c743f15
+2023-09-17 13:47:11 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym. Legendê umieœæ po prawo od wykresu. Legenda ma szeœæ kolorów, ustaw je w odcieniach niebieskiego.
+2023-09-17 13:47:11 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:47:11 [INFO] Prompt ID: 5ac8b701-0d98-4498-bcce-cb1c248c315a
+2023-09-17 13:47:17 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym. Legendê umieœæ po prawo od wykresu. Legenda ma szesc kolorów, ustaw je w odcieniach niebieskiego.
+2023-09-17 13:47:17 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:47:17 [INFO] Prompt ID: 49450892-e84b-4829-bb78-bb6946f0518f
+2023-09-17 13:47:24 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym. 
+2023-09-17 13:47:24 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:47:24 [INFO] Prompt ID: 01041001-db30-43c1-8193-891a3d6a04a3
+2023-09-17 13:47:29 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym.
+2023-09-17 13:47:29 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:47:29 [INFO] Prompt ID: 83ecd619-ac0a-482d-84e2-b39d4843ed1d
+2023-09-17 13:47:38 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym.
+2023-09-17 13:47:38 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:47:38 [INFO] Prompt ID: cdc30ae6-c362-40b7-8e6d-c4ba527b878a
+2023-09-17 13:47:47 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts.
+2023-09-17 13:47:47 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:47:47 [INFO] Prompt ID: a4690911-e856-437c-b1db-3d1a0c88b77b
+2023-09-17 13:47:47 [INFO] Using cached response
+2023-09-17 13:47:47 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['float64', 'int64'])
+correlation_matrix = numeric_columns.corr()
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 13:48:01 [INFO] Answer: 
+2023-09-17 13:48:01 [INFO] Executed in: 13.560770273208618s
+2023-09-17 13:48:01 [INFO] Question: narysuj wykres ko³owy przestawiaj¹cy liczbê elementów w podziale na Investigation.Type.
+2023-09-17 13:48:01 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:48:01 [INFO] Prompt ID: ea57eef2-112e-4050-9ada-12d0cc66cbfc
+2023-09-17 13:48:01 [INFO] Using cached response
+2023-09-17 13:48:01 [INFO] 
+Code running:
+```
+investigation_counts = df['Investigation.Type'].value_counts()
+plt.pie(investigation_counts, labels=investigation_counts.index, autopct=
+    '%1.1f%%')
+plt.title('Investigation Type Distribution')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 13:48:01 [INFO] Answer: None
+2023-09-17 13:48:01 [INFO] Executed in: 0.09036612510681152s
+2023-09-17 13:48:01 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym.
+2023-09-17 13:48:01 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:48:01 [INFO] Prompt ID: b637c888-be97-4a1c-ae99-cb5f2a874b96
+2023-09-17 13:48:05 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym.
+2023-09-17 13:48:05 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:48:05 [INFO] Prompt ID: e4f472d8-0e4f-4526-b59e-50d7ef794784
+2023-09-17 13:48:44 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym.
+2023-09-17 13:48:44 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:48:44 [INFO] Prompt ID: 2da5cdc9-aa12-4a4b-8b61-797e0cb89506
+2023-09-17 13:48:45 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym.
+2023-09-17 13:48:45 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:48:45 [INFO] Prompt ID: 0ec24444-6b92-4b59-b599-35eb93305f32
+2023-09-17 13:48:54 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts.
+2023-09-17 13:48:54 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:48:54 [INFO] Prompt ID: 893fc9b7-d7b5-43c6-82c6-656def13595b
+2023-09-17 13:48:54 [INFO] Using cached response
+2023-09-17 13:48:54 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['float64', 'int64'])
+correlation_matrix = numeric_columns.corr()
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 13:49:09 [INFO] Answer: 
+2023-09-17 13:49:09 [INFO] Executed in: 14.501134395599365s
+2023-09-17 13:49:09 [INFO] Question: narysuj wykres ko³owy przestawiaj¹cy liczbê elementów w podziale na Investigation.Type.
+2023-09-17 13:49:09 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:49:09 [INFO] Prompt ID: 4d77aaab-5976-48f6-a1e3-c880b39dddc0
+2023-09-17 13:49:09 [INFO] Using cached response
+2023-09-17 13:49:09 [INFO] 
+Code running:
+```
+investigation_counts = df['Investigation.Type'].value_counts()
+plt.pie(investigation_counts, labels=investigation_counts.index, autopct=
+    '%1.1f%%')
+plt.title('Investigation Type Distribution')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 13:49:09 [INFO] Answer: None
+2023-09-17 13:49:09 [INFO] Executed in: 0.09456133842468262s
+2023-09-17 13:49:09 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym.
+2023-09-17 13:49:09 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:49:09 [INFO] Prompt ID: 7ea59928-50c2-4529-abf4-fbc0aeaff526
+2023-09-17 13:49:47 [INFO] Question: umieœæ na wykresie Number.of.Engines
+2023-09-17 13:49:47 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:49:47 [INFO] Prompt ID: bb574956-22f4-430c-99e0-7dafb369135d
+2023-09-17 13:50:00 [INFO] Question: umieœæ na wykresie Engine.Type
+2023-09-17 13:50:00 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:50:00 [INFO] Prompt ID: 99e34b5b-4a3a-4d8a-b120-e2aee13f15da
+2023-09-17 13:50:05 [INFO] Question: narysuj wykres ko³owy przestawiaj¹cy liczbê elementów w podziale na Investigation.Type.
+2023-09-17 13:50:05 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:50:05 [INFO] Prompt ID: 045bcd5a-3590-4359-bfec-ce84d438f9b5
+2023-09-17 13:50:05 [INFO] Using cached response
+2023-09-17 13:50:05 [INFO] 
+Code running:
+```
+investigation_counts = df['Investigation.Type'].value_counts()
+plt.pie(investigation_counts, labels=investigation_counts.index, autopct=
+    '%1.1f%%')
+plt.title('Investigation Type Distribution')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 13:50:05 [INFO] Answer: None
+2023-09-17 13:50:05 [INFO] Executed in: 0.10699129104614258s
+2023-09-17 13:51:49 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym.
+2023-09-17 13:51:49 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:51:49 [INFO] Prompt ID: 311bc7e7-557f-47f9-bb19-513da1f245e6
+2023-09-17 13:51:55 [INFO] Question: narysuj wykres ko³owy przestawiaj¹cy liczbê elementów w podziale na Investigation.Type.
+2023-09-17 13:51:55 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:51:55 [INFO] Prompt ID: f4df2145-804f-4fd4-bed2-dc220792a36d
+2023-09-17 13:51:55 [INFO] Using cached response
+2023-09-17 13:51:55 [INFO] 
+Code running:
+```
+investigation_counts = df['Investigation.Type'].value_counts()
+plt.pie(investigation_counts, labels=investigation_counts.index, autopct=
+    '%1.1f%%')
+plt.title('Investigation Type Distribution')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 13:51:55 [INFO] Answer: None
+2023-09-17 13:51:55 [INFO] Executed in: 0.10376906394958496s
+2023-09-17 13:52:08 [INFO] Question: narysuj wykres ko³owy przestawiaj¹cy liczbê elementów w podziale na Engine.Type
+2023-09-17 13:52:08 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:52:08 [INFO] Prompt ID: 987a26c2-0192-4eed-8293-748c6989c136
+2023-09-17 13:53:54 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts.
+2023-09-17 13:53:54 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:53:54 [INFO] Prompt ID: 85d18edb-6ba8-49b5-a71b-8875bb54adb4
+2023-09-17 13:53:54 [INFO] Using cached response
+2023-09-17 13:53:54 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['float64', 'int64'])
+correlation_matrix = numeric_columns.corr()
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 13:54:09 [INFO] Answer: 
+2023-09-17 13:54:09 [INFO] Executed in: 15.062484979629517s
+2023-09-17 13:54:09 [INFO] Question: narysuj wykres ko³owy przestawiaj¹cy liczbê elementów w podziale na Investigation.Type.
+2023-09-17 13:54:09 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:54:09 [INFO] Prompt ID: 05b49671-e435-4dfb-97f0-339477c9022b
+2023-09-17 13:54:09 [INFO] Using cached response
+2023-09-17 13:54:09 [INFO] 
+Code running:
+```
+investigation_counts = df['Investigation.Type'].value_counts()
+plt.pie(investigation_counts, labels=investigation_counts.index, autopct=
+    '%1.1f%%')
+plt.title('Investigation Type Distribution')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 13:54:09 [INFO] Answer: None
+2023-09-17 13:54:09 [INFO] Executed in: 0.08935093879699707s
+2023-09-17 13:54:09 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym.
+2023-09-17 13:54:09 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:54:09 [INFO] Prompt ID: ca087b2e-ad4e-4a63-9d54-24e09ee95888
+2023-09-17 13:56:52 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym.
+2023-09-17 13:56:52 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:56:52 [INFO] Prompt ID: 902fbadd-1342-41cd-a97b-2ee4cb8e3808
+2023-09-17 13:56:58 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by Engine.Type and Number.of.Engines and count the occurrences
+engine_counts = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+
+# Calculate the percentage of each engine type for each number of engines
+engine_percentages = engine_counts.div(engine_counts.sum(axis=1), axis=0)
+
+# Plot the data
+engine_percentages.plot(kind='bar', stacked=True)
+plt.xlabel('Number of Engines')
+plt.ylabel('Percentage')
+plt.title('Percentage of Engine Type by Number of Engines')
+plt.legend(title='Engine Type')
+plt.show()
+                        ```
+                    
+2023-09-17 13:56:58 [INFO] 
+Code running:
+```
+engine_counts = df.groupby(['Engine.Type', 'Number.of.Engines']).size(
+    ).unstack()
+engine_percentages = engine_counts.div(engine_counts.sum(axis=1), axis=0)
+engine_percentages.plot(kind='bar', stacked=True)
+plt.xlabel('Number of Engines')
+plt.ylabel('Percentage')
+plt.title('Percentage of Engine Type by Number of Engines')
+plt.legend(title='Engine Type')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 13:56:59 [INFO] Answer: None
+2023-09-17 13:56:59 [INFO] Executed in: 6.245936870574951s
+2023-09-17 13:58:48 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym.
+2023-09-17 13:58:48 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:58:48 [INFO] Prompt ID: c7080cf9-897a-47b5-b31a-34dbdb4ac8f7
+2023-09-17 13:58:48 [INFO] Using cached response
+2023-09-17 13:58:48 [INFO] 
+Code running:
+```
+engine_counts = df.groupby(['Engine.Type', 'Number.of.Engines']).size(
+    ).unstack()
+engine_percentages = engine_counts.div(engine_counts.sum(axis=1), axis=0)
+engine_percentages.plot(kind='bar', stacked=True)
+plt.xlabel('Number of Engines')
+plt.ylabel('Percentage')
+plt.title('Percentage of Engine Type by Number of Engines')
+plt.legend(title='Engine Type')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 13:58:48 [INFO] Answer: None
+2023-09-17 13:58:48 [INFO] Executed in: 0.3064723014831543s
+2023-09-17 13:59:06 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym. Ustaw legende obok wykresu po prawej stronie.
+2023-09-17 13:59:06 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:59:06 [INFO] Prompt ID: 22268604-c134-4203-8080-5bfdb192c0ef
+2023-09-17 13:59:13 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by Engine.Type and Number.of.Engines and count the occurrences
+engine_counts = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+
+# Calculate the percentage of each engine type for each number of engines
+engine_percentages = engine_counts.div(engine_counts.sum(axis=1), axis=0) * 100
+
+# Plot the bar chart
+ax = engine_percentages.plot(kind='bar', stacked=True, figsize=(10, 6))
+
+# Set the legend position to the right
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+
+# Set the x-axis label
+ax.set_xlabel('Number of Engines')
+
+# Set the y-axis label
+ax.set_ylabel('Percentage')
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 13:59:13 [INFO] 
+Code running:
+```
+engine_counts = df.groupby(['Engine.Type', 'Number.of.Engines']).size(
+    ).unstack()
+engine_percentages = engine_counts.div(engine_counts.sum(axis=1), axis=0) * 100
+ax = engine_percentages.plot(kind='bar', stacked=True, figsize=(10, 6))
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+ax.set_xlabel('Number of Engines')
+ax.set_ylabel('Percentage')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 13:59:13 [INFO] Answer: None
+2023-09-17 13:59:13 [INFO] Executed in: 7.891557216644287s
+2023-09-17 13:59:48 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym. Ustaw legende obok wykresu po prawej stronie. Posortuj legendê od najmniejszych do najwiêkszych.
+2023-09-17 13:59:48 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:59:48 [INFO] Prompt ID: f6400862-5190-475f-924c-47745d023834
+2023-09-17 13:59:56 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by Engine.Type and Number.of.Engines and calculate the count
+engine_counts = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+
+# Calculate the percentage of each engine type for each number of engines
+engine_percentages = engine_counts.apply(lambda x: x / x.sum() * 100, axis=1)
+
+# Plot the bar chart
+ax = engine_percentages.plot(kind='bar', stacked=True, figsize=(10, 6))
+
+# Set the legend position to the right
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+
+# Sort the legend labels from smallest to largest
+handles, labels = ax.get_legend_handles_labels()
+sorted_labels, sorted_handles = zip(*sorted(zip(labels, handles), key=lambda x: sum(x[0].isdigit() for i in x[0])))
+
+# Set the sorted legend labels
+ax.legend(sorted_handles, sorted_labels)
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 13:59:56 [INFO] 
+Code running:
+```
+engine_counts = df.groupby(['Engine.Type', 'Number.of.Engines']).size(
+    ).unstack()
+engine_percentages = engine_counts.apply(lambda x: x / x.sum() * 100, axis=1)
+ax = engine_percentages.plot(kind='bar', stacked=True, figsize=(10, 6))
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+handles, labels = ax.get_legend_handles_labels()
+sorted_labels, sorted_handles = zip(*sorted(zip(labels, handles), key=lambda
+    x: sum(x[0].isdigit() for i in x[0])))
+ax.legend(sorted_handles, sorted_labels)
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 13:59:57 [INFO] Answer: None
+2023-09-17 13:59:57 [INFO] Executed in: 8.674505949020386s
+2023-09-17 14:00:29 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym. Ustaw legende obok wykresu po prawej stronie. Legenda ma szeœæ elementów, powinna mieæ odcienie niebieskiego. 
+2023-09-17 14:00:29 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:00:29 [INFO] Prompt ID: 664635e2-0164-4154-906d-18be6b5c6872
+2023-09-17 14:00:37 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by Engine.Type and Number.of.Engines and calculate the count
+grouped = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+
+# Calculate the percentage for each category
+total = grouped.sum(axis=1)
+percentage = grouped.div(total, axis=0) * 100
+
+# Plot the bar chart
+ax = percentage.plot(kind='bar', stacked=True, colormap='Blues')
+
+# Set the legend on the right side
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+
+# Set the x-axis label
+ax.set_xlabel('Engine Type')
+
+# Set the y-axis label
+ax.set_ylabel('Percentage')
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 14:00:37 [INFO] 
+Code running:
+```
+grouped = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+total = grouped.sum(axis=1)
+percentage = grouped.div(total, axis=0) * 100
+ax = percentage.plot(kind='bar', stacked=True, colormap='Blues')
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+ax.set_xlabel('Engine Type')
+ax.set_ylabel('Percentage')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:00:37 [INFO] Answer: None
+2023-09-17 14:00:37 [INFO] Executed in: 7.92805027961731s
+2023-09-17 14:01:07 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym. Ustaw legende obok wykresu po prawej stronie. Legenda ma szeœæ elementów, powinna mieæ odcienie niebieskiego, zacznij od trochê ciemniejszego. 
+2023-09-17 14:01:07 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:01:07 [INFO] Prompt ID: aaf42943-b353-4dbb-93c3-ecca624ca05e
+2023-09-17 14:01:14 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by Engine.Type and Number.of.Engines and calculate the count
+grouped = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+
+# Calculate the percentage for each category
+total = grouped.sum(axis=1)
+percentage = grouped.div(total, axis=0) * 100
+
+# Plot the bar chart
+ax = percentage.plot(kind='bar', stacked=True, colormap='Blues')
+
+# Set the legend position to the right
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+
+# Set the title and labels
+plt.title('Percentage of Number of Engines by Engine Type')
+plt.xlabel('Engine Type')
+plt.ylabel('Percentage')
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 14:01:14 [INFO] 
+Code running:
+```
+grouped = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+total = grouped.sum(axis=1)
+percentage = grouped.div(total, axis=0) * 100
+ax = percentage.plot(kind='bar', stacked=True, colormap='Blues')
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+plt.title('Percentage of Number of Engines by Engine Type')
+plt.xlabel('Engine Type')
+plt.ylabel('Percentage')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:01:14 [INFO] Answer: None
+2023-09-17 14:01:14 [INFO] Executed in: 7.037981271743774s
+2023-09-17 14:01:29 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym. Ustaw legende obok wykresu po prawej stronie. Legenda ma szeœæ elementów, powinna mieæ odcienie niebieskiego, zacznij od trochê ciemniejszego odcienia. 
+2023-09-17 14:01:29 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:01:29 [INFO] Prompt ID: b3b2c52d-fee5-453d-87f6-002283d67b8a
+2023-09-17 14:01:36 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by Engine.Type and Number.of.Engines and calculate the count
+grouped = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+
+# Calculate the percentage for each category
+total = grouped.sum(axis=1)
+percentage = grouped.div(total, axis=0) * 100
+
+# Plot the bar chart
+ax = percentage.plot(kind='bar', stacked=True, colormap='Blues')
+
+# Set the legend on the right side
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+
+# Set the title and labels
+plt.title('Percentage of Number of Engines by Engine Type')
+plt.xlabel('Engine Type')
+plt.ylabel('Percentage')
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 14:01:36 [INFO] 
+Code running:
+```
+grouped = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+total = grouped.sum(axis=1)
+percentage = grouped.div(total, axis=0) * 100
+ax = percentage.plot(kind='bar', stacked=True, colormap='Blues')
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+plt.title('Percentage of Number of Engines by Engine Type')
+plt.xlabel('Engine Type')
+plt.ylabel('Percentage')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:01:36 [INFO] Answer: None
+2023-09-17 14:01:36 [INFO] Executed in: 7.25087833404541s
+2023-09-17 14:01:50 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym. Ustaw legende obok wykresu po prawej stronie. Legenda ma szeœæ elementów, powinna mieæ odcienie ciemno-niebieskiego. 
+2023-09-17 14:01:50 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:01:50 [INFO] Prompt ID: 2d8c646e-7ede-4816-bd7d-9b6f8b36e502
+2023-09-17 14:01:56 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by Engine.Type and Number.of.Engines and calculate the count
+grouped = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+
+# Calculate the percentage for each category
+total = grouped.sum(axis=1)
+percentage = grouped.div(total, axis=0) * 100
+
+# Plot the bar chart
+ax = percentage.plot(kind='bar', stacked=True, colormap='Blues')
+
+# Set the legend on the right side
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+
+# Set the x-axis label
+ax.set_xlabel('Engine Type')
+
+# Set the y-axis label
+ax.set_ylabel('Percentage')
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 14:01:56 [INFO] 
+Code running:
+```
+grouped = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+total = grouped.sum(axis=1)
+percentage = grouped.div(total, axis=0) * 100
+ax = percentage.plot(kind='bar', stacked=True, colormap='Blues')
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+ax.set_xlabel('Engine Type')
+ax.set_ylabel('Percentage')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:01:56 [INFO] Answer: None
+2023-09-17 14:01:56 [INFO] Executed in: 6.497785329818726s
+2023-09-17 14:02:06 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym. Ustaw legende obok wykresu po prawej stronie. Legenda ma szeœæ elementów, powinna mieæ odcienie granatowego. 
+2023-09-17 14:02:06 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:02:06 [INFO] Prompt ID: 7878f789-13c8-481c-8c41-fbfbad15b6d7
+2023-09-17 14:02:13 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by Engine.Type and Number.of.Engines and calculate the count
+grouped = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+
+# Calculate the percentage for each category
+total = grouped.sum(axis=1)
+percentage = grouped.div(total, axis=0) * 100
+
+# Plot the bar chart
+ax = percentage.plot(kind='bar', stacked=True, colormap='Blues')
+
+# Set the legend on the right side
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+
+# Set the x-axis label
+ax.set_xlabel('Engine Type')
+
+# Set the y-axis label
+ax.set_ylabel('Percentage')
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 14:02:13 [INFO] 
+Code running:
+```
+grouped = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+total = grouped.sum(axis=1)
+percentage = grouped.div(total, axis=0) * 100
+ax = percentage.plot(kind='bar', stacked=True, colormap='Blues')
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+ax.set_xlabel('Engine Type')
+ax.set_ylabel('Percentage')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:02:13 [INFO] Answer: None
+2023-09-17 14:02:13 [INFO] Executed in: 7.227091312408447s
+2023-09-17 14:02:25 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym. Ustaw legende obok wykresu po prawej stronie. Legenda ma szeœæ elementów, powinna mieæ odcienie darkblue. 
+2023-09-17 14:02:25 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:02:25 [INFO] Prompt ID: 8dce5e38-acc2-4c05-acb6-076b1ff05952
+2023-09-17 14:02:31 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by Engine.Type and Number.of.Engines and calculate the count
+grouped = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+
+# Calculate the percentage for each engine type and number of engines
+total_counts = grouped.sum(axis=1)
+percentage = grouped.div(total_counts, axis=0) * 100
+
+# Plot the bar chart
+ax = percentage.plot(kind='bar', stacked=True, color='darkblue')
+
+# Set the legend position to the right
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 14:02:31 [INFO] 
+Code running:
+```
+grouped = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+total_counts = grouped.sum(axis=1)
+percentage = grouped.div(total_counts, axis=0) * 100
+ax = percentage.plot(kind='bar', stacked=True, color='darkblue')
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:02:31 [INFO] Answer: None
+2023-09-17 14:02:31 [INFO] Executed in: 5.988605499267578s
+2023-09-17 14:02:43 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym. Ustaw legende obok wykresu po prawej stronie. Legenda ma szeœæ elementów, powinna mieæ odcienie niebieskiego. 
+2023-09-17 14:02:43 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:02:43 [INFO] Prompt ID: f3ea069e-73cf-4843-b27f-dcef84f116f0
+2023-09-17 14:02:43 [INFO] Using cached response
+2023-09-17 14:02:43 [INFO] 
+Code running:
+```
+grouped = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+total = grouped.sum(axis=1)
+percentage = grouped.div(total, axis=0) * 100
+ax = percentage.plot(kind='bar', stacked=True, colormap='Blues')
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+ax.set_xlabel('Engine Type')
+ax.set_ylabel('Percentage')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:02:43 [INFO] Answer: None
+2023-09-17 14:02:43 [INFO] Executed in: 0.25310611724853516s
+2023-09-17 14:03:01 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym. Ustaw legende obok wykresu po prawej stronie. Legenda ma szeœæ elementów, powinna mieæ odcienie niebieskiego. Posortuj legendê ASC. 
+2023-09-17 14:03:01 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:03:01 [INFO] Prompt ID: ff7edad9-a53b-48a8-b503-d23365cb0b36
+2023-09-17 14:03:09 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by Engine.Type and Number.of.Engines and calculate the count
+grouped = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+
+# Calculate the percentage for each category
+total = grouped.sum(axis=1)
+percentage = grouped.div(total, axis=0) * 100
+
+# Plot the bar chart
+ax = percentage.plot(kind='bar', stacked=True, colormap='Blues')
+
+# Set the legend position to the right
+ax.legend(bbox_to_anchor=(1, 1), loc='upper left')
+
+# Sort the legend in ascending order
+handles, labels = ax.get_legend_handles_labels()
+ax.legend(handles[::-1], labels[::-1])
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 14:03:09 [INFO] 
+Code running:
+```
+grouped = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+total = grouped.sum(axis=1)
+percentage = grouped.div(total, axis=0) * 100
+ax = percentage.plot(kind='bar', stacked=True, colormap='Blues')
+ax.legend(bbox_to_anchor=(1, 1), loc='upper left')
+handles, labels = ax.get_legend_handles_labels()
+ax.legend(handles[::-1], labels[::-1])
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:03:09 [INFO] Answer: None
+2023-09-17 14:03:09 [INFO] Executed in: 7.3467957973480225s
+2023-09-17 14:03:17 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym. Ustaw legende obok wykresu po prawej stronie. Legenda ma szeœæ elementów, powinna mieæ odcienie niebieskiego. Posortuj legendê DESC. 
+2023-09-17 14:03:17 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:03:17 [INFO] Prompt ID: ec161cc5-fc49-40ec-ab0d-f1ec5f2cfa7d
+2023-09-17 14:03:23 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by Engine.Type and Number.of.Engines and calculate the count
+grouped = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+
+# Calculate the percentage for each category
+total = grouped.sum(axis=1)
+percentage = grouped.div(total, axis=0) * 100
+
+# Plot the bar chart
+ax = percentage.plot(kind='bar', stacked=True, colormap='Blues')
+
+# Set the legend position to the right
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+
+# Sort the legend in descending order
+handles, labels = ax.get_legend_handles_labels()
+ax.legend(handles[::-1], labels[::-1])
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 14:03:23 [INFO] 
+Code running:
+```
+grouped = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+total = grouped.sum(axis=1)
+percentage = grouped.div(total, axis=0) * 100
+ax = percentage.plot(kind='bar', stacked=True, colormap='Blues')
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+handles, labels = ax.get_legend_handles_labels()
+ax.legend(handles[::-1], labels[::-1])
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:03:24 [INFO] Answer: None
+2023-09-17 14:03:24 [INFO] Executed in: 6.962164640426636s
+2023-09-17 14:03:42 [INFO] Question: umieœæ na wykresie Number.of.Engines (posortowane desc) w rozró¿nieniu na Engine.Type w ujêciu procentowym. Ustaw legende obok wykresu po prawej stronie. Legenda ma szeœæ elementów, powinna mieæ odcienie niebieskiego.  
+2023-09-17 14:03:42 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:03:42 [INFO] Prompt ID: fdc3a2e1-7eca-414b-a336-06699e048985
+2023-09-17 14:03:49 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by Engine.Type and Number.of.Engines and calculate the count
+engine_counts = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+
+# Calculate the percentage of each engine type for each number of engines
+engine_percentages = engine_counts.div(engine_counts.sum(axis=1), axis=0)
+
+# Sort the data by Number.of.Engines in descending order
+engine_percentages_sorted = engine_percentages.sort_values(by='Number.of.Engines', ascending=False)
+
+# Plot the data
+ax = engine_percentages_sorted.plot(kind='bar', stacked=True, colormap='Blues')
+
+# Set the legend position to the right
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 14:03:49 [INFO] 
+Code running:
+```
+engine_counts = df.groupby(['Engine.Type', 'Number.of.Engines']).size(
+    ).unstack()
+engine_percentages = engine_counts.div(engine_counts.sum(axis=1), axis=0)
+engine_percentages_sorted = engine_percentages.sort_values(by=
+    'Number.of.Engines', ascending=False)
+ax = engine_percentages_sorted.plot(kind='bar', stacked=True, colormap='Blues')
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:04:12 [INFO] Answer: None
+2023-09-17 14:04:12 [INFO] Executed in: 30.03245520591736s
+2023-09-17 14:04:23 [INFO] Question: umieœæ na wykresie Number.of.Engines posortowane desc w rozró¿nieniu na Engine.Type w ujêciu procentowym. Ustaw legende obok wykresu po prawej stronie. Legenda ma szeœæ elementów, powinna mieæ odcienie niebieskiego.  
+2023-09-17 14:04:23 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:04:23 [INFO] Prompt ID: 9cc7e581-2596-4c66-b6c7-20bca101eb23
+2023-09-17 14:04:30 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by Engine.Type and Number.of.Engines and count the occurrences
+engine_counts = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+
+# Calculate the percentage of each engine type for each number of engines
+engine_percentages = engine_counts.div(engine_counts.sum(axis=1), axis=0)
+
+# Sort the data by Number.of.Engines in descending order
+engine_percentages_sorted = engine_percentages.sort_values(by='Number.of.Engines', ascending=False)
+
+# Plot the data
+ax = engine_percentages_sorted.plot(kind='bar', stacked=True, colormap='Blues')
+
+# Set the legend on the right side
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 14:04:30 [INFO] 
+Code running:
+```
+engine_counts = df.groupby(['Engine.Type', 'Number.of.Engines']).size(
+    ).unstack()
+engine_percentages = engine_counts.div(engine_counts.sum(axis=1), axis=0)
+engine_percentages_sorted = engine_percentages.sort_values(by=
+    'Number.of.Engines', ascending=False)
+ax = engine_percentages_sorted.plot(kind='bar', stacked=True, colormap='Blues')
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:04:52 [INFO] Answer: None
+2023-09-17 14:04:52 [INFO] Executed in: 29.193055868148804s
+2023-09-17 14:05:54 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym. Ustaw legende obok wykresu po prawej stronie. Legenda ma szeœæ elementów, powinna mieæ odcienie niebieskiego.  
+2023-09-17 14:05:54 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:05:54 [INFO] Prompt ID: 0bb36b24-1997-450f-9ac5-b04e449e7b59
+2023-09-17 14:06:02 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by Engine.Type and Number.of.Engines and count the occurrences
+engine_counts = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+
+# Calculate the percentage of each engine type for each number of engines
+engine_percentages = engine_counts.div(engine_counts.sum(axis=1), axis=0)
+
+# Plot the bar chart
+ax = engine_percentages.plot(kind='bar', stacked=True, colormap='Blues')
+
+# Set the legend position to the right
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+
+# Set the x-axis label
+ax.set_xlabel('Number of Engines')
+
+# Set the y-axis label
+ax.set_ylabel('Percentage')
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 14:06:02 [INFO] 
+Code running:
+```
+engine_counts = df.groupby(['Engine.Type', 'Number.of.Engines']).size(
+    ).unstack()
+engine_percentages = engine_counts.div(engine_counts.sum(axis=1), axis=0)
+ax = engine_percentages.plot(kind='bar', stacked=True, colormap='Blues')
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+ax.set_xlabel('Number of Engines')
+ax.set_ylabel('Percentage')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:06:03 [INFO] Answer: None
+2023-09-17 14:06:03 [INFO] Executed in: 8.353450298309326s
+2023-09-17 14:06:44 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym. Ustaw legende obok wykresu po prawej stronie. Legenda ma szeœæ elementów, powinna mieæ odcienie niebieskiego. Kategorie posortuj alfabetycznie. 
+2023-09-17 14:06:44 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:06:44 [INFO] Prompt ID: 3ec0dee6-62b3-45e5-92bc-a880a286f389
+2023-09-17 14:06:50 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by Engine.Type and Number.of.Engines and calculate the count
+grouped = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+
+# Calculate the percentage for each category
+total = grouped.sum(axis=1)
+percentage = grouped.div(total, axis=0) * 100
+
+# Sort the categories alphabetically
+percentage = percentage.sort_index()
+
+# Plot the bar chart
+ax = percentage.plot(kind='bar', stacked=True, colormap='Blues')
+
+# Set the legend on the right side
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 14:06:50 [INFO] 
+Code running:
+```
+grouped = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+total = grouped.sum(axis=1)
+percentage = grouped.div(total, axis=0) * 100
+percentage = percentage.sort_index()
+ax = percentage.plot(kind='bar', stacked=True, colormap='Blues')
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:06:50 [INFO] Answer: None
+2023-09-17 14:06:50 [INFO] Executed in: 6.333056211471558s
+2023-09-17 14:08:28 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym. Ustaw legende obok wykresu po prawej stronie. Legenda ma szeœæ elementów, powinna mieæ odcienie niebieskiego. Dane grupuj¹ce posortuj alfabetycznie. 
+2023-09-17 14:08:28 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:08:28 [INFO] Prompt ID: 6706640e-240f-44fc-82ef-5a350bd1f0fb
+2023-09-17 14:08:41 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by Engine.Type and Number.of.Engines and calculate the count
+grouped_data = df.groupby(['Engine.Type', 'Number.of.Engines']).size().reset_index(name='Count')
+
+# Calculate the total count for each Engine.Type
+total_count = grouped_data.groupby('Engine.Type')['Count'].sum()
+
+# Calculate the percentage of each Number.of.Engines within each Engine.Type
+grouped_data['Percentage'] = grouped_data.apply(lambda row: (row['Count'] / total_count[row['Engine.Type']]) * 100, axis=1)
+
+# Sort the data alphabetically by Engine.Type
+grouped_data.sort_values(by=['Engine.Type', 'Number.of.Engines'], inplace=True)
+
+# Create a bar plot
+fig, ax = plt.subplots(figsize=(10, 6))
+colors = ['#0000FF', '#3333FF', '#6666FF', '#9999FF', '#CCCCFF', '#FFFFFF']
+for i, (engine_type, group) in enumerate(grouped_data.groupby('Engine.Type')):
+    ax.bar(group['Number.of.Engines'], group['Percentage'], color=colors[i], label=engine_type)
+
+# Set the legend on the right side
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+
+# Set the x-axis and y-axis labels
+ax.set_xlabel('Number of Engines')
+ax.set_ylabel('Percentage')
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 14:08:41 [INFO] 
+Code running:
+```
+grouped_data = df.groupby(['Engine.Type', 'Number.of.Engines']).size(
+    ).reset_index(name='Count')
+total_count = grouped_data.groupby('Engine.Type')['Count'].sum()
+grouped_data['Percentage'] = grouped_data.apply(lambda row: row['Count'] /
+    total_count[row['Engine.Type']] * 100, axis=1)
+grouped_data.sort_values(by=['Engine.Type', 'Number.of.Engines'], inplace=True)
+fig, ax = plt.subplots(figsize=(10, 6))
+colors = ['#0000FF', '#3333FF', '#6666FF', '#9999FF', '#CCCCFF', '#FFFFFF']
+for i, (engine_type, group) in enumerate(grouped_data.groupby('Engine.Type')):
+    ax.bar(group['Number.of.Engines'], group['Percentage'], color=colors[i],
+        label=engine_type)
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+ax.set_xlabel('Number of Engines')
+ax.set_ylabel('Percentage')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:09:19 [INFO] Answer: None
+2023-09-17 14:09:19 [INFO] Executed in: 51.14665937423706s
+2023-09-17 14:10:13 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym. Ustaw legende obok wykresu po prawej stronie. Legenda ma szeœæ elementów, powinna mieæ odcienie niebieskiego. Sortuj wed³ug Number.of.Engines 
+2023-09-17 14:10:13 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:10:13 [INFO] Prompt ID: 2b0ac007-9f0d-4556-afa0-ba4e23f42309
+2023-09-17 14:10:20 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by Engine.Type and Number.of.Engines and calculate the count
+engine_counts = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+
+# Calculate the percentage of each engine type for each number of engines
+engine_percentages = engine_counts.div(engine_counts.sum(axis=1), axis=0)
+
+# Sort the data by Number.of.Engines
+engine_percentages = engine_percentages.sort_values(by='Number.of.Engines')
+
+# Plot the data
+ax = engine_percentages.plot(kind='bar', stacked=True, colormap='Blues')
+
+# Set the legend position to the right
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 14:10:20 [INFO] 
+Code running:
+```
+engine_counts = df.groupby(['Engine.Type', 'Number.of.Engines']).size(
+    ).unstack()
+engine_percentages = engine_counts.div(engine_counts.sum(axis=1), axis=0)
+engine_percentages = engine_percentages.sort_values(by='Number.of.Engines')
+ax = engine_percentages.plot(kind='bar', stacked=True, colormap='Blues')
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:10:42 [INFO] Answer: None
+2023-09-17 14:10:42 [INFO] Executed in: 28.586293935775757s
+2023-09-17 14:11:05 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym. Ustaw legende obok wykresu po prawej stronie. Legenda ma szeœæ elementów, powinna mieæ odcienie niebieskiego. Sortuj legende wed³ug Number.of.Engines 
+2023-09-17 14:11:05 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:11:05 [INFO] Prompt ID: ca4888ef-52f8-4997-8e0b-313c05e94da1
+2023-09-17 14:11:13 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by Engine.Type and Number.of.Engines and calculate the count
+grouped = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+
+# Calculate the percentage for each engine type
+total_counts = grouped.sum(axis=1)
+percentage = grouped.div(total_counts, axis=0) * 100
+
+# Sort the legend by Number.of.Engines
+sorted_legend = percentage.columns.sort_values()
+
+# Plot the bar chart
+ax = percentage[sorted_legend].plot(kind='bar', stacked=True, colormap='Blues')
+
+# Set the legend on the right side
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+
+# Set the x-axis label
+ax.set_xlabel('Engine Type')
+
+# Set the y-axis label
+ax.set_ylabel('Percentage')
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 14:11:13 [INFO] 
+Code running:
+```
+grouped = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+total_counts = grouped.sum(axis=1)
+percentage = grouped.div(total_counts, axis=0) * 100
+sorted_legend = percentage.columns.sort_values()
+ax = percentage[sorted_legend].plot(kind='bar', stacked=True, colormap='Blues')
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+ax.set_xlabel('Engine Type')
+ax.set_ylabel('Percentage')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:11:13 [INFO] Answer: None
+2023-09-17 14:11:13 [INFO] Executed in: 8.04956340789795s
+2023-09-17 14:11:34 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym. Ustaw legende obok wykresu po prawej stronie. Legenda ma szeœæ elementów, powinna mieæ odcienie niebieskiego. 
+2023-09-17 14:11:34 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:11:34 [INFO] Prompt ID: ffc00ca8-f767-4966-92af-7c2bc14fbab9
+2023-09-17 14:11:34 [INFO] Using cached response
+2023-09-17 14:11:34 [INFO] 
+Code running:
+```
+grouped = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+total = grouped.sum(axis=1)
+percentage = grouped.div(total, axis=0) * 100
+ax = percentage.plot(kind='bar', stacked=True, colormap='Blues')
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+ax.set_xlabel('Engine Type')
+ax.set_ylabel('Percentage')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:11:34 [INFO] Answer: None
+2023-09-17 14:11:34 [INFO] Executed in: 0.2652924060821533s
+2023-09-17 14:11:49 [INFO] Question: umieœæ na wykresie Number.of.Engines w rozró¿nieniu na Engine.Type w ujêciu procentowym. Ustaw legende obok wykresu po prawej stronie. Legenda ma szeœæ elementów, powinna mieæ odcienie niebieskiego.Sortuj legende wed³ug Number.of.Engines  
+2023-09-17 14:11:49 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:11:49 [INFO] Prompt ID: 9b24de51-07db-4281-b6c9-054ea63d6494
+2023-09-17 14:11:57 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by Engine.Type and Number.of.Engines and calculate the count
+grouped = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+
+# Calculate the percentage for each engine type
+total_counts = grouped.sum(axis=1)
+percentage = grouped.div(total_counts, axis=0) * 100
+
+# Plot the bar chart
+ax = percentage.plot(kind='bar', stacked=True, colormap='Blues')
+
+# Set the legend position to the right
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+
+# Sort the legend by Number.of.Engines
+handles, labels = ax.get_legend_handles_labels()
+sorted_labels = [label for _, label in sorted(zip(handles, labels), key=lambda x: int(x[1].split('.')[0]))]
+ax.legend(handles, sorted_labels, loc='center left', bbox_to_anchor=(1, 0.5))
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 14:11:57 [INFO] 
+Code running:
+```
+grouped = df.groupby(['Engine.Type', 'Number.of.Engines']).size().unstack()
+total_counts = grouped.sum(axis=1)
+percentage = grouped.div(total_counts, axis=0) * 100
+ax = percentage.plot(kind='bar', stacked=True, colormap='Blues')
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+handles, labels = ax.get_legend_handles_labels()
+sorted_labels = [label for _, label in sorted(zip(handles, labels), key=lambda
+    x: int(x[1].split('.')[0]))]
+ax.legend(handles, sorted_labels, loc='center left', bbox_to_anchor=(1, 0.5))
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:11:58 [INFO] Answer: None
+2023-09-17 14:11:58 [INFO] Executed in: 8.892274618148804s
+2023-09-17 14:13:45 [INFO] Question: umieœæ na wykresie Number.of.Engines
+2023-09-17 14:13:45 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:13:45 [INFO] Prompt ID: 9472ccaa-1805-47ca-957c-2c9a69645791
+2023-09-17 14:13:47 [INFO] 
+                        Code generated:
+                        ```
+                        df['Number.of.Engines'].plot(kind='hist')
+                        ```
+                    
+2023-09-17 14:13:47 [INFO] 
+Code running:
+```
+df['Number.of.Engines'].plot(kind='hist')
+```
+2023-09-17 14:13:47 [INFO] Answer: Axes(0.125,0.11;0.775x0.77)
+2023-09-17 14:13:47 [INFO] Executed in: 2.0340609550476074s
+2023-09-17 14:13:58 [INFO] Question: umieœæ na wykresie Number.of.Engines jako udzia³ procentowy
+2023-09-17 14:13:58 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:13:58 [INFO] Prompt ID: a6a73815-cb0a-4de0-8754-d61abb2d8270
+2023-09-17 14:14:02 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Count the number of occurrences for each value in Number.of.Engines column
+engine_counts = df['Number.of.Engines'].value_counts()
+
+# Calculate the percentage for each value
+engine_percentages = engine_counts / engine_counts.sum() * 100
+
+# Plot the data
+plt.figure(figsize=(10, 6))
+engine_percentages.plot(kind='bar')
+plt.xlabel('Number of Engines')
+plt.ylabel('Percentage')
+plt.title('Percentage of Aircrafts by Number of Engines')
+plt.show()
+                        ```
+                    
+2023-09-17 14:14:02 [INFO] 
+Code running:
+```
+engine_counts = df['Number.of.Engines'].value_counts()
+engine_percentages = engine_counts / engine_counts.sum() * 100
+plt.figure(figsize=(10, 6))
+engine_percentages.plot(kind='bar')
+plt.xlabel('Number of Engines')
+plt.ylabel('Percentage')
+plt.title('Percentage of Aircrafts by Number of Engines')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:14:02 [INFO] Answer: None
+2023-09-17 14:14:02 [INFO] Executed in: 4.937177658081055s
+2023-09-17 14:14:18 [INFO] Question: umieœæ na wykresie Number.of.Engines jako udzia³ procentowy, dodaj etykiety
+2023-09-17 14:14:18 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:14:18 [INFO] Prompt ID: d943bba7-d03d-42cc-acec-61b082c7b4ef
+2023-09-17 14:14:22 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Count the number of occurrences for each value in Number.of.Engines column
+engine_counts = df['Number.of.Engines'].value_counts()
+
+# Calculate the percentage of each value in Number.of.Engines column
+engine_percentages = engine_counts / engine_counts.sum() * 100
+
+# Plot the data as a pie chart
+plt.pie(engine_percentages, labels=engine_percentages.index, autopct='%1.1f%%')
+plt.title('Number of Engines')
+plt.show()
+                        ```
+                    
+2023-09-17 14:14:22 [INFO] 
+Code running:
+```
+engine_counts = df['Number.of.Engines'].value_counts()
+engine_percentages = engine_counts / engine_counts.sum() * 100
+plt.pie(engine_percentages, labels=engine_percentages.index, autopct='%1.1f%%')
+plt.title('Number of Engines')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:14:23 [INFO] Answer: None
+2023-09-17 14:14:23 [INFO] Executed in: 4.628849506378174s
+2023-09-17 14:14:33 [INFO] Question: umieœæ na wykresie Number.of.Engines jako udzia³ procentowy, na wykresie s³upkowym,  dodaj etykiety
+2023-09-17 14:14:33 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:14:33 [INFO] Prompt ID: aa1ca9e6-4c6c-4e6e-a560-be9c16715518
+2023-09-17 14:14:39 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by Number of Engines and count the occurrences
+engine_counts = df['Number.of.Engines'].value_counts()
+
+# Calculate the percentage of each engine count
+engine_percentages = engine_counts / engine_counts.sum() * 100
+
+# Plot the bar chart
+plt.bar(engine_percentages.index, engine_percentages.values)
+
+# Add labels to the bars
+for i, v in enumerate(engine_percentages.values):
+    plt.text(i, v, f"{v:.2f}%", ha='center', va='bottom')
+
+# Add labels to the x-axis
+plt.xlabel('Number of Engines')
+
+# Add labels to the y-axis
+plt.ylabel('Percentage')
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 14:14:39 [INFO] 
+Code running:
+```
+engine_counts = df['Number.of.Engines'].value_counts()
+engine_percentages = engine_counts / engine_counts.sum() * 100
+plt.bar(engine_percentages.index, engine_percentages.values)
+for i, v in enumerate(engine_percentages.values):
+    plt.text(i, v, f'{v:.2f}%', ha='center', va='bottom')
+plt.xlabel('Number of Engines')
+plt.ylabel('Percentage')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:14:39 [INFO] Answer: None
+2023-09-17 14:14:39 [INFO] Executed in: 6.193499565124512s
+2023-09-17 14:15:02 [INFO] Question: umieœæ na wykresie Number.of.Engines jako udzia³ procentowy, na wykresie s³upkowym poziomym,  dodaj etykiety
+2023-09-17 14:15:02 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:15:02 [INFO] Prompt ID: 594417b4-a72a-43f1-b709-784b514ad6ff
+2023-09-17 14:15:07 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by Number of Engines and count the occurrences
+engine_counts = df['Number.of.Engines'].value_counts()
+
+# Calculate the percentage of each engine count
+engine_percentages = engine_counts / engine_counts.sum() * 100
+
+# Create a horizontal bar plot
+plt.barh(engine_percentages.index, engine_percentages)
+
+# Add labels to the plot
+plt.xlabel('Percentage')
+plt.ylabel('Number of Engines')
+plt.title('Percentage of Aircrafts by Number of Engines')
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 14:15:07 [INFO] 
+Code running:
+```
+engine_counts = df['Number.of.Engines'].value_counts()
+engine_percentages = engine_counts / engine_counts.sum() * 100
+plt.barh(engine_percentages.index, engine_percentages)
+plt.xlabel('Percentage')
+plt.ylabel('Number of Engines')
+plt.title('Percentage of Aircrafts by Number of Engines')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:15:08 [INFO] Answer: None
+2023-09-17 14:15:08 [INFO] Executed in: 5.594142198562622s
+2023-09-17 14:15:20 [INFO] Question: umieœæ na wykresie Number.of.Engines jako udzia³ procentowy, na wykresie s³upkowym poziomym, dodaj etykiety na koñcu s³upka
+2023-09-17 14:15:20 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:15:20 [INFO] Prompt ID: 52850e7c-dc67-41f3-9268-766347c6f1fa
+2023-09-17 14:15:27 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by Number of Engines and count the occurrences
+engine_counts = df['Number.of.Engines'].value_counts()
+
+# Calculate the percentage of each engine count
+engine_percentages = engine_counts / engine_counts.sum() * 100
+
+# Create a horizontal bar plot
+plt.barh(engine_percentages.index, engine_percentages.values)
+
+# Add labels to the end of each bar
+for i, v in enumerate(engine_percentages.values):
+    plt.text(v + 0.5, i, f'{v:.1f}%', va='center')
+
+# Set the x-axis label
+plt.xlabel('Percentage')
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 14:15:27 [INFO] 
+Code running:
+```
+engine_counts = df['Number.of.Engines'].value_counts()
+engine_percentages = engine_counts / engine_counts.sum() * 100
+plt.barh(engine_percentages.index, engine_percentages.values)
+for i, v in enumerate(engine_percentages.values):
+    plt.text(v + 0.5, i, f'{v:.1f}%', va='center')
+plt.xlabel('Percentage')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:15:27 [INFO] Answer: None
+2023-09-17 14:15:27 [INFO] Executed in: 6.582115411758423s
+2023-09-17 14:15:38 [INFO] Question: umieœæ na wykresie Number.of.Engines jako udzia³ procentowy, na wykresie kolumnowym, dodaj etykiety na koñcu s³upka
+2023-09-17 14:15:38 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:15:38 [INFO] Prompt ID: 75b3b79d-91c8-4a89-b5b0-30486ceba48a
+2023-09-17 14:15:44 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Group the data by Number of Engines and count the occurrences
+engine_counts = df['Number.of.Engines'].value_counts()
+
+# Calculate the percentage of each engine count
+engine_percentages = engine_counts / engine_counts.sum() * 100
+
+# Create a bar plot with the engine percentages
+plt.bar(engine_percentages.index, engine_percentages.values)
+
+# Add labels to the end of each bar
+for i, v in enumerate(engine_percentages.values):
+    plt.text(i, v, f"{v:.2f}%", ha='center', va='bottom')
+
+# Set the x-axis label
+plt.xlabel('Number of Engines')
+
+# Set the y-axis label
+plt.ylabel('Percentage')
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 14:15:44 [INFO] 
+Code running:
+```
+engine_counts = df['Number.of.Engines'].value_counts()
+engine_percentages = engine_counts / engine_counts.sum() * 100
+plt.bar(engine_percentages.index, engine_percentages.values)
+for i, v in enumerate(engine_percentages.values):
+    plt.text(i, v, f'{v:.2f}%', ha='center', va='bottom')
+plt.xlabel('Number of Engines')
+plt.ylabel('Percentage')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:15:44 [INFO] Answer: None
+2023-09-17 14:15:44 [INFO] Executed in: 6.589969635009766s
+2023-09-17 14:16:04 [INFO] Question: umieœæ na wykresie Number.of.Engines jako procentowy, na wykresie kolumnowym, dodaj etykiety na koñcu s³upka
+2023-09-17 14:16:04 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:16:04 [INFO] Prompt ID: 73ac97d7-15ec-41d2-8074-ae7dbec9268c
+2023-09-17 14:16:11 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv("data.csv")
+
+# Calculate the percentage of each value in Number.of.Engines column
+engine_percentage = df["Number.of.Engines"].value_counts(normalize=True) * 100
+
+# Create a bar plot with labels at the end of each bar
+plt.bar(engine_percentage.index, engine_percentage.values)
+plt.xlabel("Number of Engines")
+plt.ylabel("Percentage")
+plt.title("Percentage of Number of Engines")
+plt.xticks(rotation=45, ha="right")
+
+# Add labels at the end of each bar
+for i, v in enumerate(engine_percentage.values):
+    plt.text(i, v + 1, f"{v:.2f}%", ha="center")
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 14:16:11 [INFO] 
+Code running:
+```
+engine_percentage = df['Number.of.Engines'].value_counts(normalize=True) * 100
+plt.bar(engine_percentage.index, engine_percentage.values)
+plt.xlabel('Number of Engines')
+plt.ylabel('Percentage')
+plt.title('Percentage of Number of Engines')
+plt.xticks(rotation=45, ha='right')
+for i, v in enumerate(engine_percentage.values):
+    plt.text(i, v + 1, f'{v:.2f}%', ha='center')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:16:11 [INFO] Answer: None
+2023-09-17 14:16:11 [INFO] Executed in: 6.89103889465332s
+2023-09-17 14:16:25 [INFO] Question: umieœæ na wykresie Number.of.Engines jako procentowy, na wykresie kolumnowym, dodaj etykiety bez miejsc po przecinkuna koñcu s³upka
+2023-09-17 14:16:25 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:16:25 [INFO] Prompt ID: d58b53c4-5659-4e14-9e94-764ad511827f
+2023-09-17 14:16:31 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Calculate the percentage of each value in Number.of.Engines column
+engine_percentage = df['Number.of.Engines'].value_counts(normalize=True) * 100
+
+# Plot the bar chart
+plt.bar(engine_percentage.index, engine_percentage.values)
+
+# Add labels to the end of each bar
+for i, v in enumerate(engine_percentage.values):
+    plt.text(i, v + 0.5, f'{v:.0f}%', ha='center')
+
+# Set the x-axis label
+plt.xlabel('Number of Engines')
+
+# Set the y-axis label
+plt.ylabel('Percentage')
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 14:16:31 [INFO] 
+Code running:
+```
+engine_percentage = df['Number.of.Engines'].value_counts(normalize=True) * 100
+plt.bar(engine_percentage.index, engine_percentage.values)
+for i, v in enumerate(engine_percentage.values):
+    plt.text(i, v + 0.5, f'{v:.0f}%', ha='center')
+plt.xlabel('Number of Engines')
+plt.ylabel('Percentage')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:16:31 [INFO] Answer: None
+2023-09-17 14:16:31 [INFO] Executed in: 5.712845802307129s
+2023-09-17 14:16:57 [INFO] Question: umieœæ na wykresie Number.of.Engines jako procentowy, na wykresie kolumnowym, dodaj etykiety bez miejsc po przecinku nad kolumn¹
+2023-09-17 14:16:57 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:16:57 [INFO] Prompt ID: 7bef2179-2089-42d9-aa16-330844d41418
+2023-09-17 14:17:02 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Calculate the percentage of each value in Number.of.Engines column
+percentage = df['Number.of.Engines'].value_counts(normalize=True) * 100
+
+# Plot the bar chart
+plt.bar(percentage.index, percentage.values)
+
+# Add labels to the bars
+for i, v in enumerate(percentage.values):
+    plt.text(i, v + 1, f'{v:.0f}%', ha='center')
+
+# Add title and labels to the plot
+plt.title('Percentage of Number of Engines')
+plt.xlabel('Number of Engines')
+plt.ylabel('Percentage')
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 14:17:02 [INFO] 
+Code running:
+```
+percentage = df['Number.of.Engines'].value_counts(normalize=True) * 100
+plt.bar(percentage.index, percentage.values)
+for i, v in enumerate(percentage.values):
+    plt.text(i, v + 1, f'{v:.0f}%', ha='center')
+plt.title('Percentage of Number of Engines')
+plt.xlabel('Number of Engines')
+plt.ylabel('Percentage')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:17:03 [INFO] Answer: None
+2023-09-17 14:17:03 [INFO] Executed in: 6.0673816204071045s
+2023-09-17 14:17:15 [INFO] Question: umieœæ na wykresie Number.of.Engines jako procentowy, na wykresie kolumnowym, dodaj etykiety bez miejsc po przecinku nad kolumn¹. Zwiêksz oœ Y do 100
+2023-09-17 14:17:15 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:17:15 [INFO] Prompt ID: 47e3e1f7-3728-498c-971a-6a2d5811d906
+2023-09-17 14:17:21 [INFO] 
+                        Code generated:
+                        ```
+                        import matplotlib.pyplot as plt
+
+# Calculate the percentage of each value in Number.of.Engines column
+percentage = df['Number.of.Engines'].value_counts(normalize=True) * 100
+
+# Plot the bar chart
+plt.bar(percentage.index, percentage.values)
+
+# Set the y-axis limit to 100
+plt.ylim(0, 100)
+
+# Add labels above each bar
+for i, v in enumerate(percentage.values):
+    plt.text(i, v + 1, f'{v:.0f}', ha='center')
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 14:17:21 [INFO] 
+Code running:
+```
+percentage = df['Number.of.Engines'].value_counts(normalize=True) * 100
+plt.bar(percentage.index, percentage.values)
+plt.ylim(0, 100)
+for i, v in enumerate(percentage.values):
+    plt.text(i, v + 1, f'{v:.0f}', ha='center')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:17:21 [INFO] Answer: None
+2023-09-17 14:17:21 [INFO] Executed in: 6.362493276596069s
+2023-09-17 14:17:33 [INFO] Question: umieœæ na wykresie Number.of.Engines jako procentowy, na wykresie kolumnowym, Zwiêksz oœ Y do 100
+2023-09-17 14:17:33 [INFO] Running PandasAI with openai LLM...
+2023-09-17 14:17:33 [INFO] Prompt ID: 8c655e98-2b3d-4b9d-9c44-0b09e5fe4b85
+2023-09-17 14:17:38 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import matplotlib.pyplot as plt
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Calculate the percentage of Number.of.Engines
+df['Number.of.Engines_percentage'] = (df['Number.of.Engines'] / df['Number.of.Engines'].sum()) * 100
+
+# Create a bar plot
+plt.bar(df.index, df['Number.of.Engines_percentage'])
+
+# Set the y-axis limit to 100
+plt.ylim(0, 100)
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 14:17:38 [INFO] 
+Code running:
+```
+df['Number.of.Engines_percentage'] = df['Number.of.Engines'] / df[
+    'Number.of.Engines'].sum() * 100
+plt.bar(df.index, df['Number.of.Engines_percentage'])
+plt.ylim(0, 100)
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 14:19:27 [INFO] Answer: None
+2023-09-17 14:19:27 [INFO] Executed in: 114.5016758441925s
