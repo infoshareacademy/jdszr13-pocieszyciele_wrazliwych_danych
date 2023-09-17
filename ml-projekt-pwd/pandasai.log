@@ -1,0 +1,258 @@
+2023-09-17 13:13:42 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts.
+2023-09-17 13:13:42 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:13:42 [INFO] Prompt ID: a7f269a3-e52b-4bb3-a333-a2987421091c
+2023-09-17 13:13:49 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+import seaborn as sns
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Select only numeric columns
+numeric_columns = df.select_dtypes(include=['float64', 'int64'])
+
+# Calculate the correlation matrix
+correlation_matrix = numeric_columns.corr()
+
+# Plot the correlation matrix as a heatmap
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
+
+# Show the plot
+plt.show()
+                        ```
+                    
+2023-09-17 13:13:49 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['float64', 'int64'])
+correlation_matrix = numeric_columns.corr()
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 13:14:02 [INFO] Answer: 
+2023-09-17 13:14:02 [INFO] Executed in: 19.744487285614014s
+2023-09-17 13:16:35 [INFO] Question: Cel ML: analiza szans na wypadek lotniczy, Cel aplikacji: predykcja bezpiecznego lotu
+2023-09-17 13:16:35 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:16:35 [INFO] Prompt ID: 70253306-c704-413b-a9fd-77c0f3838b73
+2023-09-17 13:16:51 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+
+# Load the dataframe
+df = pd.read_csv('data.csv')
+
+# Get the number of rows and columns in the dataframe
+num_rows = df.shape[0]
+num_columns = df.shape[1]
+
+# Print the number of rows and columns
+print("Number of rows:", num_rows)
+print("Number of columns:", num_columns)
+
+# Get the unique values in the 'Injury.Severity' column
+injury_severity_values = df['Injury.Severity'].unique()
+
+# Print the unique values in the 'Injury.Severity' column
+print("Unique values in 'Injury.Severity' column:", injury_severity_values)
+
+# Get the count of each unique value in the 'Injury.Severity' column
+injury_severity_counts = df['Injury.Severity'].value_counts()
+
+# Print the count of each unique value in the 'Injury.Severity' column
+print("Count of each unique value in 'Injury.Severity' column:")
+print(injury_severity_counts)
+
+# Get the mean latitude and longitude
+mean_latitude = df['Latitude'].mean()
+mean_longitude = df['Longitude'].mean()
+
+# Print the mean latitude and longitude
+print("Mean latitude:", mean_latitude)
+print("Mean longitude:", mean_longitude)
+                        ```
+                    
+2023-09-17 13:16:51 [INFO] 
+Code running:
+```
+num_rows = df.shape[0]
+num_columns = df.shape[1]
+print('Number of rows:', num_rows)
+print('Number of columns:', num_columns)
+injury_severity_values = df['Injury.Severity'].unique()
+print("Unique values in 'Injury.Severity' column:", injury_severity_values)
+injury_severity_counts = df['Injury.Severity'].value_counts()
+print("Count of each unique value in 'Injury.Severity' column:")
+print(injury_severity_counts)
+mean_latitude = df['Latitude'].mean()
+mean_longitude = df['Longitude'].mean()
+print('Mean latitude:', mean_latitude)
+print('Mean longitude:', mean_longitude)
+```
+2023-09-17 13:17:31 [INFO] Answer: Number of rows: 88889
+Number of columns: 31
+Unique values in 'Injury.Severity' column: ['Fatal(2)' 'Fatal(4)' 'Fatal(3)' 'Fatal(1)' 'Non-Fatal' 'Incident'
+ 'Fatal(8)' 'Fatal(78)' 'Fatal(7)' 'Fatal(6)' 'Fatal(5)' 'Fatal(153)'
+ 'Fatal(12)' 'Fatal(14)' 'Fatal(23)' 'Fatal(10)' 'Fatal(11)' 'Fatal(9)'
+ 'Fatal(17)' 'Fatal(13)' 'Fatal(29)' 'Fatal(70)' 'Unavailable'
+ 'Fatal(135)' 'Fatal(31)' 'Fatal(256)' 'Fatal(25)' 'Fatal(82)'
+ 'Fatal(156)' 'Fatal(28)' 'Fatal(18)' 'Fatal(43)' 'Fatal(15)' 'Fatal(270)'
+ 'Fatal(144)' 'Fatal(174)' 'Fatal(111)' 'Fatal(131)' 'Fatal(20)'
+ 'Fatal(73)' 'Fatal(27)' 'Fatal(34)' 'Fatal(87)' 'Fatal(30)' 'Fatal(16)'
+ 'Fatal(47)' 'Fatal(56)' 'Fatal(37)' 'Fatal(132)' 'Fatal(68)' 'Fatal(54)'
+ 'Fatal(52)' 'Fatal(65)' 'Fatal(72)' 'Fatal(160)' 'Fatal(189)'
+ 'Fatal(123)' 'Fatal(33)' 'Fatal(110)' 'Fatal(230)' 'Fatal(97)'
+ 'Fatal(349)' 'Fatal(125)' 'Fatal(35)' 'Fatal(228)' 'Fatal(75)'
+ 'Fatal(104)' 'Fatal(229)' 'Fatal(80)' 'Fatal(217)' 'Fatal(169)'
+ 'Fatal(88)' 'Fatal(19)' 'Fatal(60)' 'Fatal(113)' 'Fatal(143)' 'Fatal(83)'
+ 'Fatal(24)' 'Fatal(44)' 'Fatal(64)' 'Fatal(92)' 'Fatal(118)' 'Fatal(265)'
+ 'Fatal(26)' 'Fatal(138)' 'Fatal(206)' 'Fatal(71)' 'Fatal(21)' 'Fatal(46)'
+ 'Fatal(102)' 'Fatal(115)' 'Fatal(141)' 'Fatal(55)' 'Fatal(121)'
+ 'Fatal(45)' 'Fatal(145)' 'Fatal(117)' 'Fatal(107)' 'Fatal(124)'
+ 'Fatal(49)' 'Fatal(154)' 'Fatal(96)' 'Fatal(114)' 'Fatal(199)'
+ 'Fatal(89)' 'Fatal(57)' 'Fatal' nan 'Minor' 'Serious']
+Count of each unique value in 'Injury.Severity' column:
+Non-Fatal     67357
+Fatal(1)       6167
+Fatal          5262
+Fatal(2)       3711
+Incident       2219
+              ...  
+Fatal(270)        1
+Fatal(60)         1
+Fatal(43)         1
+Fatal(143)        1
+Fatal(230)        1
+Name: Injury.Severity, Length: 109, dtype: int64
+2023-09-17 13:17:31 [INFO] Executed in: 56.52782320976257s
+2023-09-17 13:17:55 [INFO] Question: Cel ML: analiza szans na wypadek lotniczy
+2023-09-17 13:17:55 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:17:55 [INFO] Prompt ID: 6b7063d6-e20c-43fd-8938-69419e4973ad
+2023-09-17 13:17:59 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+
+# Read the dataframe from a file or any other source
+df = pd.read_csv("data.csv")
+
+# Get the number of rows and columns in the dataframe
+num_rows = df.shape[0]
+num_columns = df.shape[1]
+
+# Print the number of rows and columns
+print("Number of rows:", num_rows)
+print("Number of columns:", num_columns)
+                        ```
+                    
+2023-09-17 13:17:59 [INFO] 
+Code running:
+```
+num_rows = df.shape[0]
+num_columns = df.shape[1]
+print('Number of rows:', num_rows)
+print('Number of columns:', num_columns)
+```
+2023-09-17 13:17:59 [INFO] Answer: Number of rows: 88889
+Number of columns: 31
+2023-09-17 13:17:59 [INFO] Executed in: 3.374551296234131s
+2023-09-17 13:18:19 [INFO] Question: Cel machine learning analiza szans na wypadek lotniczy
+2023-09-17 13:18:19 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:18:19 [INFO] Prompt ID: 58f869d1-e79a-4f84-91e9-e47d35f42afc
+2023-09-17 13:18:23 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+
+# Read the dataframe from a file or any other source
+df = pd.read_csv('data.csv')
+
+# Get the number of rows and columns in the dataframe
+num_rows = df.shape[0]
+num_columns = df.shape[1]
+
+# Print the number of rows and columns
+print("Number of rows:", num_rows)
+print("Number of columns:", num_columns)
+                        ```
+                    
+2023-09-17 13:18:23 [INFO] 
+Code running:
+```
+num_rows = df.shape[0]
+num_columns = df.shape[1]
+print('Number of rows:', num_rows)
+print('Number of columns:', num_columns)
+```
+2023-09-17 13:18:23 [INFO] Answer: Number of rows: 88889
+Number of columns: 31
+2023-09-17 13:18:23 [INFO] Executed in: 3.6589670181274414s
+2023-09-17 13:19:15 [INFO] Question: Purpose of machine learning analysis of the chances of an aviation accident
+2023-09-17 13:19:15 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:19:15 [INFO] Prompt ID: 20019d96-d4a7-4391-8171-9348b004dab0
+2023-09-17 13:19:35 [INFO] 
+                        Code generated:
+                        ```
+                        import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+
+# Preprocess the data
+# Drop irrelevant columns
+df = df.drop(['Event.Id', 'Accident.Number', 'Airport.Code', 'Airport.Name', 'Registration.Number', 'Publication.Date'], axis=1)
+# Handle missing values
+df = df.fillna(0)  # Replace missing values with 0
+# Encode categorical variables
+df = pd.get_dummies(df, columns=['Investigation.Type', 'Country', 'Injury.Severity', 'Aircraft.damage', 'Aircraft.Category', 'Make', 'Model', 'Amateur.Built', 'Engine.Type', 'FAR.Description', 'Schedule', 'Purpose.of.flight', 'Air.carrier', 'Weather.Condition', 'Broad.phase.of.flight', 'Report.Status'])
+
+# Split the data into training and testing sets
+X = df.drop('Total.Fatal.Injuries', axis=1)  # Features
+y = df['Total.Fatal.Injuries']  # Target variable
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Train the logistic regression model
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+# Predict on the test set
+y_pred = model.predict(X_test)
+
+# Evaluate the model
+accuracy = accuracy_score(y_test, y_pred)
+print("Accuracy:", accuracy)
+                        ```
+                    
+2023-09-17 13:19:35 [INFO] 
+Code running:
+```
+X = df.drop('Total.Fatal.Injuries', axis=1)
+y = df['Total.Fatal.Injuries']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2,
+    random_state=42)
+model = LogisticRegression()
+model.fit(X_train, y_train)
+y_pred = model.predict(X_test)
+accuracy = accuracy_score(y_test, y_pred)
+print('Accuracy:', accuracy)
+```
+2023-09-17 13:20:16 [INFO] Answer: 
+2023-09-17 13:20:16 [INFO] Executed in: 60.94636917114258s
+2023-09-17 13:28:20 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts.
+2023-09-17 13:28:20 [INFO] Running PandasAI with openai LLM...
+2023-09-17 13:28:20 [INFO] Prompt ID: 2d91ae35-4ebb-4b00-9aa8-9fe430cff49b
+2023-09-17 13:28:20 [INFO] Using cached response
+2023-09-17 13:28:20 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['float64', 'int64'])
+correlation_matrix = numeric_columns.corr()
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-17 13:28:33 [INFO] Answer: 
+2023-09-17 13:28:33 [INFO] Executed in: 12.96894121170044s
