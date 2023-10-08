@@ -2167,3 +2167,63 @@ plt.close('all')
 ```
 2023-09-17 14:19:27 [INFO] Answer: None
 2023-09-17 14:19:27 [INFO] Executed in: 114.5016758441925s
+2023-09-24 11:29:24 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts.
+2023-09-24 11:29:24 [INFO] Running PandasAI with openai LLM...
+2023-09-24 11:29:24 [INFO] Prompt ID: 65616943-52cb-4449-baa4-80ba73f4c375
+2023-09-24 11:29:24 [INFO] Using cached response
+2023-09-24 11:29:24 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['float64', 'int64'])
+correlation_matrix = numeric_columns.corr()
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-24 11:29:25 [INFO] error_code=invalid_api_key error_message='Incorrect API key provided: sk-NR9mM***************************************pWt1. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-09-24 11:29:25 [INFO] Question: narysuj wykres ko³owy przestawiaj¹cy liczbê elementów w podziale na Investigation.Type.
+2023-09-24 11:29:25 [INFO] Running PandasAI with openai LLM...
+2023-09-24 11:29:25 [INFO] Prompt ID: 597577a2-dfcb-4366-b9e9-0584eecaa47e
+2023-09-24 11:29:25 [INFO] Using cached response
+2023-09-24 11:29:25 [INFO] 
+Code running:
+```
+investigation_counts = df['Investigation.Type'].value_counts()
+plt.pie(investigation_counts, labels=investigation_counts.index, autopct=
+    '%1.1f%%')
+plt.title('Investigation Type Distribution')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-24 11:29:25 [INFO] Answer: None
+2023-09-24 11:29:25 [INFO] Executed in: 0.0717766284942627s
+2023-09-24 13:36:54 [INFO] Question: Find all correlations for numeric_only columns and make chart or charts.
+2023-09-24 13:36:54 [INFO] Running PandasAI with openai LLM...
+2023-09-24 13:36:54 [INFO] Prompt ID: c195a6ef-2d47-4977-bacc-dc7d9d7de9af
+2023-09-24 13:36:54 [INFO] Using cached response
+2023-09-24 13:36:54 [INFO] 
+Code running:
+```
+numeric_columns = df.select_dtypes(include=['float64', 'int64'])
+correlation_matrix = numeric_columns.corr()
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-24 13:36:55 [INFO] error_code=invalid_api_key error_message='Incorrect API key provided: sk-NR9mM***************************************pWt1. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2023-09-24 13:36:55 [INFO] Question: narysuj wykres ko³owy przestawiaj¹cy liczbê elementów w podziale na Investigation.Type.
+2023-09-24 13:36:55 [INFO] Running PandasAI with openai LLM...
+2023-09-24 13:36:55 [INFO] Prompt ID: 8921233b-0bd4-4b3a-9895-3ac8d3af5622
+2023-09-24 13:36:55 [INFO] Using cached response
+2023-09-24 13:36:55 [INFO] 
+Code running:
+```
+investigation_counts = df['Investigation.Type'].value_counts()
+plt.pie(investigation_counts, labels=investigation_counts.index, autopct=
+    '%1.1f%%')
+plt.title('Investigation Type Distribution')
+plt.show(block=False)
+plt.close('all')
+```
+2023-09-24 13:36:55 [INFO] Answer: None
+2023-09-24 13:36:55 [INFO] Executed in: 0.07212519645690918s
