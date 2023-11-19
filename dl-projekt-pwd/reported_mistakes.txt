@@ -1,0 +1,4 @@
+C:/Users/adria/ProjektyInfoshare/jdszr13-pocieszyciele_wrazliwych_danych/dl-projekt-pwd-fruits/kaggle/input/fruit-recognition/Apple/Apple C/Apple Ce01921.png, jab³ko, confidence: 99.98663663864136
+C:/Users/adria/ProjektyInfoshare/jdszr13-pocieszyciele_wrazliwych_danych/dl-projekt-pwd-fruits/kaggle/input/fruit-recognition/Apple/Apple C/Apple Ce01921.png, jab³ko, confidence: 99.98663663864136
+C:/Users/adria/ProjektyInfoshare/jdszr13-pocieszyciele_wrazliwych_danych/dl-projekt-pwd-fruits/kaggle/input/fruit-recognition/Apple/Apple C/Apple Ce03091.png, jab³ko, confidence: 99.98146891593933
+C:/Users/adria/OneDrive - CREASITE Adrian Bednarczyk/Desktop/pomidory-wlasciwosci-odzywcze-kalorie-i-polecane-przepisy-czy-pomidor-jest-zdrowy.jpg, pomidor, confidence: 99.99417066574097
